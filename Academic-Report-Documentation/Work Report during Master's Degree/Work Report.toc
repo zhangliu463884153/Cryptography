@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.14pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Self Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Translation Equivalence of Boolean Functions \\ Expressed By Primitive Element}{4}{0}{2}
+\beamer@sectionintoc {3}{A Lower Bound of Fast Algebraic Immunity of \\ A Class of 1-Resilient Boolean Functions }{12}{0}{3}
+\beamer@sectionintoc {4}{Fast Algebraic Immunity of $2^m+2$ \& $2^m+3$ \\ Variables Majority Function}{23}{0}{4}
+\beamer@sectionintoc {5}{Research Plan}{30}{0}{5}
+\beamer@sectionintoc {6}{Reference}{32}{0}{6}

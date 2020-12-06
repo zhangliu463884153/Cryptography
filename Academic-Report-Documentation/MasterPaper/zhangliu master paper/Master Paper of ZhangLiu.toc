@@ -1,0 +1,53 @@
+\ttl@change@i {\@ne }{chapter}{0pt}{\vspace {.5\baselineskip }\bfseries }{\CJKfamily {hei} 第~\thecontentslabel ~ 章\quad }{}{\hspace {.5em}\titlerule *[10pt]{$\cdot $}\contentspage }\relax 
+\ttl@change@v {chapter}{}{}{}\relax 
+\ttl@change@i {\@ne }{section}{2em}{\vspace {.25\baselineskip }}{\thecontentslabel \quad }{}{\hspace {.5em}\titlerule *[10pt]{$\cdot $}\contentspage }\relax 
+\ttl@change@v {section}{}{}{}\relax 
+\contentsline {chapter}{\CJKfamily {hei}中文摘要}{I}
+\contentsline {chapter}{\CJKfamily {hei}Abstract}{III}
+\contentsline {chapter}{\CJKfamily {hei} 目\hspace {2em} 录}{V}
+\contentsline {chapter}{\numberline {1}\CJKfamily {hei}绪论}{1}
+\contentsline {section}{\numberline {1.1}研究背景及意义}{1}
+\contentsline {subsection}{\numberline {1.1.1}再制造闭环供应链的作用和意义}{1}
+\contentsline {subsection}{\numberline {1.1.2}企业间的再制造合作}{2}
+\contentsline {subsection}{\numberline {1.1.3}再制造行为得到政府广泛关注}{3}
+\contentsline {subsection}{\numberline {1.1.4}闭环供应链运作过程中的不确定风险备受关注}{4}
+\contentsline {subsection}{\numberline {1.1.5}问题的提出}{5}
+\contentsline {section}{\numberline {1.2}研究意义}{5}
+\contentsline {section}{\numberline {1.3}国内外研究现状}{6}
+\contentsline {section}{\numberline {1.4}本文的框架及主要内容}{9}
+\contentsline {chapter}{\numberline {2}\CJKfamily {hei}预备知识}{11}
+\contentsline {section}{\numberline {2.1}Stackelberg博弈模型}{11}
+\contentsline {section}{\numberline {2.2}授权、外包再制造模式}{11}
+\contentsline {chapter}{\numberline {3}\CJKfamily {hei}政府干涉下再制造闭环供应链的模式选择}{13}
+\contentsline {section}{\numberline {3.1}问题描述}{13}
+\contentsline {section}{\numberline {3.2}模型假设}{14}
+\contentsline {section}{\numberline {3.3}模型求解}{15}
+\contentsline {subsection}{\numberline {3.3.1}外包再制造模式}{15}
+\contentsline {subsection}{\numberline {3.3.2}授权再制造模式}{24}
+\contentsline {section}{\numberline {3.4}供应链成员对再制造模式的选择}{33}
+\contentsline {subsection}{\numberline {3.4.1}消费者角度}{33}
+\contentsline {subsection}{\numberline {3.4.2}政府角度}{34}
+\contentsline {subsection}{\numberline {3.4.3}原始设备制造商和第三方再制造商角度}{37}
+\contentsline {section}{\numberline {3.5}数值实验}{39}
+\contentsline {subsection}{\numberline {3.5.1}参数设定}{39}
+\contentsline {subsection}{\numberline {3.5.2}结果分析}{40}
+\contentsline {section}{\numberline {3.6}小结}{41}
+\contentsline {chapter}{\numberline {4}\CJKfamily {hei}再制造产品需求波动对再制造闭环供应链的影响}{45}
+\contentsline {section}{\numberline {4.1}问题描述}{45}
+\contentsline {section}{\numberline {4.2}模型假设}{45}
+\contentsline {section}{\numberline {4.3}模型求解}{46}
+\contentsline {subsection}{\numberline {4.3.1}外包再制造模式}{46}
+\contentsline {subsection}{\numberline {4.3.2}授权再制造模式}{48}
+\contentsline {section}{\numberline {4.4}基于再制造产品市场需求波动的灵敏性分析}{50}
+\contentsline {section}{\numberline {4.5}再制造产品市场需求波动下的再制造模式选择}{52}
+\contentsline {section}{\numberline {4.6}数值实验}{54}
+\contentsline {subsection}{\numberline {4.6.1}参数设定}{54}
+\contentsline {subsection}{\numberline {4.6.2}结果分析}{54}
+\contentsline {section}{\numberline {4.7}小结}{55}
+\contentsline {chapter}{\numberline {5}\CJKfamily {hei}研究结论与展望}{57}
+\contentsline {section}{\numberline {5.1}研究内容与结论}{57}
+\contentsline {section}{\numberline {5.2}主要创新点}{58}
+\contentsline {section}{\numberline {5.3}研究的不足与未来展望}{58}
+\contentsline {chapter}{\CJKfamily {hei}参考文献}{61}
+\contentsline {chapter}{\CJKfamily {hei}致\hspace {2em} 谢}{67}
+\contentsfinish 

@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.14pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Block Cipher}{2}{0}{1}
+\beamer@sectionintoc {2}{Differential Cryptanalysis of a Toy Cipher}{8}{0}{2}
+\beamer@sectionintoc {3}{Automatic Security Evaluation of Block Ciphers}{15}{0}{3}
+\beamer@sectionintoc {4}{Tighten the Feasible Region with Valid Cutting-off Inequalities}{22}{0}{4}
+\beamer@sectionintoc {5}{NBC}{29}{0}{5}

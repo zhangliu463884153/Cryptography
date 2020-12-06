@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.14pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Cube attack}{2}{0}{1}
+\beamer@sectionintoc {2}{cube attack and cube-attack-like cryptanalysis \\ on the round-reduced Keccak sponge function}{30}{0}{2}
+\beamer@sectionintoc {3}{Conditional cube attack on reduced-round \\ Keccak sponge functon}{51}{0}{3}

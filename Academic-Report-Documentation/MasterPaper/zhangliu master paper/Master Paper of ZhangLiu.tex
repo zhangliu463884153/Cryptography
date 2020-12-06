@@ -1,0 +1,2237 @@
+\documentclass[12pt,twoside,a4paper]{book}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}%{amsart}
+\usepackage{CJK}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{graphicx, color}
+%\usepackage{collref}
+%\usepackage{caption2}
+\usepackage{CJKnumb}
+\usepackage{titletoc}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage[centerlast]{caption}
+\usepackage{graphicx}%%%%
+\usepackage{float}%%%%
+\usepackage{mathdots}%%%%
+\usepackage{multicol}%%%%
+\usepackage{multirow}%%%%
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{booktabs}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\textwidth}{142mm} \setlength{\textheight}{22cm}
+\setlength{\topmargin}{9mm} \setlength{\headheight}{14pt}
+\setlength{\headsep}{5mm} \setlength{\footskip}{9mm}
+\setlength{\oddsidemargin}{30pt} \setlength{\evensidemargin}{30pt}
+% 学位论文一律采用A4 纸张打印,页面设置参考如下：页边距上为25mm、 下为20mm、
+% 左为25mm、 右为20mm,页眉为15mm,页脚为12mm,行间距为1.5 倍行距,字符间距为标准.
+\linespread{1.3}%1.5 倍行距
+\setlength{\parindent}{2em}
+\pagestyle{fancy}
+\def\dmin{\displaystyle\min}
+\def\dmax{\displaystyle\max}
+\def\dprod{\displaystyle\Pi}
+\def\hang{\hangindent\parindent}
+\def\textindent#1{\indent\llap{#1\enspace}\ignorespaces}
+\def\re{\par\hang\textindent}
+\def\sgn{\hbox{sgn}}
+\def\dint{\displaystyle\int}
+\def\e{\varepsilon}
+\def\dlim{\displaystyle\lim}
+\def\diiint{\displaystyle\iiint}
+\def\didotsint{\displaystyle\idotsint}
+\def\dinf{\displaystyle\inf}
+\def\dsup{\displaystyle\sup}
+\def\dsum{\displaystyle\sum}
+\def\dfrac{\displaystyle\frac}
+\def\dline{\displaylines}
+
+\begin{document}
+\begin{CJK*}{GBK}{song}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\CJKfamily{hei} 定理~}[section]
+\newtheorem{lemma}{\CJKfamily{hei} 引理~}[section]
+\newtheorem{example}{\CJKfamily{hei} 例~}[section]
+\newtheorem{corollary}{\CJKfamily{hei} 推论~}[section]
+
+\newtheorem{remarkq}{\CJKfamily{} 结论~}[chapter]
+
+\newtheorem{proposition}{\CJKfamily{hei} 命题~}[section]
+\renewcommand{\proofname}{\noindent{\bf 证明}: } \theoremstyle{definition}
+\newtheorem{definition}{\CJKfamily{hei} 定义~}[section]
+\newtheorem{remark}{\CJKfamily{hei} 注~}[section]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%
+%%%%%%  Essential definitions.  Do not remove
+%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\hei}{\CJKfamily{hei}}
+
+\def\newop#1{\expandafter\def\csname #1\endcsname%
+{\mathop{\rm #1}\nolimits}}
+
+\newop{Con}  \newop{Fix}
+\newop{min}  \newop{max}
+\newop{Min}   \newop{Max}
+\newop{Ker}   \newop{Coker}
+\newop{K}
+
+\renewcommand{\arraycolsep}{1pt}
+\newcommand{\st}{\;\big|\;}
+\newcommand{\lat}{\text{\rm\scriptsize lat}}
+\newcommand{\id}{\text{\rm id}}
+
+\newcommand{\tsbbigcup}{\mathop{\textstyle\bigcup}\limits}
+\newcommand{\dif}{\,\mathrm{d}}
+
+\newcommand{\twotabletitle}[2]{
+\renewcommand{\tablename}{表~}
+\caption{#1}
+\renewcommand{\tablename}{Tab~}
+\addtocounter{table}{-1} \caption{#2}}
+\renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
+\renewcommand{\figurename}{图}
+
+\renewcommand\theequation{\arabic{chapter}-\arabic{equation}}
+\renewcommand\thetable{\arabic{chapter}-\arabic{table}}
+
+\setlength{\abovecaptionskip}{-1pt}
+\setlength{\belowcaptionskip}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 章节
+\renewcommand{\contentsname}{\hei 目\quad 录}
+\renewcommand{\chaptername}{\CJKfamily{hei} 第~\thechapter~ 章}
+\titlecontents{chapter}[0pt]{\vspace{.5\baselineskip}\bfseries}
+    {\CJKfamily{hei} 第~\thecontentslabel~ 章\quad}{}
+    {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+
+\titlecontents{section}[2em]{\vspace{.25\baselineskip}}
+    {\thecontentslabel\quad}{}
+    {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+
+\titleformat{\chapter}[hang]{\centering\LARGE\bfseries}{\chaptername}{1em}{}
+\titlespacing{\chapter}{0pt}{*0}{*4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 页眉页脚
+\renewcommand{\headrule}{%
+\hrule height0.8pt width\headwidth \vskip0.8pt%
+\hrule height0.4pt width\headwidth \vskip -2pt}%
+\fancyhead[C]{\CJKfamily{song}\small 汕\ \ 头\ \ 大\ \ 学\ \ 硕\ \
+士\ \ 学\ \ 位\ \ 论\ \ 文} \lhead{} \rhead{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%diyiye
+
+\makeatletter
+\let\ps@plain\relax
+\let\ps@plain=\ps@fancy
+\makeatother
+
+ \thispagestyle{empty}
+ \hfill{\large  密级：公开}
+
+\begin{center}
+\vspace{1.5cm} {\hei\huge 布尔函数的代数免疫性\\相关研究}
+
+
+ \vspace{1cm} {\huge\bf Research on the (fast) algebraic immunity of Boolean functions}
+
+
+
+
+
+\vskip24pt
+ \vspace{1cm} {\large
+（申请汕头大学工学硕士学位论文）} \vspace{5cm}
+
+\begin{tabular}{ll}
+
+\large 院（系、所）：\hspace{0.5cm} & \large 工\  学\  院\  计\ 算\ 机\ 系\\
+[0.5cm]
+\large 专\ \ \ \ \ \ \ \ \ \ \ \ 业 ：\hspace{0.5cm} & \large  计\ 算\ 机\ 软\ 件\ 与\  理\ 论\\
+[0.5cm]
+\large 研\ \ \ \ \ 究\ \ \ \ 生 ：\hspace{0.5cm} & \large 张\ 柳\  \ \ \ \ \ \ \ \ \ \ \\
+[0.5cm] \large 指\ \ 导\ \ 教\ \ 师 ：\hspace{0.5cm} & \large 陈\
+银\ 冬\ 副\ 教\ 授 \
+
+
+
+
+
+
+\end{tabular}
+
+\vspace{10mm} {\large 二\ O\ 二\ O\ 年\ 六\ 月}
+\end{center}
+
+\newpage
+\    \thispagestyle{empty}
+
+\newpage
+\thispagestyle{empty} \vspace{3truecm}
+\begin{center}
+{\huge\CJKfamily{hei} 学位论文原创性声明}
+\end{center}
+
+\vspace{10pt}
+ 本论文是我个人在导师指导下进行的工作研究及取得的研究成果.
+ 论文中除了特别加以标注和致谢的地方外,不包含其他人或其它机构已经发表或撰写过的研究成果.
+ 对本文的研究做出贡献的个人和集体,均已在论文中以明确方式标明.
+ 本人完全意识到本声明的法律责任由本人承担.
+
+\vspace{40pt}
+
+论文作者签名：\underline{\qquad\qquad\qquad\quad}~~~~~~~ 日期：
+\underline{\qquad\qquad} 年\underline{\qquad} 月\underline{\qquad} 日
+
+
+
+ \vspace{4cm}
+\begin{center}
+{\huge\CJKfamily{hei} 学位论文使用授权的声明}
+\end{center}
+
+\vspace{10pt} 本人授权汕头大学保存本学位论文的电子和纸质文档,
+允许论文被查阅和借阅;
+学校可将本学位论文的全部或部分内容编入有关数据库进行检索,
+可以采用影印、缩印或其它复制手段保存和汇编论文;
+学校可以向国家有关部门或机构送交论文并授权其保存、借阅或上网公布本学位论文的全部或部
+分内容.
+对于保密的论文,按照保密的有关规定和程序处理.
+ \vspace{20pt}
+
+本论文属于：保密 （~~~）,在 \qquad 年解密后适用本授权声明.
+
+~~~~~~~~~~~~~~~~~~ 不保密（$ \surd$）.（请在以上括号内打“$ \surd$”）
+\vspace{40pt}
+
+论文作者签名：\underline{\qquad\qquad\qquad}\ \ \ \ \ \ \ \ \
+指导教师签名：\underline{\qquad\qquad\qquad}
+
+日期：\underline{\qquad\qquad} 年\underline{\qquad} 月\underline{\qquad} 日\
+\ \ \ \ \
+日期：\underline{\qquad\qquad} 年\underline{\qquad} 月\underline{\qquad} 日\
+
+
+
+\newpage
+\    \thispagestyle{empty}
+
+\newpage
+
+\frontmatter
+
+\pagenumbering{Roman} \setlength{\parindent}{2em}
+
+\chapter[\hei 中文摘要]{\hei 摘\quad 要}
+
+再制造作为一种资源重新利用的有效方式, 在我国绿色发展的道路上发挥着十分重要的作用. 但是再制造行为往往涉及的行业众多, 原始设备制造商往往没有相关的技术、人力和资金去独立地实施自身产品的再制造, 与生产新产品的利润相比, 再制造产品的利润较低, 原始设备制造商并不重视废旧产品的回收利用. 但是第三方再制造公司拥有相关的资源和人力, 能以较低的成本完成废旧产品的回收再利用. 当第三方再制造商为非独立时, 原始设备制造商和第三方再制造公司的合作模式主要有两种: 外包再制造模式和授权再制造模式.
+
+本文在原始设备制造商和非独立的第三方再制造的再制造模式选择的基础上, 分别讨论了政府干涉和再制造产品需求波动下的再制造闭环供应链, 具体研究结果如下:
+
+(1)~研究了政府的政策干涉对再制造闭环供应链的影响. 研究的结果表明: 政府的补贴能切实有效的提高废旧产品的回收量和回收率, 但是补贴对象的不同并不能带来差异, 最终政府的偏好为外包再制造模式; 从原始设备制造商的角度看, 外包再制造模式能带来更多的利润; 第三方再制造商对再制造模式的偏好比较复杂, 当消费者对再制造产品的接受程度较低时, 采用外包模式合作能带来更大的利润, 但若消费者对再制造产品的接受程度较高, 当且仅当废旧产品的回收难度比较小时, 第三方再制造商喜欢外包再制造模式, 否则喜欢授权再制造模式.
+
+(2)~分析对比了再制造产品需求为波动条件下, 风险厌恶的供应链成员的再制造模式选择问题. 研究结果表明: 原始设备制造商和第三方造制造商对再制造模式的选择和供应链决策绩效受到再制造产品需求波动的影响, 再制造产品需求波动较大时, 原始设备制造商和第三方造制造商喜好都为授权再制造模式.
+
+\bigskip
+{\hei 关键词:} 再制造闭环供应链; 外包; 授权; 政府; 需求不确定性
+
+\chapter[\hei Abstract]{\hei Abstract}
+
+Remanufacturing, as an effective way to reuse resources, plays a very important role in the path of green development. However, remanufacturing behavior often involves many industries. Original equipment manufacturers often do not have the relevant technology, manpower and funds to be independent. Realizing the remanufacturing of its own products, and the profit of remanufactured products is lower than that of producing new products. Original equipment manufacturers do not pay attention to the recycling of used products, but third-party remanufacturing companies have related resources and Manpower, can recycle and recycle used products at a lower cost. When third-party remanufacturers are non-independent, there are two main modes of cooperation between original equipment manufacturers and third-party remanufacturing companies: Outsourcing remanufacturing mode and Authorized remanufacturing mode.
+
+Based on the choice of remanufacturing mode of original equipment manufacturers and non-independent third-party remanufacturing, this paper discusses the closed-loop supply chain of remanufacturing under the fluctuation of government intervention and remanufacturing products. The research results are as follows:
+
+(1)~Study the impact of government policy intervention on the closed-loop supply chain of remanufacturing under the condition of fluctuations in demand in the remanufacturing market. The results of the study show that: government subsidies can effectively improve the recycling and recovery of waste products. However, the difference in the object of subsidies does not make a difference. In the end, the government's preference is the outsourcing remanufacturing model. From the perspective of original equipment manufacturers, the outsourcing remanufacturing model can bring more profits. Third-party remanufacturers The re-manufacturing model has a more complex preference. When the consumer's acceptance of remanufactured products is low, the outsourcing remanufacturing model can bring greater profits, but if consumers accept higher remanufactured products, Third-party remanufacturers prefer to outsource remanufacturing mode only when the recycling of used products is relatively difficult. Otherwise, they prefer to authorize the remanufacturing mode.
+
+(2)~Analyze and compare the re-manufacturing product demand for the risk-averse supply chain members' choice of remanufacturing mode under the fluctuating conditions. The research results show: Original equipment manufacturers and third-party manufacturers to choose the remanufacturing mode And supply chain decision-making performance is affected by fluctuations in demand for remanufactured products. When demand for remanufactured products fluctuates significantly, both OEMs and third-party manufacturers prefer to license remanufacturing models.
+
+\bigskip {\bf Key words:} Remanufacturing closed-loop supply chain; Outsourcing; authorization; government; Demand uncertainty
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\CJKfamily{hei} 目\hspace{2em} 录}
+\tableofcontents
+\newpage
+
+\mainmatter
+\chapter{\hei 绪论}  % 第1 章
+
+\section{研究背景及意义}
+
+\subsection{再制造闭环供应链的作用和意义}
+
+改革开放40多年来, 我国经济发展取得了有目共睹的骄人成绩, 随着经济继续不断的发展, 人民生活水平得到显著提高. 人民从改革开放初期对温饱的关注逐步发展为对美好生活的全方位追求, 在越来越多的人对生存环境日益关注的今天, 过去通过高污染、高消耗、低产出、低效益的“杀鸡取卵式”、“竭泽而渔式”发展经济的思路势必要被“补短板、调结构、增后劲、惠民生”的绿色协调可持续的发展理念所取代, 这也正是习近平总书记在党的十九大报告中就加快生态文明体制建设, 建设美丽中国时提出“推进绿色发展. 加快建立绿色生产和消费的法律制度和政策导向, 建立健全绿色低碳循环发展的经济体系. 构建市场导向的绿色技术创新体系, 发展绿色金融, 壮大节能环保产业、清洁生产产业、清洁能源产业. 推进能源生产和消费革命, 构建清洁低碳、安全高效的能源体系. 推进资源全面节约和循环利用, 实施国家节水行动, 降低能耗、物耗，实现生产系统和生活系统循环链接.”$^{[1]}$
+
+当今世界越来越多的人意识到环境保护的问题, 再制造是推进实现绿色发展的重要手段, 是利用重复利用、修理坏件制成新零件的过程. 再制造按照原制造产品的规格重新制造产品, 使产品至少恢复原来的性能$^{[2, 3]}$. 作为资源高效循环利用、节能、绿色、可持续发展的一种重要手段, 再制造是资源高效利用的重要组成部分, 通过延长主件及其配件的使用时间, 可以显着避免巨额的能源使用的同时避免向大气和水体排放大量的SO2、CO2$^{[4]}$. 除此之外再制造产业还为创造高技能工作和经济增长提供了机会, 其巨大的社会价值和经济价值, 作为资源高效利用的一种有效方式, 所以受到企业、政府以及全大量的学者的广泛关注.
+
+本文借助Stackelberg博弈模型, 分别讨论政府的政策干涉和再制造产品的市场需求波动对原始设备制造商和第三方再制造商决策和绩效的影响, 为政府和相关企业提供相应的决策参考. 本节从企业间的再制造合作、政府关注下的再制造产业和闭环供应链运作过程中的不确定风险等三个重要的方向阐述本文的研究背景.
+
+\subsection{企业间的再制造合作}
+
+早在上世纪九十年代的企业界, 柯达就启动了一次性相机再利用项目$^{[5]}$. 作为行业巨头的卡特彼勒再制造公司, 利用旧件生产新件, 取得了巨大的商业成功$^{[6]}$. 施乐在其英国工厂将旧复印件改造为“新”产品, 从再制造中获得利润$^{[7]}$. 戴尔为电脑组装厂提供再制造闭环供应链环境$^{[8]}$. 而在国内，再制造产业刚刚起步，潍柴动力（潍坊）再制造有限公司是国内一家重要的再制造企业，专业从事发动机及其零部件的再制造业务$^{[9]}$. 国内知名调研机构赛诺发布的《2017~年手机回收市场研究》报告中称: 废旧手机再利用价值巨大, 无论是在废旧手机拆解还是二手手机销售$^{[10]}$. 在美国国际贸易委员会在~2012~年的报告中显示: 美国是世界上最大的再制造产品产地, 在~2009~年至~2011~年间, 再制造产品的价值增长了~15％~至少~430~亿美元，支持了~180,000~个全职美国工作岗位. 2011~年, 美国再制造商品出口总额为~117~亿美元. 在欧洲, 再制造密集型行业的所有制成品的价值为~1.5~万亿欧元.
+
+以上的数据说明, 通过对废旧产品的回收再制造, 企业可以获得巨大的经济利益, 因此许多企业都投身再制造行业. 但是并非所有的企业都适合独立的建立再制造体系, 其中最典型的例子为美国福特公司$^{[11]}$. 许多企业开始把再制造业务转包给第三方公司, 采取合作的方式利用第三方再制造商的优势进行废旧产品的回收再制造, 把非核心的业务剥离, 只专注于核心业务, 达到与第三方再制造商的共赢. 例如~2016~年, 富士康旗下的电商网站富连网上架开卖二手苹果手机, 苹果把非核心的翻新业务授权给加工供应商富士康; 紧接着在~2017~年, 二手交易平台转转与富士康签署战略合作协议, 双方将在质检等方面加强合作, 转转的核心业务为二手闲置物品交易平台, 若对二手苹果手机进行维修翻新, 可以使得转转获得更多的利润, 但是其自身缺少相应的维修能力, 与富士康的合作是互惠互赢的选择, 此时富士康可以获得相应的维修费用.
+
+原始设备制造商和第三方再制造公司的合作模式主要有两种: 外包再制造模式和授权再制造模式, 以上两种合作方式都是为了调和原始设备制造商和第三方再制造公司矛盾冲突而产生. 现代工业体系中, 新产品的研发将花费设备制造商巨额的成本, 而再制造产品进入市场, 必将对新产品的销售造成冲击, 造成原始设备制造商的经济损失. 并且, 第三方再制造商进行废旧产品的再制造过程中必将涉及到设备的专利使用问题, 在专利保护越来约严格的今天, 独立的进行废旧产品再制造将十分困难$^{[12, 13, 14]}$.
+
+在这方面的案例有“美国打印机墨盒案”、“日本打印机墨盒案”等, 上述两个案件的主角都在墨盒的原始生产商和再制造商之间进行, 最后的结果都是法院判定再制造商败诉, 并责令再制造商立即停止销售回收改造的墨盒$^{[15]}$. 因此再制造商一般会采取跟原始设备制造商合作的方式进行废旧产品的再制造的合作, 所以在本文的研究中, 第三方再制造商为非独立型, 采取外包或者授权模式与原始设备制造商进行合作, 原始设备制造商对第三方再制造支付外包费用或者收取授权费用后, 第三方再制造商从原始设备制造商处取得合法回收废旧产品进行再制造的权力. 已经有很多学者分析了合作模式对供应链决策和绩效的影响, 并得到了丰富的结论.
+
+\subsection{再制造行为得到政府广泛关注}
+
+截至2018年底, 根据公安部发布的数据, 全国汽车保有量达~2.4~亿辆, 近五年年均增长~1952~万辆, 新能源汽车保有量达~261~万辆. 按照国际上~4\%~至~6\%~报废比例的平均水平, 未来汽车报废规模巨大. 对汽车废旧机电的再制造可以极大节省资源的消耗, 由于充分利用了废旧发动机的中附加值, 利用废旧的发动机进行再制造, 其能源消耗、劳动力消耗和原材料消耗只是新品制造中的~50\%、67\%~和~11.1\%-20\%$^{[16]}$. 近些年来, 由于对环境的污染较传统汽车少, 所以电动汽车受到了广泛的关注, 到~2020~年预计保有量将达~2000~万量$^{[17]}$. 但是新能源汽车的大力推广使用将产生大量的废旧电池, 这将导致严重的环境问题,  潜在的环境风险和自身的材料有关, 也受到再制造技术等因素的影响$^{[18]}$. 不仅如此, 虽然矿产资源丰富, 由于巨大的人口总量, 但是我国依然是一个贫乏的国家, 到~2020~年, 国内的铜矿需求为~445~万吨, 有近~300~万吨的缺口需求$^{[19]}$.
+
+基于以上再制造产业的重要经济价值和社会价值的事实, 再制造行为得到政府广泛关注, 政府的政策干涉对再制造行为的积极影响得到了广泛的证实$^{[20, 21, 22, 23]}$. 现在, 废物管理责任从私营废物管理行业和地方政府向制造商、分销商和零售商转移$^{[24]}$. 近年来, 制造商的责任已经扩大到涵盖某些产品的整个生命周期, 这也包括产品的安全处置责任$^{[25]}$.
+
+环境法规的执行变得更加严格$^{[26]}$, 现在越来越多的制造商被要求回收废旧产品, 再制造行为在节能环保方面的成绩受到政府的重视.
+
+在主要的发达国家, 因此世界各国政府也积极推进再制造产业的发展. 在欧盟《循环经济实施方针》、《视野~2020~》对推动再制造产业发挥着重要的作用, 美国现在受到《联邦汽车维修成本节约法案~2015~》的影响, 汽车零部件的再制造受到立法认可和鼓励. 在国内, 《国务院办公厅关于印发生产者责任延伸制度推行方案的通知》中, 政府制定汽车产品生产者责任延伸政策指引，鼓励再制造产业的发展, 并且在《中国制造~2025~》中明确“大力发展再制造产业, 实施高端再制造、智能再制造、在役再制造，推进产品认定, 促进再制造产业持续健康发展”. 在~2016~年的《工业和信息化部商务部科技部关于加快推进再生资源产业发展的指导意见》中明确指出: 通过提高资源利用水平, 到~2020~年, 使得报废机动车的利用率到达~95\%~以上.
+
+可见世界各国都在大力促进绿色节能发展, 在立法和补贴的角度加大对再制造闭环供应链的扶持$^{[27]}$.
+
+\subsection{闭环供应链运作过程中的不确定风险备受关注}
+
+在实际的企业运行过程中, 企业需要面对大量的不确定性, 主要为市场需求的不确定性、供应链产量的不确定和突发的社会情况.
+
+在再制造闭环供应链中需求的不确定性在再制造行业主要表现为消费者对产品喜好的不定. 企业无法精确预测消费者的需求偏好, 消费者可能因为自身偏好从而更喜欢新产品, 但是与此同时, 在整个市场中, 也会有一部分的消费者是“绿色消费者”, 他们更可能会考虑再制造产品$^{[28]}$.
+
+供应链的不确定性主要体现为产品的生产、销售、信息和物料成本等方面产生的不确定性. 知名手机生产商宏达电（宏达国际电子股份有限公司）在~2010~年如日中天, 旗下手机Desire销售十分火爆, 但是当时Desire采用的是三星电子AMOLED屏幕, 但三星见Desire热卖, 但是三星电子机身也在销售手机, 三星便无耻的减少了对其屏幕的供应, 导致宏达电的手机销售一落千丈, 生产经营陷入困难, 从此一蹶不振.
+
+突发的社会情况也会引起企业所面对的不确定性, 例如金融危机和火灾等. 在~2007~年–2008~年全球金融危机中, 以出口为主要业务的企业受到严重的冲击$^{[29]}$. 2013~年, 无锡海力士DRAM（动态随机存取存储器）芯片工厂发生爆炸, 官方宣布DRAM生产线被迫中断. 随后DRAM的主要生产厂家三星、美光及其南科等相继暂停报价, 在过后的几年中内存芯片价格大涨, 至今没有恢复.
+
+研究市场的不确定性带给供应链决策和绩效的影响十分必要, 目前已经有许多学者在建模的过程中考虑了企业需要面对的不确定性, 使得其理论更符合实际的结果, 获得理论更能指导实际企业所面临的问题.
+
+\subsection{问题的提出}
+
+综上所述, 非独立的第三方再制造模式受到了供应链成员的广泛欢迎, 这类再制造模式是供应链中的重要组成部分, 因此得到了广大学者的关注和研究, 但是一些具有现实意义的问题还没解决.
+
+(1)~政府的产业政策作为发展中国家实现大跨步赶超发达国家的重要手段, 得到了世界范围内的国家广泛使用$^{[30]}$. 但是在研究原始设备制造商和第三方再制造商进行再制造模式的选择时, 以往的学者很少考虑政府的政策干涉是否能影响到企业的选择, 但是现实却不如此, 补贴的对象的差异将导致供应链中企业分配利润发生差异$^{[31]}$. 企业将在追逐商业利益的过程中受到政府产业政策的影响, 它们对再制造模式的选择可能受到政府的政策影响, 因此在两种常用的再制造模式中引入政府政策干涉, 具有重要的现实意义.
+
+(2)~经济的不景气带来了更加激烈的市场竞争, 市场上的消费者对再制造产品的接受程度波动具有的不确定性, 这深刻的改变了企业的运营环境. 企业在日常生产过程中的不确定性日益显现, 这严重影响了再制造产业中企业的利润. 然而现在大多下的研究都假设供应链成员为风险中性的, 最大化的目标为最大期望利润. 但是市场需求的波动对再制造产业具有重要的影响, 很多的供应链成员为风险厌恶型, 供应链中企业的决策者面对风险时显现出对市场不确定性的有效控制行为, 因此对两种再制造模式下销售再制造产品的风险建模十分必要, 但是以往的学者较少把它们进行比较.
+
+基于上面讨论, 本文分别将政府的政策干涉和再制造的市场需求不确定性引入到再制造模式选择模型中, 分别研究原始设备制造商和在外包再制造模式与授权再制造模式.
+
+\section{研究意义}
+
+研究了政府干涉和再制造产品的市场需求波动对供应链成员决策和绩效的影响, 研究意义如下:
+
+(1)~拓展了再制造闭环供应链的相关理论研究
+
+本文考虑了政府干涉和再制造产品需求波动对供应链成员决策和绩效的影响. 利用博弈论等相关理论建立相关模型, 研究了以上两个问题, 丰富了再制造闭环供应链的相关研究, 提供了研究和应用的思路一个新思路.
+
+(2)~为管理者的科学管理提供了理论依据
+
+在本文的模型中, 分别将政府干涉和再制造产品需求波动下市场需求波动纳入Stackelberg博弈模型中, 并且进行了数值仿真, 为政府和供应链中企业决策提供了理论依据. 这不仅能够提高企业的经济效益, 更能减少资源浪费、促进环境保护、提高资源利用率, 为经济的可持续提供了一种思路.
+
+\section{国内外研究现状}
+
+再制造闭环供应链是供应链管理的一个重要的研究方向, 一方面废旧产品的再制造能产生巨大的经济价值一系列的企业因此受益, 另一方面再制造产品的生产过程是一个废旧产品的回收过程, 这一过程对于环境的保护产生了积极的影响, 因此受到了学术界广泛的研究与关注. 首先~1995~年, Martijn等~[32]~首先基于产品回收的形式对闭环供应链进行定义, 即: 修复、翻新、再制造、拆分和回收. 紧接着~1997~年, Clegg等~[33]~研究了回收和再制造如何影响公司的经营管理政策, 建立了具有再制造能力的生产系统的线性规划模型. 再制造闭环供应链的研究就此展开.
+
+再制造闭环供应链的文献浩如烟海, 仅在这集中阐述与归纳与本文相关的文献: (1)~回收和再制造渠道选择; (2)~政府干涉下的再制造闭环供应链; (3)~采用均值方差模型对进行风险分析.
+
+(1)~回收和再制造渠道选择
+
+供应链存在着设备制造商、供应商、运输商、仓储商、零售商、消费者等成员, 在供应链中占据领导地位的成员在决策中扮演者重要的作用, 再制造产品将有效的增加负责销售再制造的供应链成员的利润.
+
+邱若臻等~[34]~研究了随机需求下的再制造闭环供应链协调问题, 通过“二部收费制”契约实现了供应链的协调.
+
+Atasu等~[35]~认为市场上存在着两类消费者, 一类是普通消费者, 他们认为新产品更有优势; 另一类是“绿色消费者”, 他们更喜欢再制造产品. 研究表明, 再制造成为一种有效的营销策略.
+
+Xiong等~[36]~分析了集成制造商和分散供应链的性能, 发现集成制造商虽然有可能在再制造活动中获利, 但是再制造活动可能会造成供应商和非集成再制造商的利益损失, 使得它们对再制造行为的抵制. 紧接着Xiong等~[37]~又证实了在再制造成本高于新产品成本也可以启动再制造, 原始设备制造商也可以从中获利.
+
+Chiang等~[38]~研究直销渠道与零售商销售渠道之间的定价博弈, 当制造商控制零售商的定价行为时, 直接渠道可能并不总是对零售商不利, 因为它会伴随着批发价格的降低. 发现直销渠道通过零售商渠道间接获取利润, 有助于帮助设备制造商获利.
+
+Savaska等~[39]~考虑了三种回收废旧产品的模式, 分别为企业直接回收、通过零售商或者分销商回收、通过第三方独立回收商回收, 结果发现: 与消费者最接近的再制造闭环供应链回收者进行回收是最有效的.
+
+Arya等~[40]~研究了批发商与销售商之间的竞争, 批发商经营直销渠道直接向消费者销售产品, 发现降低的批发价格和增加下游竞争可以缓解双重边缘化问题, 并促进了可确保帕累托改进的效率收益.
+
+Tsay等~[41]~讨论了供应链中的设备制造商、区域经销商和本地销售商的“渠道冲突”, 发现设备制造商实施直销并不一定对区域经销商和本地销售商的利益有害.
+
+Ferguso等~[42]~的研究说明, 外包再制造是对于原始设备制造商来说总是最优的选择.
+
+Atasu等~[43]~研究了回收方式对企业产品质量选择的影响, 发现产品回收的形式、回收成本结构、以及产品回收立法的存在对质量选择具有重要作用.
+
+(2) 政府干涉下的再制造闭环供应链
+
+政府对再制造闭环供应链的政策主要为制定奖惩机制, 鼓励或迫使设备制造商进行废旧产品的回收. 通过制定合理的政策, 政府的政策对再制造产业具有重要的影响, 能够促使再制造闭环供应链回收更多的废旧产品, 减小对环境的污染.
+
+Hulett等~[44]~研究了武器系统的再制造, 由政府出资维护延长武器系统的使用寿命.
+
+关启亮等~[45]~考虑政府设定一个最低回收率, 原始设备制造商、销售商、第三方回收商的博弈论模型, 政府的策略能有效地引导原始设备制造商的再制造行为, 政府设定的最低回收率越大, 越能激发供应链的回收行为.
+
+张曙红等~[46]~考虑政府的奖励政策, 在分散决策与集中决策的背景下讨论了新产品与再制造的回收问题, 结果表明政府补贴政策下的闭环供应链集中决策的效率大于分散决策.
+
+辛广茜等~[47]~讨论了政府补贴对政府补贴对制造商、销售商、第三方回收商组成的闭环供应链的影响, 发现政府的补贴能够切实带来废旧产品回收量的提升.
+
+Mitra等~[48]~研究了政府补贴作为促进再制造活动的手段的影响, 政策制定者应考虑向制造商提供的补贴中有一定比例的补贴计划, 补贴分享为制造商设计更适合再制造的产品创造了动力, 并对提高报废产品回报率的努力持更加开放的态度.
+
+Zhu~[49]~等进行了再制造闭环供应链的碳税补贴分析, 研究发现只有当回收价格在一定的范围内时, 政府才应该实施碳补贴政策, 并且碳补贴应该在合理的范围内.
+
+Li等~[50]~讨论了若消费者无法通过接受再制造产品, 使得原始设备制造商无法通过废旧产品的再制造获利时, 可以通过产品捐赠与政府补贴相结合的方式实施再制造.
+
+Zhang等~[51]~讨论了政府干涉下原始设备制造商的回收模型选择问题, 政府对基本再制造比率和单位奖励金额的分配在闭环供应链运营中意义重大, 特别是对作为系统领导者和制造模式的制造商而言选择.
+
+(3) 采用均值方差模型对供应链进行风险分析
+
+均值方差模型被广泛的应用在许多的领域, 包括再制造闭环供应链领域, 可以优化和改善产品销售的预测, 给供应链成员带来潜在的利润. 但是还少见到将利用方差模型分析授权模式和外包模式进行比较的文献.
+
+Guide等~[52]~认为, 再制造系统面临着更大程度的不确定性和复杂性, 因此需要设计规划和控制系统来处理增加的不确定性和复杂性.
+
+Choi等~[53]~研究了基于决策者风险偏好的报童问题. 之后Choi等又~[54]~研究了供应链成员采用均值方差分析时, 供应链中的协调问题, 发现渠道协调取决于供应链协调员和零售商的风险偏好之间的净差异的大小.
+
+Shang等~[55]~研究了两个竞争厂商通过一个共同的零售商销售可替代产品的供应链中零售商的需求信息共享问题, 发现较大的生产不经济或更高的竞争强度导致更多的信息共享.
+
+Hashiguchi等~[56]~介绍了大数据分析在工业系统工程和控制论中面临的挑战和机遇. 基于工业的业务系统的技术发展和进步、工业系统的可靠性和安全性及其操作风险管理.
+
+Xiao等~[57]~研究了存在一个风险中性的供应链和一个风险厌恶的零售商的供应链的决策问题, 其中零售商的供应链是因为市场需求的不确定性从而规避风险， 发现: 零售商的风险敏感性越高, 其最优服务水平和零售价格就越低.
+
+叶飞等~[58]~将上述的问题拓展到零售商和供应商都为风险厌恶下的供应链决策问题, 分析了双方的风险厌恶程度对供应链决策和绩效的影响.
+
+类似的研究有2013年的Xu~[59], Xu将研究的方向引入了双渠道供应链, 其中供应链成员都为风险厌恶型.
+
+曹晓等~[60]~研究了市场需求随机的条件下的供应链竞争问题, 并且在模型中零售商为风险规避型, 最后得到了供应链的均衡结果.
+
+高鹏等~[61]~研究了专利授权合作模式下的闭环供应链.
+
+Niu等~[62]~研究了授权再制造模式下大数据能力对闭环供应链的影响, 发现更好的需求信号能够给原始设备制造商带来更大的利润, 而有些时候却使得第三方再制造的利益受损, 因此提升大数据能力不总是一个好选择.
+
+\section{本文的框架及主要内容}
+
+本文以非独立第三方再制造博弈为背景, 分别考虑政府干涉下和再制造产品市场需求波动下的再制造闭环供应链, 研究原始设备制造商和非独立的第三方再制造商在外包和授权再制造模式的选择问题.
+
+第一章主要介绍研究的背景以及意义, 并详细介绍了前人关于再制造的研究现状, 主要的内容为: (1)~回收和再制造渠道的选择. (2)~政府干涉下的闭环供应链. (3)~采用均值方差模型对进行风险分析.
+
+第二章介绍了本文会用到的一些相关的知识和概念, 例如Stackelberg博弈模型、外包和授权再制造模式的定义.
+
+第三章给出政府对不同的补贴对象进行补贴对原始设备制造商和第三方再制造商之间再制造模式选择的影响, 通过Stackelberg博弈模型给出相应补贴对象下供应链成员的决策和绩效, 然后分析比较上述数值的大小, 最后对市场波动对决策和绩效的影响进行数值实验.
+
+第四章给分析比较了再制造产品需求波动对风险厌恶的供应链企业的再制造模式选择的影响, 并给出了数值实验的结果.
+
+第五章对本文的主要内容及结论进行总结, 并对下一步的研究提出展望.
+
+研究的主要方法:
+
+(1)~文献归纳法, 分别对国内外再制造闭环供应链相关文献进行归纳分析, 比较不同的研究方法的优点和缺点, 总结出相关的重要知识内容, 为本文的研究奠定文献基础.
+
+(2)~数学建模分析, 利用Python中Sympy库, 分别对政府干涉下的再制造闭环供应链与市场波动条件下风险分析进行建模的建立和分析, 通过数学分析得出最优的决策.
+
+(3)~数值模拟, 利用Python中Numpy和Pandas库, 模拟不同参数条件下对供应链成员的决策和绩效的影响, 强化研究的可视性, 使得实际研究更加直观.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{jishu.eps}
+\caption{论文的框架结构}    %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The research process of this dissertation}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\newpage
+\thispagestyle{empty}
+\newpage
+\chapter{\hei 预备知识} % 第2 章
+
+\section{Stackelberg博弈模型}
+
+博弈论是对理性决策者之间战略互动数学模型的研究, 它适用于社会科学以及逻辑和计算机科学的所有领域. 最初它涉及零和博弈, 其中一个人的收益导致其他参与者的损失. 今天博弈论适用于广泛的行为关系, 现在是人类、动物和计算机逻辑决策科学的总称.
+
+在常见的古诺模型和伯特兰德模型里中, 博弈的参与者的市场地位平等, 它们在价格上面竞争并且同时做出决策, 这就导致它们的行为相似; 而在Stackelberg模型的参与者是一个领导者和一个追随者, 他们在产量上竞争, Stackelberg博弈的领导者有时被称为市场领导者.
+
+Stackelberg博弈领导模型是经济学中的一种战略博弈模型, 在这个模型中, 领导者先行动, 然后跟随者依次行动. 它是以德国经济学家Stackelberg的名字命名的, 该模型在~1934~年被提出.
+
+Stackelberg博弈平衡方面进一步的限制中. 领导者必须事先知道跟随者观察其行为, 跟随者必须无法承诺未来的非Stackelberg博弈跟随者行动, 而领导者必须知道这一点. 如果一家公司拥有某种优势, 使其能够先发制人, 那么这些公司可能会参与Stackelberg的竞争. 更笼统地说, 领导者必须有承诺的权力. 首先采取明显的行动是最明显的承诺手段: 一旦领导人采取了行动, 它就不能撤消它, 它将致力于这一行动. 如果领先者是该行业的现有垄断者, 而跟随者是新进入者, 则可能首先采取行动, 持有过剩产能是另一种承诺手段.
+
+\section{授权、外包再制造模式}
+
+外包再制造模式(图\ref{O})是指一家公司雇佣另一家公司负责现有内部活动的模式, 在闭环供应链领域具体表现为原始设备制造商雇佣第三方公司负责废旧产品的回收或者再制造. 与授权再制造模式不同的是, 第三方再制造公司再制造的产品由原始设备制造商进行销售, 原始设备制造商支付给第三方再制造商一定的外包费用$^{[63]}$.
+
+授权再制造模式(图\ref{A})是指第三方再制造商从原始设备制造商获得许可, 使得其合法的使用原始设备制造商的废旧产品进行再制造, 并在不涉及原始设备制造商的情况下自身渠道销售再制造产品$^{[64, 66]}$.
+
+以上的两种再制造方式都为非独立, 非独立的第三方再制造商采取和原始设备制造商合作的方式进行废旧产品的回收再利用, 在文章中, 简称非独立的第三方再制造商为第三方再制造商. 在发达国家, 企业普遍采用外包再制造模式, 而授权模式在发展中国家得到了良好的发展$^{[66, 67]}$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2in]{O.eps}
+\caption{外包再制造模式}\label{O}    %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Outsourced remanufacturing model}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2in]{O.eps}
+\caption{授权再制造模式}\label{A}    %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Authorized remanufacturing mode}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\chapter{\hei 政府干涉下再制造闭环供应链的模式选择}
+
+本章构建了外包再制造模式和授权再制造模式下原始设备制造商与第三方再制造商之间的博弈模型, 讨论了政府干涉对再制造闭环供应链的影响, 分析了供应链决策与绩效在政府不同补贴对象下的异同, 并研究了市场需求波动对供应链决策与绩效的影响. 最后通过数值实验, 进一步研究相关结论.
+
+\section{问题描述}
+
+供应链存在着设备制造商、供应商、运输商、仓储商与零售商等成员. 为简化模型, 本文考虑的供应链成员为原始设备制造商与第三方再制造商. 作为再制造项目的主导者, 原始设备制造商对于再制造产品有两种选择方式: (1)~ 将再制造的整个运作外包给第三方再制造商, 通过支付给第三方再制造商一定的单位再制造外包费用, 使得第三方再制造商回收废旧产品, 称之为外包再制造模式. (2)~ 将再制造运作授权给第三方再制造商, 原始设备制造商对第三方再制造商收取一定的授权专利使用费, 将销售再制造产品的销售权让渡给第三方再制造商, 称之为授权再制造模式.
+
+本文假定新产品与再制造产品在同一个市场进行面向消费者竞争. 在外包模式中, 原始设备制造商负责销售新产品和再制造商品, 第三方再制造商只负责对回收的旧产品进行再制造; 而在授权模式中, 原始设备制造商只进行新产品的销售, 再制造的产品由第三方再制造商进行销售. 由上面的讨论可以得出: 在外包模式中, 原始设备制造商与再制造商没有直接的进行竞争, 双方构成了在合作关系; 而在授权模式中, 因为第三方再制造进行再制造产品的销售, 原始设备制造商与再制造商构成竞争的关系. 原始设备制造商与第三方再制造商均为理性的企业, 都以最大化利润为最终目标. 在整个原始设备制造商与第三方再制造商的竞合过程中, 因为制造新产品所带来的环境污染大于利用废旧产品制造新产品, 因此政府分别向供应链成员提供财政补贴, 旨在通过政策引导, 鼓励再制造产业的发展.
+
+\section{模型假设}
+
+下面讨论几个关键的假设.
+
+假设1: 消费者对于新产品和再制造产品有一定的偏好. 假定新产品的价格为~$v$, 经验证据和实验结果表明, 再制造产品的价值通常比新产品低, 则消费者对于再制造产品的购买意愿为~$\delta v$($\delta  \in (0,1)$), 其中~$v$~服从~[0,1]~上的均匀分布. 消费者对于新产品与再制造的效用分别为:~${u_n} = v - {p_n}$,${u_r} = \delta v - {p_r}$; 再制造产品需求波动的不确定性深刻影响着再制造闭环供应链成员的决策, 因此假定再制造产品的不确定性为~$\varepsilon$, 其中~$\varepsilon\sim N(0,{\sigma ^2})$, 经过简单的积分计算可得,
+\begin{align}
+{Q_n} &= 1 - \frac{{{p_n} - {p_r}}}{{1 - \delta }},\\
+{Q_r} &= \frac{{\delta {p_n} - {p_r}}}{{\delta (1 - \delta )}}+ \varepsilon.
+\end{align}
+
+经过数学计算可得,
+\begin{align}
+{p_n} &= 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon,
+\\
+{p_r} &= \delta (1 - {Q_n} - {Q_r} + \varepsilon).
+\end{align}
+
+假设2: 再制造的生产成本小于全新制造的产品, 旧产品的零件大部分可以重新加以利用, 即$~c_r<c_n$.
+
+此假设广泛的使用在闭环供应链的研究中, 不失一般性, 设备制造商重新组装、测试、准备销售再制造产品的价格与新产品一致, 并已经正规化为零. 研究认为再制造产品的具有成本优势, 在传统行业再制造产品的成本比新产品的成本低~40-60\%.
+
+假设3: 假定第三方回收商回收~${Q_r}$~的回收成本为$~\frac{1}{2}\eta Q_r^2$, 其中~$\eta~$为收集再制造产品的难度系数, 表明过分追求最求过高的回收量是不经济不明智的行为.
+
+假设4: 补贴政策是政府为确保闭环供应链达到一定的目标回收率水平而设计, 为鼓励原始设备制造商和第三方再制造商增加废旧产品的回收,政府对其单位补贴为~$s_{N}~$和~$s_{R}$. 为鼓励消费者购买再制造产品,政府对购买再制造产品的消费者补贴~$s_{C}$, 结合假设1可以得到: 购买再制造产品的消费者的效用~${u_r} = \delta v - ({p_r} - s_{C})$, 则在讨论政府对消费者进行补贴后, 研究引起的引起供应链成员决策和绩效变化时, 重写再制造产品的需求函数为,
+\begin{equation}
+\label{pr} {p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ) + s_{C}.
+\end{equation}
+
+假设5: 所有的决策都在一个稳定的时期内考虑. 原始设备制造商先为新产品定价, 然后第三方再制造商再确定废旧产品的回收量.
+
+再制造的关键特征之一是再制造产品的生产量受可用于再制造的使用产品的数量限制. 一般的只有一部分使用过的产品可由第三方再制造商回收, 假设产品只能使用一个周期, 当期的旧产品数量等于前期新产品的生产量. 市场稳定时, 单周期的模型可以看作无限周期模型的一部分. 并且Zou等$[60]$讨论得出，两周期所有的结论都与单周期类似.
+
+\section{模型求解}
+
+在本章, 讨论两种政府影响下的再制造模型: 外包或者授权再制造模式, 并记~$\pi _k^{ij},i \in \{ O,A\} ,j \in \{ N,R,C\}~$为原始设备制造商或者第三方再制造商的利润，其中上标~$i$ 代表外包或者授权再制造模式, 上标~$j$ 代表政府分别对原始设备制造商、第三方再制造商或者消费者进行补贴, 下标~$k \in \{ n,r\}~$代表原始设备制造商或者第三方再制造商, 本文(3.4.1)首先讨论外包再制造模式, 在后一节(3.4.2)中讨论授权再制造模式. 以下称原始设备制造商为OEM(original equipment manufacturer, OEM), 第三方再制造商为3PR(third-party remanufacturer, 3PR).
+
+\subsection{外包再制造模式}
+
+外包再制造模式中, OEM销售的产品为两种: 新产品与再制造产品. 为获得再制造产品, OEM给3PR支付单位再制造外包费用~${p_o}$, 在供应链中3PR仅负责回收废旧产品产品进行再制造. 假定OEM是stackelberg的领导者, 3PR是其追随者, OEM与3PR的博弈过程如下, OEM决定新产品的产量~${Q_n}$, 支付给3PR的单位外包费用~${p_o}$, 随后根据费用~${p_o}$, 3PR决定从消费者手中收回的旧产品的回收量~${Q_r}$, 利用后向归纳法求解博弈,得到外包再制造模式的均衡决策.
+
+外包再制造模式下, 四种情况分别如下.
+
+(1)~考虑无政府干涉下的外包再制造模式, 如图\ref{O}, OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_o}} {\pi _n^{O}} &= ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}\\
+\mathop {\max }\limits_{Q_r}  {\pi _r^{O}} &= ({p_o} - {c_r}){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{align}
+
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition10}
+外包再制造模式无政府干涉下, 新产品产量、再制造产品产量和外包费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{O*}{\rm{ }} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta {c_r} - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber Q_r^{O*}{\rm{ }} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{O*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+占主导地位的OEM充当Stackelberg博弈的领导者, 而3PR则是跟随者. 因此博弈问题可以反向解决. 在这个市场中, 首先需要求解3PR的回收量的大小.
+
+为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+\begin{equation}\label{ap01}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{O}} = ({p_o} - {c_r}){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{equation}
+对(\ref{ap01})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^O}}{{\partial Q_r^{2}}} =  - \eta  < 0.$
+所以3PR的利润$~\pi _R^O$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应:
+\begin{equation}\label{ap03}
+Q_r^O = \frac{{{p_o} - {c_r}}}{\eta }
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^O$, OEM选择$~Q_{n}^O~$和$~p_{o}^O~$最大化自身的利润
+\[\begin{array}{*{20}{l}}
+{\mathop {\max }\limits_{{Q_n^O},{p_o^O}} \pi _n^{O} = ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}}\\
+{s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^O = \frac{{{p_o^O} - {c_r}}}{\eta }}
+\end{array}\]
+求$~\pi _n^O~$关于$~Q_{n}^O~$和$~p_{o}^O~$ 的~Hessian~矩阵为
+\[H = \left( {\begin{array}{*{20}{c}}
+{ - 2}&{ - \frac{{2\delta }}{\eta }}\\
+{ - \frac{{2\delta }}{\eta }}&{ - \frac{{2(\delta  + \eta )}}{{{\eta ^2}}}}
+\end{array}} \right)\]
+行列式的值为
+\[|H| =  \frac{{4(\eta  - {\delta ^2} + \delta )}}{{{\eta ^2}}} > 0\]
+所以$~\pi _n^O~$是为关于$~Q_{n}^O$~和$~p_{o}^O~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{O*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta {c_r} - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{O*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+将$~Q_n^{O*}$、$p_o^{O*}$~分别代入(\ref{ap03})可以得到
+\begin{align}
+\nonumber Q_r^{O*} = \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary10}
+基于上述均衡决策、相应的均衡下的新产品零售价格、再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论.
+\begin{align}
+\nonumber p_n^{O*} &= \frac{{{c_n} + \delta\varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{O*} &= \frac{{\delta [{c_n}\eta  + ({c_r} + \varepsilon \eta )(1 - \delta )]}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\delta (\varepsilon  + 1)}}{2}
+\\
+\nonumber \begin{split}\label{Rro}
+\pi _n^{O*} &= \frac{{({c_n} - \delta \varepsilon  + 1)({c_n}\delta  + {c_n}\eta  + {\delta ^2} - \delta \varepsilon \eta  - \delta  - \eta)}}{{4(\eta  - {\delta ^2} + \delta )}}
+\\
+& + \frac{{({c_r} - \delta \varepsilon  - \delta )({\delta ^2}\varepsilon  + \delta \varepsilon  + {c_r} - \delta {c_n})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{O*} &= \frac{{\eta {{[{c_n}\delta  - {c_r} + \varepsilon \delta (1 - \delta )]}^2}}}{{8{{(\eta  - {\delta ^2} + \delta )}^2}}}
+\end{align}
+\end{corollary}
+
+(2)~外包再制造模式下, 政府对OEM进行补贴, 如图\ref{OEMO}, 考虑到提高3PR对废旧产品的回收积极性, 政府对OEM单位补贴~${s_N}$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{OEMO.eps}
+\caption{ 政府对OEM进行补贴下的外包再制造模式}\label{OEMO}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Outsourcing remanufacturing model under government subsidy for OEM}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_o}} {\pi _n^{ON}} &= ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o} + {s_N}){Q_r}\\
+\mathop {\max }\limits_{Q_r}  {\pi _r^{ON}} &= ({p_o} - {c_r}){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition11}
+外包再制造模式下政府对OEM进行补贴, 新产品产量、再制造产品产量和外包费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{ON*}{\rm{ }} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta {c_r} - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber Q_r^{ON*}{\rm{ }} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + s_N}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{ON*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\eta {s_N}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+与无政府干涉情况类似, 政府对OEM进行补贴时, 在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap11}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{ON}} = ({p_o} - {c_r}){Q_r} + \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap11})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^O}}{{\partial Q_r^2}} =  - \eta  < 0.$
+所以3PR的利润$~\pi _R^{ON}$~为~$Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap13}
+Q_r^{ON} = \frac{{{p_o} - {c_r}}}{\eta }
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{ON}$, OEM选择$~Q_{n}^{ON}~$和$~p_{o}^{ON}~$最大化自身的利润
+
+\[\begin{array}{*{20}{l}}\label{ap14}
+{\mathop {\max }\limits_{{Q_n},{p_o}} \pi _n^{ON} = ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o} + {s_N}){Q_r}}\\
+{s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^{ON} = \frac{{{p_o} - {c_r}}}{\eta }}
+\end{array}\]
+
+求$~\pi _n^{ON}~$关于$~Q_{n}^{ON}~$和$~p_{o}^{ON}~$的~Hessian~矩阵为
+\[H = \left( {\begin{array}{*{20}{c}}
+{ - 2}&{ - \frac{{2\delta }}{\eta }}\\
+{ - \frac{{2\delta }}{\eta }}&{ - \frac{{2(\delta  + \eta )}}{{{\eta ^2}}}}
+\end{array}} \right)\]
+行列式的值为
+\[|H| =  \frac{{4(\eta  - {\delta ^2} + \delta )}}{{{\eta ^2}}} > 0\]
+所以$~\pi _n^{ON}~$是为关于$~Q_{n}^{ON}$~ 和$~p_{o}^{ON}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{ON*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_N}) - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{ON*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\eta {s_N}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+将$~Q_n^{ON*}$、$p_o^{ON*}$~分别代入(\ref{ap13})可以得到,
+\begin{align}
+\nonumber Q_r^{ON*} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + {s_N}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary11}
+基于上述均衡决策、相应的均衡新产品零售价格、再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+\nonumber p_n^{ON*} &= \frac{{{c_n} + \delta\varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{ON*} &= \frac{{\delta [{c_n}\eta  + ({c_r} - {s_N} + \varepsilon \eta )(1 - \delta )]}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\delta (\varepsilon  + 1)}}{2}
+\\
+\nonumber \begin{split}
+\pi _n^{ON*} &= \frac{{({c_n} - \delta \varepsilon  + 1)({c_n}\delta  + {c_n}\eta  + {\delta ^2} - \delta \varepsilon \eta  - \delta  - \eta  + \delta {s_N})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\\
+&+ \frac{{({c_r} - \delta \varepsilon  - \delta  - {s_N})({\delta ^2}\varepsilon  + \delta \varepsilon  + {c_r} - \delta {c_n} - {s_N})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{ON*} &= \frac{{\eta {{[{c_n}\delta  - {c_r} + \varepsilon \delta (1 - \delta ) + {s_N}]}^2}}}{{8{{(\eta  - {\delta ^2} + \delta )}^2}}}
+\end{align}
+\end{corollary}
+
+(3)~外包再制造模式下, 政府对3PR进行补贴, 如图\ref{3PRO}, 考虑到提高3PR对废旧产品的回收积极性, 政府对3PR进行补贴$~{s_R}$.
+
+\begin{figure}[h]
+\centering
+%\includegraphics[width=5.5cm,height=3.5cm]{3PRO.eps}
+\includegraphics[width=3in]{3PRO.eps}
+\caption{政府对3PR进行补贴下的外包再制造模式}\label{3PRO}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Outsourcing remanufacturing model under government subsidy for 3PR}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_o}} {\pi _n^{OR}} &= ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}\\
+\mathop {\max }\limits_{Q_r}   {\pi _r^{OR}} &= ({p_o} - {c_r} + {s_R}){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{align}
+
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition12}
+外包再制造模式下政府对3PR进行补贴, 新产品产量、再制造产品产量、外包费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{OR*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_R}) - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber Q_r^{OR*} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + {s_R}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{OR*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{(\eta  - 2{\delta ^2} + 2\delta ){s_R}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+\end{proposition}
+
+
+\begin{proofname}
+政府对3PR进行补贴时, 在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap21}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{OR}} = ({p_o} - {c_r}+ s_{R}){Q_r} + \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap21})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^O}}{{\partial Q_r^2}} =  - \eta  < 0.$
+所以3PR的利润$~\pi _R^{OR}$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap23}
+Q_r^{OR} = \frac{{{p_o} - {c_r}}}{\eta }
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{OR}$, OEM选择$~Q_{n}^{OR}~$和$~p_{o}^{OR}~$最大化自身的利润
+
+\[\begin{array}{*{20}{l}}\label{ap24}
+{\mathop {\max }\limits_{{Q_n},{p_o}} \pi _n^{OR} = ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}}\\
+{s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^{OR} = \frac{{{p_o} - {c_r}}}{\eta }}
+\end{array}\]
+
+求$~\pi _n^{OR}~$关于$~Q_{n}^{OR}~$和$~p_{o}^{OR}~$的~Hessian~矩阵为
+\[H = \left( {\begin{array}{*{20}{c}}
+{ - 2}&{ - \frac{{2\delta }}{\eta }}\\
+{ - \frac{{2\delta }}{\eta }}&{ - \frac{{2(\delta  + \eta )}}{{{\eta ^2}}}}
+\end{array}} \right)\]
+行列式的值为
+\[|H| =  \frac{{4(\eta  - {\delta ^2} + \delta )}}{{{\eta ^2}}} > 0\]
+所以$~\pi _n^{OR}~$是为关于$~Q_{n}^{R}$~ 和$~p_{o}^{R}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{OR*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_R}) - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{OR*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{(\eta  - 2{\delta ^2} + 2\delta ){s_R}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+将$~Q_n^{OR*}$、$p_o^{OR*}$~分别代入(\ref{ap23})可以得到
+\begin{align}
+\nonumber Q_r^{OR*} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + {s_R}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary12}
+基于上述均衡决策、相应的均衡新产品零售价格、再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+\nonumber p_n^{OR*} &= \frac{{{c_n} + \varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{OR*} &= \frac{{\delta [{c_n}\eta  + ({c_r} - {s_R})(1 - \delta )]}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\delta (\varepsilon  + 1)}}{2}
+\\
+\nonumber \begin{split}
+\pi _n^{OR*} &= (1 + \varepsilon  - {c_n})\left[\frac{{1 + \varepsilon }}{4} + \frac{{\delta ({c_{r}}  - {s_R}) - {c_n}(\delta  + \eta )}}{{4(\eta  - {\delta ^2} + \delta )}}\right]
+\\
+&+\frac{{({c_n}\delta  - {c_r} + {s_R})(\delta \varepsilon  + \delta  - {c_r} + {s_R})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{OR*}{\rm{ }} &= \frac{{\eta {{({c_n}\delta  - {c_r} + {s_R})}^2}}}{{8{{(\eta  - {\delta ^2} + \delta )}^2}}}
+\end{align}
+\end{corollary}
+
+(4)~外包再制造模式下, 政府对消费者进行补贴, 如图\ref{CO}, 考虑到提高消费者对再制造产品的购买量, 政府对购买再制造产品的消费者补贴$~s_{C}$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{CO.eps}
+\caption{政府对消费者进行补贴下的外包再制造模式}\label{CO}     % 图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Outsourcing remanufacturing model under government subsidy for consumers}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_o}} {\pi _n^{OC}} &= ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}\\
+\mathop {\max }\limits_{Q_r}   {\pi _r^{OC}} &= ({p_o} - {c_r}){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta{Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon + s_{C}).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition13}
+外包再制造模式下政府对消费者进行补贴, 新产品产量、再制造产品产量、外包费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{OC*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_C}) - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber Q_r^{OC*} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + {s_C}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{OC*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\eta {s_C}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+政府对消费者进行补贴时, 在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap31}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{OC}} = ({p_o} - {c_r}){Q_r} + \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap31})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^{OR}}}{{\partial Q_r^2}} =  - \eta  < 0.$
+所以3PR的利润$~\pi _R^{OC}$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap33}
+Q_r^{OC} = \frac{{{p_o} - {c_r}}}{\eta }
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{OC}$, OEM选择$~Q_{n}^{OC}~$和$~p_{o}^{OC}~$最大化自身的利润
+
+\[\begin{array}{*{20}{l}}\label{ap34}
+{\mathop {\max }\limits_{{Q_n},{p_o}} \pi _n^{OC} = ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}}\\
+{s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^{OC} = \frac{{{p_o} - {c_r}}}{\eta }}
+\end{array}\]
+
+求$~\pi _n^{OC}~$关于$~Q_{n}^{OC}~$和$~p_{o}^{OC}~$的~Hessian~矩阵为
+\[H = \left( {\begin{array}{*{20}{c}}
+{ - 2}&{ - \frac{{2\delta }}{\eta }}\\
+{ - \frac{{2\delta }}{\eta }}&{ - \frac{{2(\delta  + \eta )}}{{{\eta ^2}}}}
+\end{array}} \right)\]
+行列式的值为
+\[|H| =  \frac{{4(\eta  - {\delta ^2} + \delta )}}{{{\eta ^2}}} > 0\]
+所以$~\pi _n^{OR}~$是为关于$~Q_{n}^{OR}$~ 和$~p_{o}^{OR}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{OC*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_C}) - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber p_o^{OC*} &= {c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\eta {s_C}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+将$~Q_n^{OC*}$、$p_o^{OC*}$~分别代入(\ref{ap33})可以得到
+\begin{align}
+\nonumber Q_r^{OC*} &= \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + {s_C}}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary13}
+基于上述均衡决策、相应的均衡新产品零售价格、再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+p_n^{OC*} &= \frac{{{c_n} + \delta\varepsilon  + 1}}{2}
+\\
+p_r^{OC*} &= \frac{{\delta [{c_n}n - {c_r}\delta  + {c_r} + \varepsilon \eta (1 - \delta )] + \eta {s_C}}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\delta (\varepsilon + 1) + {s_C}}}{2}
+\\
+\begin{split}
+\pi _n^{OC*} &= \frac{{({c_n} - \delta \varepsilon  + 1)({c_n}\delta  + {c_n}\eta  + {\delta ^2} - \delta \varepsilon \eta  - \delta  - \eta  + \delta {s_C})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\\
+&+ \frac{{({c_r} - \delta \varepsilon  - \delta  - {s_C})({\delta ^2}\varepsilon  + \delta \varepsilon  + {c_r} - \delta {c_n} - {s_C})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\end{split}
+\\
+\pi _r^{OC*} &= \frac{{\eta {{[{c_n}\delta  - {c_r} + \varepsilon \delta (1 - \delta ) + {s_C}]}^2}}}{{8{{(\eta  - {\delta ^2} + \delta )}^2}}}
+\end{align}
+\end{corollary}
+
+\subsection{授权再制造模式}
+
+在授权再制造模式中, OEM和3PR存在着竞合关系, 一方面OEM向3PR收取单位授权专利使用费, 3PR从出售再制造产品中获得利润, 另一方面由于本文假设新产品与再制造产品在同一市场里面向消费者, OEM销售的新产品与3PR销售的再制造产品存在着竞争关系, 因此OEM 会通过收取适当的专利使用费用以维持再制造产品的售价, 使得新产品有一定的市场空间. 和上一节类似, 假定OEM是Stackelberg博弈的领导者, 3PR是其追随者, OEM与3PR的博弈过程如下: 首先, OEM决定新产品的产量~${Q_n}$, 紧接着向3PR收取的单位专利授权使用费~${p_s}$, 随后根据授权费用~${p_s}$, 3PR决定从消费者手中收回的旧产品的回收率量~${Q_r}$.
+
+基于以上的讨论, 分种四种情况进行讨论.
+
+(1)~无政府干涉的授权再制造模式, 如图\ref{A}, OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{A} &= ({p_n} - {c_n}){Q_n} + {p_s}{Q_r}
+\\
+\mathop {\max }\limits_{Q_r}  \pi _r^{A} &= ({p_r} - {c_r}- {p_s}){Q_n} - \frac{1}{2}\eta Q_r^2
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition20}
+授权再制造模式无政府干涉下, 新产品产量、再制造产品产量和授权费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{A*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta {c_r} - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber Q_r^{A*} &= \frac{{{c_n}\delta  - {c_r}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{A*} &= \frac{{\delta \varepsilon  + \delta  - {c_r}}}{2}
+\end{align}
+\end{proposition}
+
+利用后向归纳法求解博弈,得到外包再制造模式的均衡决策.
+
+\begin{proofname}
+在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap101}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{A}} = ({p_r} - {c_r} - p_s){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap101})求~$Q_r^{A}~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^A}}{{\partial Q_r^2}} =  -2\delta -\eta  < 0.$
+所以3PR的利润$~\pi _R^{A}$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap103}
+Q_r^{A} = \frac{{\delta \varepsilon  - \delta Q_n^A + \delta  - {p_s} - {c_r}}}{{2\delta  + \eta }}
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{OR}$, OEM选择$~Q_{n}^{OR}~$和$~p_{o}^{OR}~$最大化自身的利润
+
+\[\begin{array}{l}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^A = ({p_n} - {c_n}){Q_n} + {p_s}{Q_r}\\
+s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^A = \frac{{\delta \varepsilon  - \delta Q_n^A + \delta  - {p_s} - {c_r}}}{{2\delta  + \eta }}n
+\end{array}\]
+
+求$~\pi _n^{A}~$关于$~Q_{n}^{A}~$和$~p_{o}^{A}~$的~Hessian~矩阵为
+$$H = \left( {\begin{array}{*{20}{c}}
+{\frac{{ - 2}}{{2\delta  + \eta }}}&0\\
+0&{\frac{{2{\delta ^2}}}{{2\delta  + \eta }} - 2}
+\end{array}} \right)$$
+
+行列式的值为
+\[|H| =  \frac{{ - 4{\delta ^2} + 8\delta  + 4\eta }}{{{{(2\delta  + \eta )}^2}}} > 0\]
+所以$~\pi _n^{A}~$是为关于$~Q_{n}^{A}$~和$~p_{o}^{A}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{A*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta {c_r} - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{A*} &= \frac{{\delta \varepsilon  + \delta  - {c_r}}}{2}
+\end{align}
+将$~Q_n^{A*}$、$p_o^{A*}$~分别代入(\ref{ap103})可以得到
+\begin{align}
+\nonumber Q_r^{A*} &= \frac{{{c_n}\delta  - {c_r}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary20}
+基于上述均衡决策、相应的均衡新产品零售价格、再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+\nonumber p_n^{A*} &= \frac{{{c_n} + \delta\varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{A*} &= \frac{{\delta [{c_n}(\delta  + \eta ) + {c_r}(1 - \delta ) - \delta \varepsilon (\eta  + 1)]}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta (1 + 2\varepsilon )}}{2}
+\\
+\nonumber \begin{split}\label{Rra}
+\pi _n^{A*} &= \frac{{(\delta  + 1 - {c_n})({c_r}\delta  - 2{c_n}\delta  - {c_n}\eta  + {\delta ^2}\varepsilon  - {\delta ^2} + \delta \varepsilon \eta  + 2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}\\
+& + \frac{{(\delta  + \delta \varepsilon  - {c_r})({c_r} - {c_n}\delta  + {\delta ^2}\varepsilon  - \delta \varepsilon )}}{{4(\eta  - {\delta ^2} + 2\delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{A*} &= \frac{{(2\delta  + \eta ){{({c_n}\delta  - {c_r} - {\delta ^2}\varepsilon  + \delta \varepsilon )}^2}}}{{8{{(\eta  - {\delta ^2} + 2\delta )}^2}}}
+\end{align}
+\end{corollary}
+
+
+(2)~授权再制造模式下, 政府对OEM进行补贴, 如图\ref{OEMA}, 考虑到提高OEM对废旧产品的回收积极性, 政府对OEM单位补贴$~{s_N}$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{OEMA.eps}
+\caption{政府对OEM进行补贴下的授权再制造模式}\label{OEMA}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Authorization remanufacturing model under government subsidy for OEM}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{AN} &= ({p_n} - {c_n}){Q_n} + ({p_s} + {s_N}){Q_r}
+\\
+\mathop {\max }\limits_{Q_r}  \pi _r^{AN} &= ({p_r} - {c_r}- {p_s}){Q_n} - \frac{1}{2}\eta Q_r^2
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition21}
+授权再制造模式下, 政府对OEM进行补贴, 新产品产量、再制造产品产量和授权费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{AN*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_N}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber Q_r^{AN*} &= \frac{{{c_n}\delta  - {c_r} + {s_N}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{AN*} &= \frac{{\delta \varepsilon  + \delta  - {c_r} - {s_N}}}{2}
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+在为了求出3PR的最优回收量, 需要解决其的最大化问题.
+
+\begin{equation}\label{ap111}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{AN}} = ({p_r} - {c_r} - p_s){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap111})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^{AN}}}{{\partial Q_r^2}} =  -2\delta -\eta  < 0.$
+所以3PR的利润$~\pi _R^{AN}$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap113}
+Q_r^{AN} = \frac{{\delta \varepsilon  - \delta Q_n + \delta  - {p_s} - {c_r}}}{{2\delta  + \eta }}
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{AN}$, OEM选择$~Q_{n}^{AN}~$和$~p_{o}^{AN}~$最大化自身的利润
+
+\[\begin{array}{l}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{AN} = ({p_n} - {c_n}){Q_n^{AN}} + ({p_s} + s_{N}){Q_r^{AN}}\\
+s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^{AN} = \frac{{\delta \varepsilon  - \delta Q_n^{AN} + \delta  - {p_s} - {c_r}}}{{2\delta  + \eta }}
+\end{array}\]
+
+求$~\pi _n^{AN}~$关于$~Q_{n}^{AN}~$和$~p_{o}^{AN}~$的~Hessian~矩阵为
+$$H = \left( {\begin{array}{*{20}{c}}
+{\frac{{ - 2}}{{2\delta  + \eta }}}&0\\
+0&{\frac{{2{\delta ^2}}}{{2\delta  + \eta }} - 2}
+\end{array}} \right)$$
+
+行列式的值为
+\[|H| =  \frac{{ - 4{\delta ^2} + 8\delta  + 4\eta }}{{{{(2\delta  + \eta )}^2}}} > 0\]
+所以$~\pi _n^{AN}~$是为关于$~Q_{n}^{AN}$~ 和$~p_{o}^{AN}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{AN*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_N}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{AN*} &= \frac{{\delta \varepsilon  + \delta  - {c_r} - {s_N}}}{2}
+\end{align}
+将$~Q_n^{AN*}$、$p_o^{AN*}$~分别代入(\ref{ap113})可以得到,
+\begin{align}
+\nonumber Q_r^{AN*} &= \frac{{{c_n}\delta  - {c_r} + {s_N}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary21}
+基于上述均衡决策, 相应的均衡新产品零售价格, 再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+\nonumber p_n^{AN*} &= \frac{{{c_n} + \delta\varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{AN*} &= \frac{{\delta [{c_n}(\delta  + \eta ) + ({c_r} - {s_N}\delta )(1 - \delta ) - \delta \varepsilon (\eta  + 1)]}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta (1 + 2\varepsilon )}}{2}
+\\
+\nonumber \begin{split}
+\pi _n^{AN*} &= \frac{{(\delta  + 1 - {c_n})({c_r}\delta  - 2{c_n}\delta  - {c_n}\eta  + {\delta ^2}\varepsilon  - {\delta ^2} + \delta \varepsilon \eta  + 2\delta  + \eta  - \delta {s_N})}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+& + \frac{{(\delta  + \delta \varepsilon  - {c_r} + {s_N})({c_r} - {c_n}\delta  + {\delta ^2}\varepsilon  - \delta \varepsilon  + {s_N})}}{{4(\eta  - {\delta ^2} + 2\delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{AN*} &= \frac{{(2\delta  + \eta ){{({c_n}\delta  - {c_r} - {\delta ^2}\varepsilon  + \delta \varepsilon  + {s_N})}^2}}}{{8{{(\eta  - {\delta ^2} + 2\delta )}^2}}}
+\end{align}
+\end{corollary}
+
+(3)~授权再制造模式下, 政府对3PR进行补贴, 如图\ref{3PRA}, 考虑到提高OEM对废旧产品的回收积极性, 政府对3PR进行单位补贴~${s_R}$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{3PRA.eps}
+\caption{政府对3PR进行补贴下的授权再制造模式}\label{3PRA}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Authorization remanufacturing model under government subsidy for 3PR}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{AR} &= ({p_n} - {c_n}){Q_n} + {p_s}{Q_r}
+\\
+\mathop {\max }\limits_{Q_r}   \pi _r^{AR} &= ({p_r} - {c_r}- {p_s} + {s_R}){Q_n} - \frac{1}{2}\eta Q_r^2
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon ).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition22}
+授权再制造模式下政府对3PR进行补贴, 相应的新产品产量、再制造产品产量和授权费用可以归纳如下:
+\begin{align}
+\nonumber Q_n^{AR*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_R}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber Q_r^{AR*} &= \frac{{{c_n}\delta  - {c_r} + {s_R}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{AR*} &= \frac{{\delta \varepsilon  + \delta  - {c_r} + {s_R}}}{2}
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+
+在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap121}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{AR}} = ({p_r} - {c_r} - p_s + s_{R}){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap121})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^{AR}}}{{\partial Q_r^2}} =  -2\delta -\eta  < 0.$
+所以3PR的利润$~\pi _R^{AR}$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap123}
+Q_r^{AR} = \frac{{\delta \varepsilon  - \delta Q_n + \delta  - {p_s} - {c_r}+ s_{R}}}{{2\delta  + \eta }}
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{AR}$, OEM选择$~Q_{n}^{AR}~$和$~p_{o}^{AR}~$最大化自身的利润
+
+\[\begin{array}{l}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{AR} = ({p_n} - {c_n}){Q_n^{AR}} + {p_s}{Q_r^{AR}}\\
+s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^{AR} = \frac{{\delta \varepsilon  - \delta Q_n^{AR} + \delta  - {p_s} - {c_r}}}{{2\delta  + \eta }}
+\end{array}\]
+
+求$~\pi _n^{AR}~$关于$~Q_{n}^{AR}~$和$~p_{o}^{AR}~$的~Hessian~矩阵为,
+$$H = \left( {\begin{array}{*{20}{c}}
+{\frac{{ - 2}}{{2\delta  + \eta }}}&0\\
+0&{\frac{{2{\delta ^2}}}{{2\delta  + \eta }} - 2}
+\end{array}} \right)$$
+
+行列式的值为
+\[|H| =  \frac{{ - 4{\delta ^2} + 8\delta  + 4\eta }}{{{{(2\delta  + \eta )}^2}}} > 0\]
+所以$~\pi _n^{AN}~$是为关于$~Q_{n}^{AN}$~ 和$~p_{o}^{AN}~$凹函数, 可以得到一个稳定点为,
+\begin{align}
+\nonumber Q_n^{AR*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_R}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{AR*} &= \frac{{\delta \varepsilon  + \delta  - {c_r} + {s_R}}}{2}
+\end{align}
+将$~Q_n^{AR*}$、$p_S^{AR*}$~分别代入(\ref{ap123})可以得到,
+\begin{align}
+\nonumber Q_r^{AR*} &= \frac{{{c_n}\delta  - {c_r} + {s_R}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary22}
+基于上述均衡决策, 相应的均衡新产品零售价格, 再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+\nonumber p_n^{AR*} &= \frac{{{c_n} + \delta\varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{AR*} &= \frac{{\delta [{c_n}(\delta  + \eta ) + ({c_r} - {s_R}\delta )(1 - \delta ) - \delta \varepsilon (\eta  + 1)]}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta (1 + 2\varepsilon )}}{2}
+\\
+\nonumber \begin{split}
+\pi _n^{AR*} &= \frac{{(\delta  + 1 - {c_n})({c_r}\delta  - 2{c_n}\delta  - {c_n}\eta  + {\delta ^2}\varepsilon  - {\delta ^2} + \delta \varepsilon \eta  + 2\delta  + \eta  - \delta {s_R})}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+&+ \frac{{(\delta  + \delta \varepsilon  - {c_r} + {s_N})({c_r} - {c_n}\delta  + {\delta ^2}\varepsilon  - \delta \varepsilon  + {s_N})}}{{4(\eta  - {\delta ^2} + 2\delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{AR*} &= \frac{{(2\delta  + \eta ){{({c_n}\delta  - {c_r} - {\delta ^2}\varepsilon  + \delta \varepsilon  + {s_R})}^2}}}{{8{{(\eta  - {\delta ^2} + 2\delta )}^2}}}
+\end{align}
+\end{corollary}
+
+(4)~授权再制造模式下, 政府对消费者进行补贴如图\ref{CA}, 考虑到提高OEM对废旧产品的回收积极性, 政府对购买再制造产品的消费者补贴$~s_{C}~$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{CA.eps}
+\caption{政府对消费者进行补贴下的再制造模式}\label{CA}     % 图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{Authorization remanufacturing model under government subsidy for consumers}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+OEM问题和3PR问题分别如下:
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{AC} &= ({p_n} - {c_n}){Q_n} + {p_s}{Q_r}
+\\
+\mathop {\max }\limits_{Q_r}   \pi _r^{AC} &= ({p_r} - {c_r}- {p_s}){Q_n} - \frac{1}{2}\eta Q_r^2
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r} + \varepsilon +s_{C}).
+\end{array}
+$$
+
+\begin{proposition}\label{proposition22}
+授权再制造模式下政府对消费者进行补贴、新产品产量、再制造产品产量、授权费用和回收率可以归纳如下:
+\begin{align}
+\nonumber Q_n^{AC*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_C}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber Q_r^{AC*} &= \frac{{{c_n}\delta  - {c_r} + {s_C}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{AC*} &= \frac{{\delta \varepsilon  + \delta  - {c_r} + {s_C}}}{2}
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap131}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{AC}} = ({p_r} - {c_r} - p_s){Q_r} - \frac{1}{2}\eta Q_r^2
+\end{equation}
+
+对(\ref{ap131})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^{AC}}}{{\partial Q_r^2}} =  -2\delta -\eta  < 0.$
+所以3PR的利润$~\pi _R^{AC}$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap133}
+Q_r^{AC} = \frac{{\delta \varepsilon  - \delta Q_n + \delta  - {p_s} - {c_r}+ s_{C}}}{{2\delta  + \eta }}
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^{AC}$, OEM选择$~Q_{n}^{AC}~$和$~p_{o}^{AC}~$最大化自身的利润
+
+\[\begin{array}{l}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^{AC} = ({p_n} - {c_n}){Q_n^{AC}} + {p_s}{Q_r^{AC}}\\
+s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^{AC} = \frac{{\delta \varepsilon  - \delta Q_n^{AC} + \delta  - {p_s} - {c_r}+ s_{C}}}{{2\delta  + \eta }}
+\end{array}\]
+
+求$~\pi _n^{AC}~$关于$~Q_{n}^{AC}~$和$~p_{o}^{AC}~$的~Hessian~矩阵为
+$$H = \left( {\begin{array}{*{20}{c}}
+{\frac{{ - 2}}{{2\delta  + \eta }}}&0\\
+0&{\frac{{2{\delta ^2}}}{{2\delta  + \eta }} - 2}
+\end{array}} \right)$$
+
+行列式的值为
+\[|H| =  \frac{{ - 4{\delta ^2} + 8\delta  + 4\eta }}{{{{(2\delta  + \eta )}^2}}} > 0\]
+所以$~\pi _n^{AC}~$是为关于$~Q_{n}^{AC}$~ 和$~p_{o}^{AC}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{AC*} &= \frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s_C}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\nonumber p_s^{AR*} &= \frac{{\delta \varepsilon  + \delta  - {c_r} + {s_R}}}{2}
+\end{align}
+将$~Q_n^{AR*}$、$p_S^{AR*}$~分别代入(\ref{ap133})可以得到
+\begin{align}
+\nonumber Q_r^{AC*} &= \frac{{{c_n}\delta  - {c_r} + {s_C}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}\label{corollary23}
+基于上述均衡决策、相应的均衡新产品零售价格、再制造产品的零售价格和OEM、3PR的利润可以归纳为:
+\begin{align}
+\nonumber p_n^{AC*} &= \frac{{{c_n} + \delta \varepsilon  + 1}}{2}
+\\
+\nonumber p_r^{AC*} &= \frac{{\delta [{c_n}(\delta  + \eta ) + {c_r}(1 - \delta ) - \delta \varepsilon (\eta  + 1) + {s_C}(2\eta  - {\delta ^2} + 3\delta )]}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta (1 + 2\varepsilon )}}{2}
+\\
+\nonumber \begin{split}
+\pi _n^{AC*} &= \frac{{(\delta  + 1 - {c_n})({c_r}\delta  - 2{c_n}\delta  - {c_n}\eta  + {\delta ^2}\varepsilon  - {\delta ^2} + \delta \varepsilon \eta  + 2\delta  + \eta  - \delta {s_C})}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+&+ \frac{{(\delta  + \delta \varepsilon  - {c_r} + {s_C})({c_r} - {c_n}\delta  + {\delta ^2}\varepsilon  - \delta \varepsilon  + {s_C})}}{{4(\eta  - {\delta ^2} + 2\delta )}}
+\end{split}
+\\
+\nonumber \pi _r^{AC*} &= \frac{{(2\delta  + \eta ){{({c_n}\delta  - {c_r} - {\delta ^2}\varepsilon  + \delta \varepsilon  + {s_C})}^2}}}{{8{{(\eta  - {\delta ^2} + 2\delta )}^2}}}
+\end{align}
+\end{corollary}
+
+\section{供应链成员对再制造模式的选择}\label{3}
+
+在本节, 讨论再制造产品的市场需求波动下, 政府干涉对企业再制造模式模式选择的影响. 分析比较均衡条件下再制造闭环供应链各个成员企业决策和绩效. 不失一般性, 为简洁的比较大小, 在本节的讨论开始前假设政府为OEM、3PR消费者准备的补贴有以下的关系~$s_{N}=s_{R}=s_{C}=s$, 即政府给供应链成员的补贴相同.
+
+\subsection{消费者角度}
+
+从消费者角度选择回收渠道.
+
+\begin{remarkq}\label{pn}
+政府干涉下的闭环供应链中新产品的价格满足~$p_n^{ON*} = p_n^{OR*} = p_n^{OC*} = p_n^{O*} = p_n^{A*} = p_n^{AN*} = p_n^{AR*} = p_n^{AC*}.$
+\end{remarkq}
+
+\begin{proofname}根据推论(3.3.1)、推论(3.3.2)、推论(3.3.3)、推论(3.3.4)、推论(3.3.5)、推论(3.3.6)、推论(3.3.7) 和推论(3.3.8)可得
+\[p_n^{ON*} = p_n^{OR*} = p_n^{OC*} = p_n^{O*} = p_n^{A*} = p_n^{AN*} = p_n^{AR*} = p_n^{AC*} = \frac{{{c_n} + \delta \varepsilon  + 1}}{2}\]
+\end{proofname}
+
+结论\ref{pn}表明虽然OEM和3PR在两种再制造模式扮演的角色存在着差异, 即使政府对供应链中补贴的对象不同, 供应链中新产品的价格也并不会受补贴对象差异的影响, 新产品的销售价格保持不变. 因此从消费者的角度只需对比再制造的价格.
+
+\begin{remarkq}\label{pr}
+政府干涉下闭环供应链中再制造的价格满足~$p_r^{Oj*} < p_r^{Aj*},j \in \{ N,R,C\} ;p_r^{ON*} = p_r^{OR*} < p_r^{O*} < p_r^{OC*};p_r^{AN*} = p_r^{AR*} < p_r^{A*} < p_r^{AC*}.$
+\end{remarkq}
+
+\begin{proofname}
+根据推论(3.3.1)、推论(3.3.2)、推论(3.3.3)、推论(3.3.4)、推论(3.3.5)、推论(3.3.6)、推论(3.3.7)和推论(3.3.8) 可得
+$$p_r^{Oj*} - p_r^{Aj*} = \frac{{{\delta ^2}(1 - \delta )( - {c_n}\delta  + {c_r} + {\delta ^2}\varepsilon  - \delta \varepsilon  - s)}}{{2(\eta  - {\delta ^2} + \delta )(\eta  - {\delta ^2} + 2\delta -s)}}$$
+又因为
+$$Q_r^{ON*} = \frac{{{c_n}\delta  - {c_r} + {s}{\rm{ + }}\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}~$$
+所以有
+$${{c_n}\delta  - {c_r} + {s}{\rm{ + }}\delta \varepsilon (1 - \delta )} > 0$$
+最后可得$~p_r^{Oj*} - p_r^{Aj*} < 0$.
+
+我们有
+\[p_r^{ON*} = p_r^{OR*} = \frac{{\delta [{c_n}\eta  + ({c_r} - {s} + \varepsilon \eta )(1 - \delta )]}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\delta (\varepsilon  + 1)}}{2}\]
+又因为
+$$p_r^{O*} - p_r^{ON*} = \frac{{\delta s(1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} > 0$$
+$$p_r^{OC*} - p_r^{O*} = \frac{{s(\eta  - {\delta ^2} + 2\delta )}}{{2(\eta  - {\delta ^2} + \delta )}} > 0$$
+同理
+\[p_r^{AN*} =p_r^{AR*} = \frac{{\delta [{c_n}(\delta  + \eta ) + ({c_r} - {s}\delta )(1 - \delta ) - \delta \varepsilon (\eta  + 1)]}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta (1 + 2\varepsilon )}}{2}\]
+又因为
+$$p_r^{A*} - p_r^{AN*} = \frac{{\delta s(1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} > 0$$
+$$p_r^{AC*} - p_r^{A*} = \frac{{s(\eta  - {\delta ^2} + 3\delta )}}{{2(\eta  - {\delta ^2} + \delta )}} > 0$$
+
+结论得证.
+\end{proofname}
+
+结论\ref{pr}表明: 在外包再制造模式中再制造产品的销售价格小于授权模式下的价格. 在外包再制造模式中, OEM通过支付外包费用给3PR用以完成再制造产品的再制造, 并且自身对外销售再制造产品, 而3PR仅仅负责回收废旧产品; 而在授权模式下, 3PR 负责再制造产品的回收并且负责完成再制造产品的销售工作, 使得OEM与3PR在市场中是竞争的关系, 再制造定价的决策者的差异导致两者再制造产品价格的差异.
+
+综上可知, 外包是消费者更喜欢的再制造模式, 政府可以通过补贴给OEM或者3PR使得消费者能以较低的价格去购买再制造产品.
+
+\subsection{政府角度}
+
+从政府角度观察回收渠道.
+
+\begin{remarkq}\label{qr}
+外包再制造模式下废旧产品的回收量满足~$Q_r^{Oj*} > Q_r^{Aj*}, j \in \{ N,R,C\} ;Q_r^{OC*} = Q_r^{ON*} = Q_r^{OC*} > Q_r^{O*};Q_r^{AC*} = Q_r^{AN*} = Q_r^{AC*} > Q_r^{A*}.$
+\end{remarkq}
+
+\begin{proofname}
+根据命题(3.3.1)、命题(3.3.2)、命题(3.3.3)、命题(3.3.4)、命题(3.3.5)、命题(3.3.6)、命题(3.3.7)和命题(3.3.8).
+
+可得
+$$Q_r^{Oj*} - Q_r^{Aj*} = \frac{{( - {c_n}\delta  + {c_r} + {\delta ^2}\varepsilon  - \delta \varepsilon  - s)}}{{2(\eta  - {\delta ^2} + \delta )(\eta  - {\delta ^2} + 2\delta )}} > 0.$$
+又因为
+$$Q_r^{ON*} = Q_r^{OR*} = Q_r^{OC*} = \frac{{{c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + {s}}}{{2(\eta  - {\delta ^2} + \delta )}}$$
+且
+$$Q_r^{Oj*} - Q_r^{O*} = \frac{s}{{2(\eta  - {\delta ^2} + \delta )}} > 0$$
+同理
+$$Q_r^{AN*} = Q_r^{AR*} = Q_r^{AC*} =\frac{{{c_n}\delta  - {c_r} + {s}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\delta \varepsilon (1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}$$
+且
+$$Q_r^{Aj*} - Q_r^{A*} = \frac{s}{{2(\eta  - {\delta ^2} + 2\delta )}} > 0$$
+
+结论得证.
+\end{proofname}
+
+结论\ref{qr}说明外包再制造模式下再制造产品的产量大于授权再制造模式下的产量, 政府补贴对象的不同并不能带来最终回收数量的差异, 即使在结论\ref{pr}中说明了政府的不同补贴对象带来的再制造产品价格不同.
+
+\begin{remarkq}\label{qn}
+外包和授权再制造模式下新产品的产量满足~$Q_n^{Aj*} > Q_n^{Oj*}, j \in \{ N,R,C\} $;$Q_n^{OC*} = Q_n^{ON*} = Q_n^{OC*} < Q_n^{O*};Q_n^{AC*} = Q_n^{AN*} = Q_n^{AC*} < Q_n^{A*}.$
+\end{remarkq}
+\begin{proofname}
+根据命题(3.3.1)、命题(3.3.2)、命题(3.3.3)、命题(3.3.4)、命题(3.3.5)、命题(3.3.6)、命题(3.3.7)和命题(3.3.8).
+
+可得
+\[Q_n^{Aj*} - Q_n^{Oj*} = \frac{{{\delta ^2}( - {c_n}\delta  + {c_r} - {\delta ^2}\varepsilon  + \delta \varepsilon  + s)}}{{2(\eta  - {\delta ^2} + \delta )(\eta  - {\delta ^2} + 2\delta )}} > 0\]
+因为
+\[Q_n^{ON*} = Q_n^{OR*} = Q_n^{OC*} =\frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s}) - {c_n}(\delta  + \eta ) - \varepsilon (1 - \delta )(\delta  + \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}\]
+又因为
+\[Q_n^{O*} - Q_n^{Oj*} = \frac{{\delta s}}{{2(\eta  - {\delta ^2} + \delta )}} > 0\]
+同理有
+\[Q_n^{AN*} = Q_n^{AR*} = Q_n^{AC*} =\frac{{1 + \varepsilon }}{2} + \frac{{\delta ({c_r} - {s}) - {c_n}(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{\varepsilon (1 - \delta )(2\delta  + \eta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}\]
+又因为
+\[Q_n^{A*} - Q_n^{Aj*} = \frac{{\delta s}}{{2(\eta  - {\delta ^2} + 2\delta )}} > 0\]
+结论得证.
+\end{proofname}
+
+结论\ref{qn}说明外包再制造模式下的新产品的产量小于授权再制造模式下的产量, 政府对供应链成员的补贴能有效的降低新产品的产量, 更小的新产品产量也就意味着减少新产品制造过程中的环境污染, 但是补贴对象的不同并不会影响其对应的产量.
+
+政府所关心的不仅是再制造产品的回收量, 也会关注补贴政策对总体回收率的影响, 大量废旧产品未被回收利用也会引发严重的环境问题, 对两种模式下的回收率进行比较. 再制造产品的回收率为$~\lambda  = \frac{{{Q_r}}}{{{Q_n}}}$, 可得到以下结论.
+\begin{remarkq}\label{y}
+外包再制造与授权再制造的回收率满足: ${\lambda ^{Oj*}} > {\lambda ^{Aj*}},j \in \{ N,R,C\} ;{\lambda ^{OR*}} = {\lambda ^{ON*}} = {\lambda ^{OC*}} > {\lambda ^{O*}};{\lambda ^{AR*}} = {\lambda ^{AN*}} = {\lambda ^{AC*}} > {\lambda ^{A*}}.$
+\end{remarkq}
+
+\begin{proofname}
+根据命题(3.3.1)、命题(3.3.2)、命题(3.3.3)、命题(3.3.4)、命题(3.3.5)、命题(3.3.6)、命题(3.3.7)和命题(3.3.8),
+
+令$~{\lambda _O} = {c_n}\delta  + {c_n}\eta  - {c_r}\delta  + {\delta ^2} - \delta \varepsilon \eta  + \delta s - \delta  - \eta $,~${\lambda _A} =  - 2{c_n}\delta  - {c_n}\eta  + {c_r}\delta  + {\delta ^2}\varepsilon  - {\delta ^2} + \delta \varepsilon \eta  - \delta s - 2\delta  + \eta $.
+
+可得
+\[{\lambda ^{Oj*}} - {\lambda ^{Aj*}} = \frac{{\delta (1 + \delta \varepsilon  - {c_n})( - {c_n}\delta  + {c_r} + {\delta ^2}\varepsilon  - \delta \varepsilon  - s)}}{{{\lambda _O}{\lambda _A}}}\]
+从结论\ref{qr}、结论\ref{qn}易得$~{\lambda ^{OR*}} = {\lambda ^{ON*}} = {\lambda ^{OC*}} > {\lambda ^{O*}};{\lambda ^{AR*}} = {\lambda ^{AN*}} = {\lambda ^{AC*}} > {\lambda ^{A*}}.$
+
+结论得证.
+\end{proofname}
+
+结论\ref{y}说明外包模式下的回收率大于授权模式下的回收率, 在外包再制造模式下3PR会回收更多的产品用于再制造. 政府的补贴政策都能促进废旧产品的回收, 使得3PR生产更多的再制造产品. 在任意一种再制造模式下政府对三种补贴对象进行补贴得到的促进废旧产品回收率是相同的, 这就意味着若政府仅仅关心废旧产品的回收率, 则不需要选择补贴的对象.
+
+结合结论\ref{qn}、结论\ref{qr}、结论\ref{y}发现: 政府的干涉对引导供应链回收废旧产品的期望是积极的, 符合政府补贴政策的预期, 政府若支持外包再制造模式, 则对比授权再制造模式, 外包再制造模式能够带回收更多的废旧产品, 这表明在有限的财政支出下, 政府更应该鼓励外包再制造产业的发展, 可以花费更少的资金可以得到更好的环境保护效果. 最后若政府仅从增大废旧产品的回收率与回收量的角度进行补贴, 则对消费者、OEM和3PR进行补贴都能得到相同的正向结果. 所以政府希望OEM与3PR采用外包再制造的形式合作.
+
+\subsection{原始设备制造商和第三方再制造商角度}
+
+从供应链中企业的视角.
+
+\begin{remarkq}\label{po}
+外包再制造模式下的外包费用满足~
+$p_o^{OR*} < p_o^{O*} < p_o^{ON*} = p_o^{OC*}.$
+\end{remarkq}
+\begin{proofname}
+根据命题(3.3.1)、命题(3.3.2)、命题(3.3.3)、命题(3.3.4).可得
+\[p_o^{ON*} = p_o^{OC*} ={c_r} + \frac{{\eta ({c_n}\delta  - {c_r}) + \delta \varepsilon \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{\eta {s}}}{{2(\eta  - {\delta ^2} + \delta )}}\]
+又有
+\[p_o^{ON*} = p_o^{O*} + \frac{{\eta {s}}}{{2(\eta  - {\delta ^2} + \delta )}}\]
+所以有$p_o^{ON*} >p_o^{O*}$
+
+因为\[p_o^{OR*} = p_o^{O*}  - \frac{{(\eta  - 2{\delta ^2} + 2\delta ){s}}}{{2(\eta  - {\delta ^2} + \delta )}}\]
+所以有$p_o^{OR*} <p_o^{O*}$.
+
+结论得证.
+\end{proofname}
+
+
+结论\ref{po}说明外包再制造模式中, 对3PR的补贴会使得外包费用降低, 但是对OEM和消费者的补贴会使得外包费用增大. 外包费用为OEM为获得再制造产品销售而支付给3PR的费用, 在这样的情况下, 既然政府已经给3PR进行了补贴, OEM会节省成本降低外包费用. 反而在对消费者、OEM进行补贴会使得一部分的补贴资金通过上涨的外包费用转移至3PR. 并且转移的资金的大小相同.
+
+\begin{remarkq}\label{ps}
+授权再制造模式下的授权费用满足~
+$p_s^{AN*} < p_s^{A*} < p_s^{AR*} = p_s^{AC*}.$
+\end{remarkq}
+\begin{proofname}
+根据命题(3.3.5)、命题(3.3.6)、命题(3.3.7)、命题(3.3.8).
+可得
+\[p_s^{AR*} = p_s^{AC*} =\frac{{\delta \varepsilon  + \delta  - {c_r} + {s}}}{2}\]
+又有
+\[p_s^{AN*} = p_s^{A*} - \frac{s}{2}\]
+\[p_s^{AR*} = p_s^{A*} + \frac{s}{2}\]
+所以有: $$p_s^{AN*} < p_s^{A*} < p_s^{AR*} = p_s^{AC*}~.$$
+
+结论得证.
+\end{proofname}
+
+结论\ref{ps}授权再制造模式中,政府对3PR和消费者的补贴会使得授权费用的增大, 但会随着对OEM的补贴而降低. 授权费用为3PR为获得再制造产品的生产销售许可而支付给OEM的费用, 从以上的分析可以看出, 政府的补贴资金大部分被OEM获得, 唯有直接补贴给OEM才能使得授权费用降低.
+
+\begin{remarkq}\label{Rn}
+两种再制造模式OEM的利润满足~${\pi ^{Oj*}} > {\pi ^{Aj*}},j \in \{ N,R,C\} ;\pi _n^{ON*} = \pi _n^{OR*} = \pi _n^{OC*} > \pi _n^{O*};\pi _n^{AN*} = \pi _n^{AR*} = \pi _n^{AC*} > \pi _n^{A*}~.$
+\end{remarkq}
+
+\begin{proofname}
+根据推论(3.3.1)、推论(3.3.2)、推论(3.3.3)、推论(3.3.4)、推论(3.3.5)、推论(3.3.6)、推论(3.3.7)和推论(3.3.8)可得
+\[\pi _n^{Oj*} - \pi _n^{Aj*} = \frac{{\delta {{( - {c_n}\delta  + {c_r} + {\delta ^2}\varepsilon  - \delta \varepsilon  - s)}^2}}}{{4(\eta  - {\delta ^2} + \delta )(\eta  - {\delta ^2} + 2\delta )}}\]
+有
+\begin{equation}\nonumber
+\begin{split}
+\pi _n^{ON*} &= \pi _n^{OR*} = \pi _n^{OC*} \\
+&= \frac{{({c_n} - \delta \varepsilon  + 1)({c_n}\delta  + {c_n}\eta  + {\delta ^2} - \delta \varepsilon \eta  - \delta  - \eta  + \delta {s_N})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\\
+& + \frac{{({c_r} - \delta \varepsilon  - \delta  - {s_N})({\delta ^2}\varepsilon  + \delta \varepsilon  + {c_r} - \delta {c_n} - {s_N})}}{{4(\eta  - {\delta ^2} + \delta )}}
+\end{split}
+\end{equation}
+又有
+\begin{equation}\nonumber
+\begin{split}
+\pi _n^{AN*} &= \pi _n^{AR*} = \pi _n^{AC*}\\
+&= \frac{{(\delta  + 1 - {c_n})({c_r}\delta  - 2{c_n}\delta  - {c_n}\eta  + {\delta ^2}\varepsilon  - {\delta ^2} + \delta \varepsilon \eta  + 2\delta  + \eta  - \delta {s})}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+& + \frac{{(\delta  + \delta \varepsilon  - {c_r} + {s})({c_r} - {c_n}\delta  + {\delta ^2}\varepsilon  - \delta \varepsilon  + {s_C})}}{{4(\eta  - {\delta ^2} + 2\delta )}}
+\end{split}
+\end{equation}
+
+结论得证.
+\end{proofname}
+
+结论\ref{Rn}说明OEM在外包再制造模式下的利润大于授权再制造, 表明OEM有一定的偏好, 若企业更关系自身的利润, OEM可以选择外包再制造模式.
+
+\begin{remarkq}\label{Rr}
+两种再制造模式3PR的利润满足~
+当$~\delta < 0.5$~时~$,\pi _r^{O*} > \pi _r^{A*}~$; 当$~\delta \ge  0.5$~时, 若满足~$\eta  > ( < )\frac{{2\delta {{(1 - \delta )}^2}}}{{2\delta  - 1}}, $ 则 $\pi _r^{O*} >(<) \pi _r^{A*};$ 并且~$\pi _r^{ON*} = \pi _r^{OR*} = \pi _r^{OC*} > \pi _n^{O*},\pi _r^{AN*} = \pi _r^{AR*} = \pi _r^{AC*} > \pi _r^{A*}$.
+\end{remarkq}
+\begin{proofname}
+根据推论(3.3.1)、推论(3.3.2)、推论(3.3.3)、推论(3.3.4)、推论(3.3.5)、推论(3.3.6)、推论(3.3.7)和推论(3.3.8).
+
+可得
+$$\pi _r^{O*} - \pi _r^{A*} = \frac{{{\delta ^2}{{({c_n}\delta  - {c_r})}^2}[\eta (1 - 2\delta ) + 2\delta {{(1 - \delta )}^2}]}}{{8{{(\eta  - {\delta ^2} + \delta )}^2}{{(\eta  - {\delta ^2} + 2\delta )}^2}}}$$
+容易看出, 当$~\delta < 0.5$~时, 有$~\pi _r^{O*} > \pi _r^{A*}$; 当$~\delta \ge 0.5$~时, 满足$~\eta  < ( > )\frac{{2\delta {{(1 - \delta )}^2}}}{{2\delta  - 1}}$~, 则$~\pi _r^{O*} >(<) \pi _r^{A*}$.
+
+因为
+\[\frac{{\partial \pi _r^{ON*}}}{{\partial s}} = \frac{{\partial \pi _r^{OR*}}}{{\partial s}} = \frac{{\partial \pi _r^{OC*}}}{{\partial s}} = \frac{{\eta ({c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + s)}}{{4{{(\eta  - {\delta ^2} + \delta )}^2}}} > 0\]
+又
+\[\frac{{\partial \pi _r^{ON*}}}{{\partial s}} = \frac{{\partial \pi _r^{OR*}}}{{\partial s}} = \frac{{\partial \pi _r^{OC*}}}{{\partial s}} = \frac{{\eta ({c_n}\delta  - {c_r} + \delta \varepsilon (1 - \delta ) + s)}}{{4{{(\eta  - {\delta ^2} + \delta )}^2}}} > 0\]
+结论得证.
+\end{proofname}
+
+结论\ref{Rr}说明两种模式下3PR两种模式下利润的大小关系取决于再制造产品的消费者价值折扣与收集再制造产品的难度系之间的关系, 当消费者价值折扣小于~0.5~时, 3PR在外包再制造模式下的利润大于授权再制造, 当消费者价值折扣大于~0.5~时, 若收集再制造产品的难度系较小(大), 则3PR 在外包再制造模式下的利润大于(小于)授权再制造.
+
+\section{数值实验}
+
+为分析再制造市场需求的不确定性对供应链决策和绩效的影响, 接下来的数值实验是对前文的补充.
+
+\subsection{参数设定}
+
+经过\ref{3}节的分析发现政府补贴资金为常数的情况下, 政府对OEM、3PR和消费者的补贴给供应链主要决策与绩效($~{p_n},{p_r},{Q_n},{Q_r},{\pi _n},{\pi _r}$~)的影响相同, 所以令$~s_{N}=s_{R}=s_{C}=0.1$. 其它参数设定: $~{c_n} = 0.8,{c_r} = 0.3,\eta  = 0.5,\delta  = 0.5.$,$\varepsilon \in[-0.1,0.1]$, 其中, $~\eta  = 0.5, \delta  = 0.5$~代表再制造产品的价值折扣和回收难度适中.
+\subsection{结果分析}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{pn3.eps}
+\caption{$\varepsilon$对${p_n^{O*}}, {p_n^{A*}}$的影响}\label{pn3}
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${p_n^{O*}}$ and ${p_n^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{pr3.eps}
+\caption{$\varepsilon$对${p_r^{O*}}, {p_r^{A*}}$的影响}\label{pr3}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${p_r^{O*}}$ and ${p_r^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{qn3.eps}
+\caption{$\varepsilon$对${Q_n^{O*}}, {Q_n^{A*}}$的影响}\label{qn3}     % 图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${Q_n^{O*}}$ and ${Q_n^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{qr3.eps}
+\caption{$\varepsilon$对${Q_r^{O*}}, {Q_r^{A*}}$的影响}\label{qr3}     % 图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${Q_r^{O*}}$ and ${Q_r^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{y3.eps}
+\caption{$\varepsilon$对${\lambda^{O*}}, {\lambda^{A*}}$的影响}\label{y3}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${\lambda^{O*}}$ and ${\lambda^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{n3.eps}
+\caption{$\varepsilon$对${\pi_n^{O*}}, {\pi_n^{A*}}$的影响}\label{n3}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${\pi_n^{O*}}$ and ${\pi_n^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{r3.eps}
+\caption{$\varepsilon$对${\pi_r^{O*}}, {\pi_r^{A*}}$的影响}\label{r3}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\varepsilon$ on the ${\pi_r^{O*}}$ and ${\pi_r^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+图\ref{pn3}、\ref{pr3}、\ref{qr3}表明供应链的新产品价格$~{p_{n}}$、再制造产品价格$~{p_{r}}$~和再制造产品的产量$~{Q_{r}}$~与再制造产品需求量的不确定性正相关. 市场的波动将直接反应到供应链中的产品价格, 产品的最优定价和新产品的销售量与市场的不确定性有着密切的关系, 供应链成员想要最大限度的卖出产品, 必须更好的对再制造产品的需求量进行预测; 值得注意的是, 新产品的产量$~{Q_{n}}~$会再制造产品需求量不确定性正相关, 这就意味着卖出更多再制造产品的同时也会卖出更多的新产品. 图\ref{n3}和图\ref{r3}表明, OEM和3PR的销售利润直接受到市场波动的影响, 若企业想把握住全部的市场利润, 必须准确的对市场进行预测.
+\section{小结}
+
+再制造作为资源高效循环利用的一种有效方式, 受到企业、政府以及全社会各界的广泛关注. 本章研究了政府补贴下再制造闭环供应链的回收策略, 采用博弈论的方式, 分别求解了外包再制造模式与授权再制造模式下原始设备制造商与第三方再制造商之间的博弈, OEM是Stackelberg博弈的领导者, 3PR是其追随者, 各自得到最优的决策和绩效, 分析了两种再制造模式下政府补贴政策对闭环供应链成员在均衡下最优决策的影响, 最后对两种再制造模式的企业决策与绩效进行了对比分析并进行了数值实验. 得出结论:
+
+(1)~在外包再制造模式下, OEM可以获得更大的利润, 使其喜欢外包再制造模式. 在一个消费者对再制造产品接受程度较大的市场下, 3PR喜欢外包再制造模式, 而在一个消费者对再制造产品接受程度较大的市场下, 当且仅当废旧产品的回收难度比较大时, 第三方再制造商才会采用外包再制造模式.
+
+(2)~政府对第三方回收下再制造闭环供应链的干涉能够有效的提高回收量和回收率, 同时会降低再制造产品的价格, 使得更多的消费者购买再制造产品, 但是政府对供应链的干涉和市场需求的波动并不能影响OEM和3PR对再制造模式的偏好. 若考虑在有限的资金补贴下使得供应链回收更多的产品, 则政府应该补贴外包再制造模式下的企业.
+
+本章研究原始设备制造商和第三方再制造商都为风险中性, 而在上面的研究 发现市场需求波动深刻影响着供应链的决策和绩效, 进一步的研究方向为由于销售再制造产品而产生的利润波动, 所以在后一章的讨论中, 分析再制造产品的市场需求波动对OEM和3PR再制造模式选择的影响, 以充实本文的研究.
+
+\newpage
+\thispagestyle{empty}
+\newpage
+\chapter{\hei 再制造产品需求波动对再制造闭环供应链的影响}
+
+再制造产品需求波动存在着不确定性, 因此销售再制造产品的成员将承受较大的利润波动. 在本章, 构建了Stackelberg博弈模型下的原始设备制造商和第三方再制造商之间的供应链再制造选择模型. 通过求解博弈论模型, 分析了再制造产品需求波动对原始设备制造商和第三方再制造商的决策和绩效的影响. 最后通过数值实验验证了利润、新产品产量和再制造产品产量之间的关系.
+
+\section{问题描述}
+
+再制造市场的前景广阔, 但是经济的不景气带来了更加激烈的市场竞争, 加上市场上的消费者对再制造产品的接受程度具有波动, 使得企业无法准确的对再制造市场进行预测, 这深刻的改变了企业的运营环境, 企业在日常生产的过程中的不确定性日益显现, 这严重影响了再制造产业的发展. 然而现在大多的研究都假设供应链成员为风险中性, 其最大化的目标为期望利润. 但是市场需求的波动对再制造产业具有重要的影响, 很多的供应链成员为风险厌恶型, 因此对风险厌恶下的供应链建模十分必要. 所以在本章中, 分析由再制造产品需求的不确定性带来的市场风险, 为企业决策提供更加贴近现实的解决方案.
+
+\section{模型假设}
+
+在本章, 采用均值-方差分析再制造产品的市场需求波动再制造模式选择的影响, 再制造产品需求的不确定性深刻的影响着供应链成员的决策和绩效, 因此不确定性为$~\varepsilon$, 其中$~\varepsilon  \sim N(0,{\sigma ^2})$.
+\begin{align}
+{Q_n} &= 1- \frac{{{p_n} - {p_r}}}{{1 - \delta }}
+\\
+{Q_r} &= \frac{{\delta {p_n} - {p_r}}}{{\delta (1 - \delta )}} + \varepsilon
+\end{align}
+
+可以得到
+\begin{align}
+{p_n} &= 1 - {Q_n} - \delta {Q_r} + \delta\varepsilon
+\\
+{p_r} &= \delta (1 - {Q_n} - {Q_r} + \varepsilon )
+\end{align}
+
+OEM或者3PR的效用函数为$~U({\pi}) = E[{\pi}] - k\sqrt {{\mathop{\rm var}} ({\pi})}$, 其中$~{\mathop{\rm var}} ({\pi}) = E{[{\pi} - E[{\pi}]]^2}$, 其中$~k(k>0)$~代表OEM的风险厌恶程度, 当$~k=0$~时, 即为第三章讨论的无政府干涉的再制造闭供应链, 并且为了简约模型在本章的讨论中假设$~k=1$, 本章只讨论再制造产品需求的波动对供应链决策和绩效的影响.
+
+本章的其它假设与第三章类似.
+
+\section{模型求解}
+
+与第三章类似, 对两种再制造模式分别采用Stackelberg博弈建模, 分析风险厌恶的OEM或者3PR对再制造闭环供应链决策与绩效的影响.
+
+\subsection{外包再制造模式}
+
+在外包再制造模式中, OEM负责销售再制造产品, 所以OEM承受销售再制造产品带来的市场风险, 因此OEM的效用函数将改变, 外包再制造模式下OEM与3PR的博弈可以写为
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_o}} U({\pi _n^{O}}) &= E[({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}] - \delta\sigma({Q_n} + \delta {Q_r})
+\\
+\mathop {\max }\limits_{Q_r}  E[{\pi _r^{O}}] &= E[p_o{Q_r} - \frac{1}{2}\eta Q_r^2]
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r}, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r}).
+\end{array}
+$$
+
+上述OEM期望效用表达式可以看出正则项~$\delta\sigma(({Q_n} + {Q_r})$~与新产品的产量和再制造产品的产量有关, 当$~\delta\sigma$~为定值时, 产量$~{Q_n}$~和$~{Q_r}$~越大, 则OEM的期望效用越低, 可以看出总体风险与再制造产业的产量有关系, 又因为外包再制造模式下, 实际负责再制造产品生产的为3PR, 则3PR的利润也受到再制造产品需求波动的影响.
+
+\begin{proposition}
+外包再制造模式下, 均衡新产品产量, 再制造产品产量和外包费用可归纳如下
+\begin{align}
+\label{5qno} Q_n^{O*} &= \frac{{(\eta  - {\delta ^2} + \delta ) + \delta {c_r} - (\delta  + \eta ){c_n}}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{\delta \eta }}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\\
+\label{5qro} Q_r^{O*} &= \frac{{\delta {c_n} - {c_r}}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{\delta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\\
+\label{5po} p_o^{O*} &= \frac{{\eta \delta {c_n} + (\eta  - 2{\delta ^2} + 2\delta ){c_r}}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{\delta \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+\begin{equation}\label{ap401}
+\mathop {\max }\limits_{Q_r}  {\pi _R^{O}} = ({p_o} - {c_r}){Q_r} + \frac{1}{2}\eta Q_r^2
+\end{equation}
+对(\ref{ap401})求~$Q_r~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^O}}{{\partial Q_r^{2}}} =  - \eta  < 0.$
+所以3PR的利润$~\pi _R^O$~为$~Q_r~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap403}
+Q_r^O = \frac{{{p_o} - {c_r}}}{\eta }
+\end{equation}
+到这里, 3PR完成决策. 随后根据3PR的决策$~Q_r^O$, OEM选择$~Q_{n}^O~$和$~p_{o}^O~$最大化自身的利润.
+\[\begin{array}{*{20}{l}}
+{\mathop {\max }\limits_{{Q_n^O},{p_o^O}} \pi _n^{O} = ({p_n} - {c_n}){Q_n} + ({p_r} - {p_o}){Q_r}} - k\sigma({Q_n} + \delta {Q_r})\\
+{s.t{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^O = \frac{{{p_o^O} - {c_r}}}{\eta }}
+\end{array}\]
+求$~\pi _n^O~$关于$~Q_{n}^O~$和$~p_{o}^O~$ 的~Hessian~矩阵为
+\[H = \left( {\begin{array}{*{20}{c}}
+{ - 2}&{ - \frac{{2\delta }}{\eta }}\\
+{ - \frac{{2\delta }}{\eta }}&{ - \frac{{2(\delta  + \eta )}}{{{\eta ^2}}}}
+\end{array}} \right)\]
+行列式的值为
+\[|H| =  \frac{{4(\eta  - {\delta ^2} + \delta )}}{{{\eta ^2}}} > 0\]
+所以$~\pi _n^O~$是为关于$~Q_{n}^O$~和$~p_{o}^O~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{O*} &= \frac{{(\eta  - {\delta ^2} + \delta ) + \delta {c_r} - (\delta  + \eta ){c_n}}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{\delta \eta }}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\\
+\nonumber p_o^{O*} &= \frac{{\eta \delta {c_n} + (\eta  - 2{\delta ^2} + 2\delta ){c_r}}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{\delta \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\end{align}
+将$~Q_n^{O*}$、$p_o^{O*}$~分别代入(\ref{ap403})可以得到
+\begin{align}
+\nonumber Q_r^{O*} = \frac{{\delta {c_n} - {c_r}}}{{2(\eta  - {\delta ^2} + \delta )}} - \frac{{\delta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}
+基于上述均衡决策, 相应的均衡新产品零售价格, 再制造产品的零售价格和OEM、3PR的利润可以归纳为下面的推论
+\begin{align}
+\label{5pno} p_n^{O*} &= \frac{{1 + {c_n}}}{2} + \frac{\delta }{2}\sigma
+\\
+\label{5pro} p_r^{O*} &= \frac{{\delta (\eta  - {\delta ^2} + \delta ) + \delta (1 - \delta ){c_r} + \delta \eta {c_n}}}{{2(\eta  - {\delta ^2} + \delta )}} + \frac{{{\delta ^2}(1 - \delta  - \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\\
+\label{5rno} \begin{split}
+\pi _n^{O*} &= \frac{{{{(1 - {c_n})}^2}}}{4} + \frac{{{{(\delta {c_n} - {c_r})}^2}}}{{4(\eta  - {\delta ^2} + \delta )}}
+\\
+& + \frac{{{\sigma^2}{\delta ^2}(1 - \delta  - \eta ) + \sigma\delta ({c_n}\eta  - {c_r}\delta  + {c_r} + {\delta ^2} - \delta  - \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\end{split}
+\\
+\label{5rro} \pi _r^{O*} &= \frac{{\eta {{[{c_n}\delta  - {c_r} - \sigma\delta (1 - \delta )]}^2}}}{{8(\eta  - {\delta ^2} + \delta )}}
+\end{align}
+\end{corollary}
+
+\subsection{授权再制造模式}
+在授权再制造模式中, 3PR负责销售再制造产品, 承受销售再制造产品带来的市场风险, 因此3PR的效用函数将改变, 外包再制造模式下OEM与3PR的博弈可以写为
+\begin{align}
+\mathop {\max }\limits_{{Q_n},{p_o}} E[\pi _n^A] &= E[({p_n} - {c_n}){Q_n} + {p_r}{Q_r}]
+\\
+\mathop {\max }\limits_{{Q_r}} U(\pi _r^A) &= E[({p_r} - {p_s}){Q_n} - \frac{1}{2}\eta Q_r^2 - \sigma\delta{Q_r}]
+\end{align}
+其中,
+$$
+\begin{array}{ll}
+{p_n} = 1 - {Q_n} - \delta {Q_r}, \\
+{p_r} = \delta (1 - {Q_n} - {Q_r}).
+\end{array}
+$$
+
+上述OEM的期望效用表达式可以看出正则项$~\delta{Q_r}$~只与再制造产品的产量有关, 当~$\delta$~为定值时, 产量~${Q_r}$~越大, 则3PR的期望效用越低, 则3PR只需考虑自身的决策, 可以通过减少再制造产品的销售所带来的授权费用抵御再制造产品需求波动对自身效用的影响.
+
+\begin{proposition}
+授权再制造模式下、均衡新产品产量、再制造产品产量和授权费用可归纳如下
+\begin{align}
+\label{5qna} Q_n^{A*} &= \frac{{(\eta  - 2{\delta ^2} + \delta ) + \delta {c_r} - (2\delta  + \eta ){c_n}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{{\delta ^2}}}{{2(\eta  - {\delta ^2} + 2\delta )}}\sigma
+\\
+\label{5qra}Q_r^{A*} &= \frac{{\delta {c_n} - {c_r}}}{{2(\eta  - {\delta ^2} + 2\delta )}} - \frac{\delta }{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\\
+\label{5ps}p_s^{A*} &= \frac{{\delta  - {c_r}}}{2} - \frac{\delta }{2}\sigma
+\end{align}
+\end{proposition}
+
+\begin{proofname}
+在为了求出3PR的最优回收量, 需要解决其利润的最大化问题.
+
+\begin{equation}\label{ap501}
+\mathop {\max }\limits_{Q_r}  U({\pi _R^{A}}) = ({p_r} - {c_r} - p_s){Q_r} - \frac{1}{2}\eta Q_r^2 - \sigma\delta{Q_r}
+\end{equation}
+
+对(\ref{ap501})求~$Q_r^{A}~$的二阶导数为: $~\frac{{{\partial ^2}\pi _R^A}}{{\partial Q_r^2}} =  -2\delta -\eta  < 0.$
+所以3PR的利润$~\pi _R^{A}$~为$~Q_r^{A}~$的凸函数, 求解一阶稳定点可得到3PR的最优反应
+\begin{equation}\label{ap503}
+Q_r^A = \frac{{\delta  - {p_s} - {c_r} - \delta Q_n^A - \delta \sigma}}{{2\delta  + \eta }}
+\end{equation}
+到这里, 第3PR完成决策. 随后根据3PR的决策$~Q_r^{OR}$, OEM选择$~Q_{n}^{OR}~$和$~p_{o}^{OR}~$最大化自身的利润
+
+\[\begin{array}{l}
+\mathop {\max }\limits_{{Q_n},{p_s}} \pi _n^A = ({p_n} - {c_n}){Q_n} + {p_s}{Q_r}\\
+s.t.{\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} {\kern 1pt} Q_r^A = \frac{{\delta  - {p_s} - {c_r} - \delta Q_n^A - \delta k}}{{2\delta  + \eta }}
+\end{array}\]
+
+求$~\pi _n^{A}~$关于$~Q_{n}^{A}~$和$~p_{o}^{A}~$的~Hessian~矩阵为
+$$H = \left( {\begin{array}{*{20}{c}}
+{\frac{{ - 2}}{{2\delta  + \eta }}}&0\\
+0&{\frac{{2{\delta ^2}}}{{2\delta  + \eta }} - 2}
+\end{array}} \right)$$
+
+行列式的值为
+\[|H| =  \frac{{ - 4{\delta ^2} + 8\delta  + 4\eta }}{{{{(2\delta  + \eta )}^2}}} > 0\]
+所以$~\pi _n^{A}~$是为关于$~Q_{n}^{A}$~和$~p_{o}^{A}~$凹函数, 可以得到一个稳定点为
+\begin{align}
+\nonumber Q_n^{A*} &= \frac{{(\eta  - 2{\delta ^2} + \delta ) + \delta {c_r} - (2\delta  + \eta ){c_n}}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{{\delta ^2}}}{{2(\eta  - {\delta ^2} + 2\delta )}}\sigma
+\\
+\nonumber p_s^{A*} &= \frac{{\delta  - {c_r}}}{2} - \frac{\delta }{2}\sigma
+\end{align}
+将$~Q_n^{A*}$、$p_o^{A*}$~分别代入(\ref{ap503})可以得到
+\begin{align}
+\nonumber Q_r^{A*} = \frac{{\delta {c_n} - {c_r}}}{{2(\eta  - {\delta ^2} + 2\delta )}} - \frac{\delta }{{2(\eta  - {\delta ^2} + \delta )}}\sigma
+\end{align}
+命题得证.
+\end{proofname}
+
+\begin{corollary}
+基于上述均衡决策, 相应的均衡新产品零售价格, 再制造产品的零售价格和OEM、3PR的利润可以归纳为:
+\begin{align}
+\label{5pna}p_n^{A*} &= \frac{{1 + {c_n}}}{2}
+\\
+\label{5pra}p_r^{A*} &= \frac{{\delta [(\eta  - {\delta ^2} + 2\delta ) + (\eta  + \delta ){c_n} + (1 - \delta ){c_r}]}}{{2(\eta  - {\delta ^2} + 2\delta )}} + \frac{{{\delta ^2}(1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}}\sigma
+\\
+\label{5rna}\pi _n^{A*} &= \frac{{{{(1 - {c_n})}^2}}}{4} + \frac{{{{(\delta {c_n} - {c_r})}^2}}}{{4(\eta  - {\delta ^2} + 2\delta )}} + \frac{{{\sigma^2}{\delta ^2} - \sigma\delta ({c_n}\delta  - {c_r})}}{{2(\eta  - {\delta ^2} + 2\delta )}}
+\\
+\label{5rra}\pi _r^{A*} &= \frac{{(2\delta  + \eta ){{({c_n}\delta  - {c_r} - \sigma\delta )}^2}}}{{8(\eta  - {\delta ^2} + 2\delta )}}
+\end{align}
+\end{corollary}
+
+\section{基于再制造产品市场需求波动的灵敏性分析}\label{44}
+
+为探究销售再制造产品的风险对再制造闭环供应链的影响, 在本节对外包和授权再制造模式下销售再制造产品的市场风险进行灵敏性分析, 得到以下结果.
+
+\begin{remarkq}\label{4pno}
+外包再制造模式下新产品的价格、再制造产品的价格满足~
+$\frac{{\partial p_n^{O*}}}{{\partial \sigma}} > 0$; 授权再制造模式下新产品的价格、再制造产品的价格满足~$\frac{{\partial p_n^{A*}}}{{\partial \sigma}} = 0$, $\frac{{\partial p_r^{A*}}}{{\partial \sigma}} > 0$.
+\end{remarkq}
+
+\begin{proofname}
+根据等式(\ref{5pno})、(\ref{5pro})、(\ref{5pna}) 和(\ref{5pra})可得
+\begin{align}
+\nonumber \frac{{\partial p_n^{O*}}}{{\partial \sigma}} &= \frac{\delta }{2} >0
+\\
+\nonumber \frac{{\partial p_r^{O*}}}{{\partial \sigma}} &= \frac{{{\delta ^2}(1 - \delta  - \eta )}}{{2(\eta  - {\delta ^2} + \delta )}}
+\\
+\nonumber \frac{{\partial p_n^{A*}}}{{\partial \sigma}} &= 0
+\\
+\nonumber \frac{{\partial p_r^{A*}}}{{\partial \sigma}} &= \frac{{{\delta ^2}(1 - \delta )}}{{2(\eta  - {\delta ^2} + 2\delta )}} > 0
+\end{align}
+结论得证.
+\end{proofname}
+
+结论\ref{4pno}表明, 在外包再制造模式下, 新产品与再制造产品的需求波动正相关, 这表明OEM会转嫁风险给消费者, 再制造产品是否上涨跟1和$~(\delta  + \eta~)$关系有关; 而在授权再制造模式下, 新产品的价格并不会受到再制造产品的市场需求波动的影响, 但是再制造产品的销售价格与再制造产品的需求波动正相关. 以上的差异是因为两种模型下, 负责销售再制造产品的责任者不同, 再制造产品的销售方将直接受到销售再制造产品风险的冲击. 为防范风险OEM和3PR将分别采取相应的行动.
+
+\begin{remarkq}\label{4po}
+外包再制造模式下外包价格满足~$\frac{{\partial p_o^{O*}}}{{\partial \sigma}} < 0$;
+授权再制造模式下的授权价格满足~$\frac{{\partial p_s^{O*}}}{{\partial \sigma}} < 0$.
+\end{remarkq}
+
+\begin{proofname}
+根据等式(\ref{5po})和(\ref{5ps})可得
+\begin{align}
+\nonumber \frac{{\partial p_o^{O*}}}{{\partial \sigma}} &=  - \frac{{\delta \eta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} < 0
+\\
+\nonumber \frac{{\partial p_s^{O*}}}{{\partial \sigma}} &=  - \frac{\delta }{2} < 0
+\end{align}
+结论得证.
+\end{proofname}
+
+结论\ref{4po}表明. 在外包再制造模式下, OEM降低给3PR的外包费用, 外包费用的降低使得3PR减少废旧产品的回收再制造; 而在授权再制造模式下, 授权费用将降低.
+
+因为外包费用和授权费用直接影响着新产品和再制造产品的产量, 所以进行更进一步的讨论.
+
+\begin{remarkq}\label{4qn}
+外包再制造模式下新产品的产量、再制造产品的产量满足~
+$\frac{{\partial Q_n^{O*}}}{{\partial \sigma}} < 0$, $\frac{{\partial Q_r^{O*}}}{{\partial \sigma}} < 0$;
+授权再制造模式下新产品的产量、再制造产品的产量满足~
+$\frac{{\partial Q_n^{A*}}}{{\partial \sigma}} > 0$,$\frac{{\partial Q_r^{A*}}}{{\partial \sigma}} < 0$.
+\end{remarkq}
+
+\begin{proofname}
+根据等式(\ref{5qno})、(\ref{5qro})、(\ref{5qna}) 和(\ref{5qra})可得
+\begin{align}
+\nonumber \frac{{\partial Q_n^{O*}}}{{\partial \sigma}} &=  - \frac{{\delta \eta }}{{2(\eta  - {\delta ^2} + \delta )}} < 0
+\\
+\nonumber \frac{{\partial Q_r^{O*}}}{{\partial \sigma}} &=  - \frac{{\delta (1 - \delta )}}{{2(\eta  - {\delta ^2} + \delta )}} < 0
+\\
+\nonumber \frac{{\partial Q_n^{A*}}}{{\partial \sigma}} &= \frac{{{\delta ^2}}}{{2(\eta  - {\delta ^2} + 2\delta )}} > 0
+\\
+\nonumber \frac{{\partial Q_r^{A*}}}{{\partial \sigma}} &=  - \frac{\delta }{{2(\eta  - {\delta ^2} + \delta )}} < 0
+\end{align}
+结论得证.
+\end{proofname}
+
+结论\ref{4qn}表明再制造产品的需求波动$~\sigma$~与两种再制造模式下的产量的关系存在差异. 外包再制造模式下新产品和再制造产品的产量与$~\sigma$~负相关; 授权再制造下新产品的产量与$~\sigma$~正相关, 而$~\sigma$~与再制造产品的产量负相关, 即使由于结论\ref{4po}可以得出授权费用的降低, 3PR也没有意愿提升再制造产品的销售. 若$~\sigma$~值过大, 两种再制造模式下的3PR都有可能停止新产品的制造.
+
+以上的结果表明在再制造产品的市场需求存在波动时, 两种再制造模式下OEM和3PR的决策如下:
+
+(1)~外包再制造模式下, OEM减少新产品产量的同时降低外包费用, 3PR因为外包费用的降低, 减少再制造产品的产量. 各方的决策使得新、再制造产品的价格提高, OEM期望以降低产量增加单件产品的利润为手段抵御市场风险.
+
+(2)~授权再制造模式下, OEM增大新产品产量的同时降低授权费用, 3PR降低再制造产品的产量. 各方的决策使得新、再制造产品的价格提高.
+
+\begin{remarkq}\label{4p1}
+外包再制造模式下3PR的利润分别满足~$\frac{{\partial \pi _r^{O*}}}{{\partial \sigma}} < 0$; 授权再制造模式下3PR 的利润分别满足~$\frac{{\partial \pi _r^{A*}}}{{\partial \sigma}} < 0$.
+\end{remarkq}
+
+\begin{proofname}
+根据等式(\ref{5rro})和(\ref{5rra})可得
+
+因为\[\pi _r^{O*} = \frac{{\eta {{[{c_n}\delta  - {c_r} - \sigma\delta (1 - \delta )]}^2}}}{{8(\eta  - {\delta ^2} + \delta )}}\]
+又令$~g(\sigma) = {{c_n}\delta  - {c_r} - \sigma\delta (1 - \delta )}$, 有$\frac{{\partial g(\sigma)}}{{\partial \sigma}} =  - \delta (1 - \delta ) < 0$, 则有~$\frac{{\partial \pi _r^{O*}}}{{\partial \sigma}} < 0$.
+
+同理, 因为\[\pi _r^{A*} = \frac{{(2\delta  + \eta ){{({c_n}\delta  - {c_r} - \sigma\delta )}^2}}}{{8(\eta  - {\delta ^2} + 2\delta )}}\]
+令$f(\sigma) = {{c_n}\delta  - {c_r} - \sigma\delta }$, $\frac{{\partial f(\sigma)}}{{\partial \sigma}} =  - \delta  < 0$, 则有$\frac{{\partial \pi _r^{A*}}}{{\partial \sigma}} < 0.$
+
+结论得证.
+\end{proofname}
+
+结论\ref{4p1}表明, 不管外包还是授权再制造模式, 3PR的利润都会随着再制造产品的需求波动的变大而减少. 在外包模式下是因为OEM减少了再制造产品的销售, 使得给3PR的外包总费用降低; 在授权模式是因为其自身的负责再制造产品的销售, 使得3PR减少了再制造产品的制造和销售.
+
+\section{再制造产品市场需求波动下的再制造模式选择}
+
+在本节中, 将讨论再制造产品市场需求波动对OEM和3PR再制造模式的影响.
+
+\begin{remarkq}\label{corollary5}
+若再制造产品市场需求波动较大, 授权再制造模式下OEM的利润比外包再制造模式下的利润大.
+\end{remarkq}
+\begin{proofname}
+
+由等式(\ref{5rno})和(\ref{5rna}), 当$~\sigma = 0时~$时有
+\[\pi _n^{O*} - \pi _n^{A*} = \frac{{\delta {{({c_n}\delta  - {c_r})}^2}}}{{4(\eta  - {\delta ^2} + \delta )(\eta  - {\delta ^2} + 2\delta )}} > 0\]
+当$~\sigma > 0~$时, 可以通过等式(\ref{5rno})对$~\sigma~$求得到一个稳定点
+\[{\delta ^{O*}} = \frac{{{c_r}\delta  - {c_r} - {c_n}\delta  + \eta  - {\delta ^2} + \delta }}{{\delta (1 - \delta  - \eta )}}\]
+因为我们有$~{c_n}\delta > {c_r}$, 可以得到
+\[\mathop {\max }\limits_{{c_n} = cr/\delta } [(\pi _n^{O*} - \pi _n^{A*}){|_{{\delta ^{O*}}}}] =  - \frac{{{{(\delta  - {c_r})}^2}(\eta  - {\delta ^2} + \delta )[\delta ({\delta ^2} - \delta \eta  - 4 + \eta  + 3) + {\eta ^2} + 2\eta ]}}{{4\delta (1 - \delta  - \eta )(\eta  - {\delta ^2} + 2\delta )}} < 0\]
+由于根的存在性定理, 可得必然存在一个点$~{\delta ^{*}} > 0$, 使得~$\pi _n^{O*} - \pi _n^{A*} = 0$.
+所以必然存在$\delta > {\delta ^{*}} $, 使得~$\pi _n^{O*} < \pi _n^{A*}$.
+
+推论得证.
+\end{proofname}
+
+结论\ref{corollary5}说明: 对OEM而言, 在再制造产品需求波动比较大的情况下, 贸然采取外包再制造模式进入再制造市场是不明智的行为, 此时应该采取授权再制造模式, 自身不承担风险.
+
+\begin{remarkq}\label{corollary6}
+在消费者对再制造产品的接受程度比较小的市场条件下或者当消费者对再制造产品的接受程度比较大并且废旧产品的回收难度较小时, 再制造产品需求波动的变大将使得3PR由外包再制造模式转向授权再制造模式.
+\end{remarkq}
+
+\begin{proofname}
+在第三章的结论\ref{Rr}表明: 当$~\delta < 0.5$~时$,\pi _r^{O*} > \pi _r^{A*}~$; 当$~\delta \ge  0.5$~时, 若满足~$\eta  < ( > )\frac{{2\delta {{(1 - \delta )}^2}}}{{2\delta  - 1}}, $ 则 $\pi _r^{O*} >(<) \pi _r^{A*}$.
+
+以下仅仅讨论以下两种情况: (1)~$~\delta < 0.5$; (2)~$\eta  < \frac{{2\delta {{(1 - \delta )}^2}}}{{2\delta  - 1}}$. 因为以上两种情况都有$~\pi _r^{O*} > \pi _r^{A*}$.
+
+由等式(\ref{5rro}), 可以令$~\pi _r^{O*}(\sigma) = 0$, 可以出得
+\begin{equation}\label{kk}
+{\delta ^*} = \frac{{{c_n}\delta  - {c_r}}}{{\delta (1 - \delta )}}
+\end{equation}
+将等式(\ref{kk})代入(\ref{5rra})此时
+\[\pi _n^{A*}{|_{{\delta ^*}}} = \frac{{{\delta ^2}(2\delta  + \eta ){{({c_n}\delta  - {c_r})}^2}}}{{8({{(1 - \delta )}^2}{{(\eta  - {\delta ^2} + 2\delta )}^2}}} > 0\]
+则, 由于根的存在性定理, 可得必然存在一个点$~{\delta ^{*}} > 0$, 使得~$\pi _n^{O*} - \pi _n^{A*} = 0$.
+所以必然存在$~\delta > {\delta ^{*}}$, 使得~$\pi _n^{O*} < \pi _n^{A*}$.
+
+推论得证.
+\end{proofname}
+
+结论\ref{corollary6}说明: 3PR进入再制造产品市场前应该深入了解消费者对再制造产品接受程度和回收废旧产品的难度, 只有这样才能选择更好的再制造模式.
+
+\section{数值实验}
+
+接下来的数值实验是对前文分析的补充.
+\subsection{参数设定}
+
+下面进行参数的设定: $~{c_n} = 0.8,{c_r} = 0.3,\eta  = 0.5,\delta  = 0.5$, 同时$\sigma \in [0,0.2]$.
+
+\subsection{结果分析}
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{qn.eps}
+\caption{$~\sigma~$对$~{Q_n^{O*}}, {Q_n^{A*}}~$的影响}\label{5qn}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\sigma$ on the ${Q_n^O}$ and $Q_n^{A*}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{qr.eps}
+\caption{$~\sigma~$对~${Q_r^{O*}}, {Q_r^{A*}}~$的影响}\label{5qr}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\sigma$ on the ${Q_r^{O*}}$ and ${Q_r^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{n.eps}
+\caption{$~\sigma~$对$~{\pi_n^{O*}}, {\pi_n^{A*}}~$的影响}\label{5n}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\sigma$ on the ${\pi_n^{O*}}$ and ${\pi_n^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{r.eps}
+\caption{$~\sigma~$对$~{\pi_r^O}, {\pi_r^A}~$的影响}\label{5r}     %图片占用一行宽度的45%
+%英文标题begin
+\addtocounter{figure}{-1}
+\vspace{-5pt}
+%\SetEnglishCaption
+\renewcommand{\figurename}{Fig}
+\caption{The effect of $\sigma$ on the ${\pi_r^{O*}}$ and ${\pi_r^{A*}}$}
+\renewcommand{\figurename}{图}
+  %英文标题end
+\hspace{2mm}
+\end{figure}
+
+图\ref{5qn}比较了外包再制造模式和授权再制造模式下新产品产量之间的关系, 随着$~\sigma~$的增大, 两者的差距越来越大, 和理论分析一致. 图\ref{5qr}表明两种再制造模式再制造产品的产量大小关系与新产品产量相反. 企业的趋利属性使得利供应链中企业所关注的重点是利润和期望效用, 图\ref{5n}和图\ref{5r}中刻画了OEM和3PR在两种再制造模式下的利润大小关系, 可以看出在再制造产品的需求波动比较大时, 在本文设定的参数下, OEM更喜欢授权再制造模式, 而3PR更喜欢外包再制造模式.
+
+\section{小结}
+
+再制造市场需求为波动型, 一个重要的原因就是市场中的消费者对再制造产品的接受程度不明确, 供应链中的企业极易对于市场进行误判, 从而市场需求波动极易对原始设备制造商造成很深的影响. 本章基于再制造产品的需求波动, 建立了Stackelberg博弈模型, 讨论了再制造产品的需求波动对再制造闭环供应链决策和企业绩效的影响. 研究发现:
+
+(1)~随着再制造产品的需求波动变大时, 在外包再制造模式下, 新产品和再制造产品的产量都会降低, 原始设备制造商和第三方再制造商的利润也会降低; 但是在授权再制造模式下, 新产品的销售量随着再制造产品的需求波动的变大而变大, 再制造产品、原始设备制造商和第三方再制造商的利润的变化方式跟外包再制造模式下的变化方式一样.
+
+(2)~由理论分析发现, 再制造产品的需求波动超过某个值时, OEM更喜欢授权再制造模式; 而对于3PR而言, 在消费者对再制造产品的接受程度比较小的市场条件下或者当消费者对再制造产品的接受程度比较大并且废旧产品的回收难度较小时, 再制造产品需求波动的变大将使得3PR由外包再制造模式转向授权再制造模式. 在发展中国家, 再制造产品的接受程度较低, 再制造产品的市场需求波动比较大, 这使得授权再制造模式得到更好的发展.
+
+\chapter{\hei 研究结论与展望}
+
+\section{研究内容与结论}
+
+再制造闭环供应链是供应链研究的一个重要方向, 本文在归纳总结前人的基础上, 采用了Stackelberg博弈论作为理论工具, 分别建立了政府干涉和市场波动条件下的再制造模式选择模型, 其中原始设备制造商和第三方再制造商之间的博弈模式为外包再制造和授权再制造模式, 在此基础上分别比较了供应链成员的决策和绩效, 为供应链成员企业和政府的决策提供参考. 主要的研究结论如下:
+
+1~政府干涉下的再制造闭环供应链模式选择
+
+讨论了供应链在政府的补贴政策下的博弈, 其中政府分别为了促进再制造产业的发展, 分别对原始设备制造商、第三方再制造商和消费者进行补贴, 原始设备制造商和第三方再制造商都为风险中性, 得到了以下结论:
+
+(1)~政府的政策干涉并不会对供应链中原始设备制造商和第三方再制造商的再制造模式偏好产生影响. 原始设备制造更喜欢外包再制造模式. 在一个消费者对再制造产品接受程度较大的市场下, 第三方再制造商喜欢外包再制造模式, 而在一个消费者对再制造产品接受程度较大的市场下, 仅仅当废旧产品的回收难度比较大时, 第三方再制造商才会采用外包再制造模式.
+
+(2)~对政府而言, 补贴对象的不同并不能带来再制造产品的产量的提高, 当政府考虑对不同的补贴对象进行补贴时, 仅需要考虑企业所处的再制造模式的不同, 而外包再制造模式下的回收量和回收率都比授权再制造模式下大, 所以外包再制造模式对于政府而言是最好的补贴模式.
+
+2~再制造产品的需求波动对闭环供应链模式选择的影响
+
+讨论了再制造产品的市场需求波动对再制造闭环供应链模式选择的影响, 得到了以下结论:
+
+(1)~再制造产品的需求波动影响了再制造闭环供应链中原始设备制造商和第三方再制造商关于再制造模式的选择. 在一个再制造市场需求波动大的市场条件下, 原始设备制造商更喜欢授权再制造模式. 而对于第三方再制造商而言, 在消费者对再制造产品的接受程度比较小的市场条件下或者当消费者对再制造产品的接受程度比较大并且废旧产品的回收难度较小时, 再制造产品需求波动的变大将使得第三方再制造商由外包再制造模式转向授权再制造模式.
+
+\section{主要创新点}
+
+本文对再制造门类中非独立再制造方面进行了深入的研究, 创新性的对比了政府补贴政策下再制造闭环供应链成员的再制造模式选择和再制造产品需求的为不确定情况下的再制造模式选择问题, 本文的研究结果为政府、相关的企业制定相关补贴决策提供了理论性的方向. 本文的创新点体现为以下两个方向.
+
+(1)~通过建立数学模型, 在随机市场需求波动的条件下将政府对供应链成员的干涉归纳入模型中, 利用Stackelberg博弈的理论和方法进行模型的分析.
+
+本研究揭示了一个重要的现象: 政府对供应链成员的干涉并不会影响原始设备制造商和第三方再制造商的再制造模式选择. 而再制造产品需求波动将极大的影响企业的效益.
+
+(2)~将销售再制造产所风险归纳入博弈模型中, 研究了供应链成员是否应该进行再制造产品的销售以及应该选择何种再制造模式进行合作.
+
+虽然再制造产品的生产和销售能够来经济效益, 但是因为大众消费者对再制造产品接受程度的难以预测可能带来利润的不确定性, 这对于企业来说是难以接受的. 通过本文研究, 发现在再制造产品需求波动的条件下, 原始设备制造商的偏好为授权再制造模式, 与此同时在特定的条件下第三方再制造商喜欢销售再制造产品, 达成与原始设备制造商偏好的一致.
+
+\section{研究的不足与未来展望}
+
+本文在考虑了政府的政策干涉和再制造产品的市场需求波动对供应链成员再制造模式选择的影响, 为政府、企业的决策提供了依据, 但也存在着某些不足之处:
+
+(1) 在整个市场中, 有一部分的消费者是“绿色消费者”, 他们更可能会考虑再制造产品, 所以在整个建模过程中可以对消费者进行更加细致的区分, 得到更符合实际的结果.
+
+(2) 在模型建立的过程中, 并没有考虑政府可能实施针对原始设备制造商的奖惩机制, 政府会设定一个最低的回收量或者最低回收率, 通过这样的机制, 即使没有补贴政策, 也能够促使原始设备制造商回收更多的产品, 则应该在考虑补贴的情况下同时考虑奖惩机制.
+
+(3) 大数据时代下供应链成员可以很好的对市场需求波动进行更加精细的预测, 在第四章考虑均值方差模型分析供应链后, 可以在后续的讨论中可以考虑供应链成员分别对市场进行预测, 研究供应链成员是否应该投入资金和人力去进行大数据的实施.
+
+\backmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 参考文献
+\addcontentsline{toc}{chapter}{\hei 参考文献}
+\renewcommand{\bibname}{\CJKfamily{hei} 参考文献}
+\begin{thebibliography}{99}
+\bibitem{1} 习近平.中国共产党第十九次全国代表大会文件汇编 [M].北京：人民出版社，2017.
+\bibitem{2} Atasu A, Guide JVDR, Van Wassenhove LN. So what if remanufacturing cannibalizes my new product sales?[J]. California Management Review, 2010, 52(2):56-76.
+\bibitem{3} Govindan K, Soleimani H, Kannan D. Reverse logistics and closed-loop supply chain: A comprehensive review to explore the future[J]. European Journal of Operational Research, 2015, 240(3):603-626.
+\bibitem{4} Johnson MR, Mccarthy IP. Product recovery decisions within the context of Extended Producer Responsibility[J]. Journal of Engineering and Technology Management, 2014, 34:9-28.
+\bibitem{5} 常香云, 朱慧赟. 碳排放约束下企业制造/再制造生产决策研究[J]. 科技进步与对策, 2012, 29(11):75-78.
+\bibitem{6} 卡特彼勒再制造[EB/OL].https://www.cat.com/zh\_CN/parts/reman.html, 2018–08–16/2018–11–04
+\bibitem{7} King A, Miemczyk J, Bufton D. Photocopier remanufacturing at Xerox UK A description of the process and consideration of future policy issues[J]. Innovation in Life Cycle Engineering and Sustainable Development, 2006, 173-186
+\bibitem{8} Kumar S, Craig S. Dell, Inc.'s closed loop supply chain for computer assembly plants[J]. Information Knowledge Systems Management, 2007, 6(3):197-214.
+\bibitem{9} 潍柴动力再制造有限公司[EB/OL]. http://www.weichai.com/cpyfw\_350/wmdyw/hfwsc/zzz/, 2018-08-16/2018-11-04
+\bibitem{10} 赛瑞[EB/OL]. https://www.sohu.com/a/227642108\_257861, 2018-08-16/2018-11-04
+\bibitem{11} Karakayali I , Hülya Emir-Farinas, Akcali E . An analysis of decentralized collection and processing of end-of-life products[J]. Journal of Operations Management, 2007, 25(6):1161-1183.
+\bibitem{12} 刘志,李帮义,汪磊,唐娟.差异化竞争下考虑再制造专利许可的闭环供应链生产决策[J].运筹与管理,2018,27(05):66-74.
+\bibitem{13} 熊中楷,申成然,彭志强.专利保护下再制造闭环供应链协调机制研究[J].管理科学学报,2011,14(06):76-85.
+\bibitem{14} 李薇薇. 我国新能源汽车的绿色知识产权战略研究[D].华中科技大学,2012.
+\bibitem{15} 贾辰君, 程德理. 再制造产业中的专利侵权问题研究[J]. 河南科技, 2017.
+\bibitem{16} 徐滨士,刘世参,史佩京,邢忠,谢建军.汽车发动机再制造效益分析及对循环经济贡献研究[J].中国表面工程,2005(01):1-7.
+\bibitem{17} International Energy Agency． Global-EV-Outlook 2015［Ｒ］．Paris: IEA，2015．
+\bibitem{18} 王艺博,郭玉文,孙峙,阮久莉,张建强.我国废动力电池回收处理过程环境风险及其管理对策探讨[J].环境工程技术学报,2019,9(02):207-212.
+\bibitem{19} 伍星华. 汽车零部件再制造物流网络的优化设计研究[D].重庆大学,2011: 2-3.
+\bibitem{20} 胡强,曹柬,楼婷渊,江潇,周根贵.翻新产品竞争下闭环供应链决策及政府政策作用分析[J]. 软科学,2019(03):13-19+24.
+\bibitem{21} 韩小花,周维浪,沈莹.竞争型“以旧换再”闭环供应链策略选择及生产决策研究[J].运筹与管理,2019,28(02):37-44.
+\bibitem{22} 黄帝,周泓.考虑不同回收质量等级的再制造系统回收生产决策[J].中国管理科学,2018,26(10):102-112.
+\bibitem{23} 张峰,刘枚莲.基于财政补贴的第三方参与回收再制造模式的利润分配研究[J].物流工程与管理,2018,40(09):127-129.
+\bibitem{24} Ferguson N, Browne J. Issues in end-of-life product recovery and reverse logistics[J]. Production Planning \& Control, 2001, 12(5):534-547.
+\bibitem{25} 李新然, 陈蓉. 基于政府基金政策的再制造闭环供应链最优决策研究[J]. 管理评论, 2015, 27(10):183-194.
+\bibitem{26} 常香云, 王艺璇, 朱慧贇等. 集成碳排放约束的企业制造/再制造生产决策[J]. 系统工程, 2014, 32(2):49-56.
+\bibitem{27} 申成然, 熊中楷, 彭志强. 专利保护与政府补贴下再制造闭环供应链的决策和协调[J]. 管理工程学报, 2013, 27(3):132-138.
+\bibitem{28} 聂佳佳, 钟玲. 存在绿色消费者的再制造模式选择策略[J]. 工业工程, 2018, v.21；No.114(02):12-21.
+\bibitem{29} 黄先海, 蔡婉婷, 宋华盛. 金融危机与出口质量变动:口红效应还是倒逼提升[J]. 国际贸易问题, 2015(10):98-110.
+\bibitem{30} 张莉,朱光顺,李世刚,李夏洋.市场环境、重点产业政策与企业生产率差异[J].管理世界,2019,35(03):114-126.
+\bibitem{31} 赵敬华,林杰.不同补贴对象下的闭环供应链定价模型[J].管理工程学报,2017,31(01):85-92.
+\bibitem{32} Thierry M, Salomon M, Nunen JV, {\it et al.} Strategie Issues in Product Recovery Management[J]. California Management Review, 1995, 37(2):114-135.
+\bibitem{33} Clegg AJ, Williams DJ, Uzsoy R. Production planning for companies with remanufacturing capability[C] IEEE International Symposium on Electronics and the Environment. IEEE, 1995:186-191.
+\bibitem{34} 邱若臻, 黄小原. 具有产品回收的闭环供应链协调模型[J]. 东北大学学报(自然科学版), 2007, 28(6):883-886.
+\bibitem{35} Atasu A, Sarvary M, Wassenhove LNV. Remanufacturing as a Marketing Strategy[J]. Management Science, 2008, 54(10):1731-1746.
+\bibitem{36} Xiong Y, Zhou Y, Li G, {\it et al.} Don't forget your supplier when remanufacturing[J]. European Journal of Operational Research, 2013, 230(1):15-25.
+\bibitem{37} Xiong Y, Zhao Q, Zhou Y. Manufacturer-remanufacturing vs supplier-remanufacturing in a closed-loop supply chain[J]. International Journal of Production Economics, 2016, 176:21-28.
+\bibitem{38} Chiang WYK, Chhajed D, Hess JD. Direct Marketing, Indirect Profits: A Strategic Analysis of Dual-Channel Supply-Chain Design[J]. Management Science, 2003, 49(1):1-20.
+\bibitem{39} Savaskan RC, Bhattacharya S, Wassenhove LNV. Closed-Loop Supply Chain Models with Product Remanufacturing[M]. INFORMS, 2004.
+\bibitem{40} Arya A, Mittendorf B, Sappington DEM. The Bright Side of Supplier Encroachment[J]. Marketing Science, 2007, 26(5):651-659.
+\bibitem{41} Tsay AA, Agrawal N. Channel Conflict and Coordination in the E-Commerce Age[J]. Production \& Operations Management, 2010, 13(1):93-110.
+\bibitem{42} Ferguson M, Souza GC. Closed-loop supply chains : new developments to improve the sustainability of business practices[J]. Working Papers, 2010, 52(46):16267-16283.
+\bibitem{43} Atasu A, Souza GC. How Does Product Recovery Affect Quality Choice?[J]. Production \& Operations Management, 2013, 22(4):991-1010.
+\bibitem{44} Hulett J N, Most GF. Continuing support for aging ATE through remanufacturing engineering[C] Autotestcon. IEEE, 2006:115-119.
+\bibitem{45} 关启亮, 周根贵, 曹柬. 具有政府回收约束的闭环供应链回收再制造决策模型[J]. 工业工程, 2009, 12(5):40-44.
+\bibitem{46} 张曙红, 张金隆, 冷凯君. 基于政府激励的再制造闭环供应链定价策略及协调机制研究[J]. 计算机集成制造系统, 2012, 18(12):2750-2755.
+\bibitem{47} 辛广茜, 史成东, 谢云等. 考虑政府补贴的第三方回收再制造闭环供应链研究[J]. 工业工程, 2012, 15(6):70-75.
+\bibitem{48} Mitra S, Webster S. Competition in remanufacturing and the effects of government subsidies[J]. International Journal of Production Economics, 2012, 111(2):287-298.
+\bibitem{49} Zhu QH, Sarkis J, Lai KH. Supply chain-based barriers for truck-engine remanufacturing in China[J]. Transportation Research Part E, 2015, 74(68):94-108.
+\bibitem{50} Li B, Wang Z, Wang Y, {\it et al.} The Effect of Introducing Upgraded Remanufacturing Strategy on OEM's Decision[J]. Sustainability, 2018, 10(3):1-21.
+\bibitem{51} Zhang D, Zhang X, Shi B, {\it et al.} Collection and Remanufacturing of Waste Products under Patent Protection and Government Regulation[J]. Sustainability, 2018, 10(5):1-22.
+\bibitem{52} Guide VDR, Kraus ME, Srivastava R. Scheduling policies for remanufacturing[J]. International Journal of Production Economics, 1997, 48(2):187-204.
+\bibitem{53} Choi TM, Li D, Yan HM. Mean-Variance Analysis for the Newsvendor Problem[J]. IEEE Transactions on Systems Man and Cybernetics, 2008, 38(5):1169-1180.
+\bibitem{54} Choi TM, Li D, Yan H, {\it et al}. Channel coordination in supply chains with agents having mean-variance objectives[J]. Omega, 2008, 36(4):565-576.
+\bibitem{55} Shang W, Ha AY, Tong S. Information sharing in a supply chain with a common retailer[J]. Management Science Journal of the Institute for Operations Research \& the Management Sciences, 2016, 62(1):245-263.
+\bibitem{56} Hashiguchi M S. Recycling Efforts and Patent Rights Protection in the United States and Japan[J]. Columbia Journal of Environmental Law, 2008, 33(1):169-195.
+\bibitem{57} Xiao T, Yang D. Price and service competition of supply chains with risk-averse retailers under demand uncertainty[J]. International Journal of Production Economics, 2008, 114(1): 187-200.
+\bibitem{58} 叶飞, 林强. 风险规避型供应链的收益共享机制研究[J]. 管理工程学报, 2012, 26(1): 113-118.
+\bibitem{59} Xu G, Dan B, Zhang X, {\it et al.} Coordinating a dual-channel supply chain with risk-averse under a two-way revenue sharing contract[J]. International Journal of Production Economics, 2014, 147(1):171-179.
+\bibitem{60} 曹晓刚, 郑本荣, 夏火松等. 具有风险规避型零售商的闭环供应链网络均衡分析[J]. 控制与决策, 2014, 29(4): 659-6650.
+\bibitem{61} 高鹏, 聂佳佳, 谢忠秋. 制造商风险规避下闭环供应链专利授权经营策略[J]. 计算机集成制造系统, 2014, 20(3):680-688.
+\bibitem{62} Niu B, Zou Z. Better Demand Signal, Better Decisions? Evaluation of Big Data in a Licensed Remanufacturing Supply Chain with Environmental Risk Considerations[J]. Risk Analysis, 2017, 37(8):1550-1565.
+\bibitem{63} Zou ZB, Wang JJ, Deng GS, {\it et al.} Third-party remanufacturing mode selection: Outsourcing or authorization?[J]. Transportation Research Part E, 2016, 87:1-19.
+\bibitem{64} Oraiopoulos N, Toktay L B. Relicensing as a Secondary Market Strategy[J]. Management Science, 2008, 58(5):1022-1037.
+\bibitem{65} Hashiguchi M S. Recycling Efforts and Patent Rights Protection in the United States and Japan[J]. Columbia Journal of Environmental Law, 2008, 33(1):169-195.
+\bibitem{66} Karakayali I, Emir-Farinas H, Akcali E. An analysis of decentralized collection and processing of end-of-life products[J]. Journal of Operations Management, 2007, 25(6):1161-1183.
+\bibitem{67} Wang K, Zhao Y, Cheng Y, {\it et al.}. Cooperation or competition? Channel choice for a Remanufacturing Fashion Supply Chain with, Government Subsidy[J]. Sustainability, 2014, 6(10):7292-7310.
+\newpage
+\end{thebibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter[\hei 致\hspace{2em} 谢]{\hei 致\hspace{1em} 谢}
+\vskip0.4cm
+转眼时光即将流逝, 研究生的三年生涯即将完结, 在汕头大学的三年期间, 碰到了许多人经历了许多事, 得到了很多老师、同学的帮忙和关心, 在此向在学习生活过程中 给予我帮助和鼓励的人表示我最真挚的感谢.
+\vskip0.4cm
+首先, 感谢我的导师韦才敏教授在三年期间对我的帮助, 韦才敏老师严谨的治学态度以及精深的学术水平让我受益终身. 在我论文选题、构思、撰写和定稿的过程中, 韦才敏老师自始至终都给予我帮助和指导, 我毕业论文的完成是和韦才敏老师的辛勤教导分不开的, 在硕士论文完稿之际, 对韦才敏老师致以崇高的敬意.
+\vskip0.4cm
+再次, 感谢汕头大学商学院的邹宗宝老师, 他在我论文撰写过程当中给予我很大的帮助.
+\vskip0.4cm
+其次,  感谢汕头大学理学院数学系的全体领导和老师, 在他们的悉心教导下, 我学到了专业知识, 掌握了扎实的专业技能. 同时也感谢论文指导组老师们, 对论文的修改提出了宝贵意见, 使我的论文更加完善.
+\vskip0.4cm
+最后,  感谢我的家人在此期间给予我的关爱与帮助, 在我遇到困难的时候, 是他们一直在我的身边, 帮助我鼓励我, 若是没有他们, 我也无法完成自身的学业, 他们是我坚强的后盾.
+\vskip0.4cm
+毕业后,  在今后的工作和生活中,  我会铭记师长们的教诲,  继续不懈努力和追求, 做到: “有志、有识、有恒、有为”.
+\vskip0.4cm
+再见！
+
+\vskip1.4cm \quad\quad\quad\quad\quad\quad
+\qquad\qquad\qquad\quad\quad\quad\quad\quad\quad\quad\quad  黄国航
+\vskip0.4cm \quad\quad\quad\quad\quad\quad \qquad\qquad\qquad\quad\quad\quad\quad\quad\quad
+  2019 年 4 月 7 日
+
+\newpage
+    \thispagestyle{empty}
+
+
+
+\newpage
+
+\centerline
+{\bf\LARGE\textbf{\ 个\ \ 人\ \ 简\ \ 历} }
+\vskip0.5cm
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+\multicolumn{6}{|c|}{\rule[-3mm]{0mm}{4mm} \textbf{基\ \ 本 \ \ 情 \ \ 况}} \\
+\hline \hline 姓~~ 名 & 黄国航 & ~ 性 ~~ 别~ & 男 & 出生年月 & 1993~ 年~12~ 月 \\
+\hline  政治面貌 & 共青团员 & ~ 民~~ 族~ & 壮 & ~ 籍~~ 贯~ & 广西南宁 \\
+\hline  专~~ 业 & 应用数学 & ~ 方~~ 向~ & 金融数学 & 攻读学位~ & ~ 理学硕士~ \\
+\hline
+\end{tabular}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|c|c|}\hline
+\multicolumn{2}{|c|}{\rule[-3mm]{0mm}{4mm}\bfseries { 学\ \ 习 \ 及\ 工 \ 作 \ 经 \ \ 历}} \\
+\hline \hline~~~~~~~~~~~~~ 迄止时间~~~~~~~~~~~~~& ~~~~~~~~~~~~~~~ 学习或工作单位~~~~~~~~~~~~~~ \\
+\hline  2011~ 年~9~ 月~-~2015~ 年~6~ 月 & 广西民族大学(攻读学士学位)   \\
+\hline  2016~ 年~9~ 月~-~2019~ 年~6~ 月 & 汕头大学(攻读硕士学位)   \\
+\hline
+\end{tabular}
+
+\end{center}
+\end{CJK*}
+\end{document}

@@ -1,0 +1,1288 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.11.13)  13 NOV 2019 16:44
+entering extended mode
+**Master*Paper*of*ZhangLiu.tex
+
+("D:\Person Program\github\Academic-Report-Documentation\MasterPaper\zhangliu m
+aster paper\Master Paper of ZhangLiu.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+("D:\Person Program\CTEX\MiKTeX\tex\latex\base\book.cls"
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+("D:\Person Program\CTEX\MiKTeX\tex\latex\base\bk12.clo"
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\CJK.sty"
+Package: CJK 2008/12/29 4.8.2
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\mule\MULEenc.sty"
+Package: MULEenc 2008/12/29 4.8.2
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\CJK.enc"
+File: CJK.enc 2008/12/29 4.8.2
+)
+LaTeX Info: Redefining \selectfont on input line 756.
+\CJK@indent=\box26
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+("D:\Person Program\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+("D:\Person Program\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip55
+\thm@postskip=\skip56
+\thm@headsep=\skip57
+\dth@everypar=\toks25
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip61
+\c@subfigure=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@lotdepth=\count104
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("D:\Person Program\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip62
+\subfig@bottom=\skip63
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\CJKnumb.sty"
+Package: CJKnumb 2008/12/29 4.8.2
+\CJK@q=\count105
+\CJK@r=\count106
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\titlesec\titletoc.sty"
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen116
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\titlesec\titlesec.sty"
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box29
+\beforetitleunit=\skip64
+\aftertitleunit=\skip65
+\ttl@plus=\dimen117
+\ttl@minus=\dimen118
+\ttl@toksa=\toks27
+\titlewidth=\dimen119
+\titlewidthlast=\dimen120
+\titlewidthfirst=\dimen121
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\caption\caption.sty"
+Package: caption 2011/11/10 v3.2e Customizing captions (AR)
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\caption\caption3.sty"
+Package: caption3 2011/11/01 v1.4a caption3 kernel (AR)
+\captionmargin=\dimen122
+\captionmargin@=\dimen123
+\captionwidth=\dimen124
+\caption@indent=\dimen125
+\caption@parindent=\dimen126
+\caption@hangindent=\dimen127
+)
+\c@ContinuedFloat=\count107
+Package caption Info: subfigure package is loaded.
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks28
+\float@box=\box30
+\@float@everytoks=\toks29
+\@floatcapt=\box31
+)
+("D:\Person Program\CTEX\MiKTeX\tex\generic\genmisc\mathdots.sty"
+Package: mathdots 2004/07/02 version 0.6.
+\MD@unit=\dimen128
+LaTeX Info: Redefining \ddots on input line 120.
+LaTeX Info: Redefining \vdots on input line 122.
+
+
+Package Mathdots Warning: Redefining amsmath commands \dddot and \ddddot.
+
+LaTeX Info: Redefining \dddot on input line 145.
+LaTeX Info: Redefining \ddddot on input line 145.
+) ("D:\Person Program\CTEX\MiKTeX\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
+\mult@box=\box32
+\multicol@leftmargin=\dimen129
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen130
+\page@free=\dimen131
+\premulticols=\dimen132
+\postmulticols=\dimen133
+\multicolsep=\skip66
+\multicolbaselineskip=\skip67
+\partial@page=\box33
+\last@line=\box34
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen134
+\multicolovershoot=\dimen135
+\multicolundershoot=\dimen136
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
+\multicol@sort@counter=\count117
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen137
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+("D:\Person Program\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+("D:\Person Program\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("D:\Person Program\CTEX\MiKTeX\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen138
+\lightrulewidth=\dimen139
+\cmidrulewidth=\dimen140
+\belowrulesep=\dimen141
+\belowbottomsep=\dimen142
+\aboverulesep=\dimen143
+\abovetopsep=\dimen144
+\cmidrulesep=\dimen145
+\cmidrulekern=\dimen146
+\defaultaddspace=\dimen147
+\@cmidla=\count118
+\@cmidlb=\count119
+\@aboverulesep=\dimen148
+\@belowrulesep=\dimen149
+\@thisruleclass=\count120
+\@lastruleclass=\count121
+\@thisrulewidth=\dimen150
+)
+("D:\Person Program\github\Academic-Report-Documentation\MasterPaper\zhangliu m
+aster paper\Master Paper of ZhangLiu.aux"
+
+LaTeX Warning: Label `proposition22' multiply defined.
+
+
+LaTeX Warning: Label `pr' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+ ("D:\Person Program\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count122
+\scratchdimen=\dimen151
+\scratchbox=\box58
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen152
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks31
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ ("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\standard.bdg"
+File: standard.bdg 2008/12/29 4.8.2
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\extended.enc"
+File: extended.enc 2008/12/29 4.8.2
+)
+("D:\Person Program\CTEX\MiKTeX\tex\latex\cjk\extended.chr"
+File: extended.chr 2008/12/29 4.8.2
+)
+\c@theorem=\count128
+\c@lemma=\count129
+\c@example=\count130
+\c@corollary=\count131
+\c@remarkq=\count132
+\c@proposition=\count133
+\c@definition=\count134
+\c@remark=\count135
+LaTeX Font Info:    Try loading font information for C19+song on input line 143
+.
+
+("D:\Person Program\CTEX\CTeX\tex\latex\CJK\GB\c19song.fd"
+File: c19song.fd 2009/09/23 4.8.2
+)
+LaTeX Font Info:    Try loading font information for C19+hei on input line 146.
+
+
+("D:\Person Program\CTEX\CTeX\tex\latex\CJK\GB\c19hei.fd"
+File: c19hei.fd 2009/09/23 4.8.2
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 159.
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 159.
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 159.
+
+("D:\Person Program\CTEX\MiKTeX\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [1
+
+{D:/Person Program/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd
+}}] [2]
+[3] [4] [1
+
+
+] [2
+
+]
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+ [3]
+[4]
+("D:\Person Program\github\Academic-Report-Documentation\MasterPaper\zhangliu m
+aster paper\Master Paper of ZhangLiu.toc" [5
+
+
+])
+\tf@toc=\write3
+ [6]
+\CJKfamily {hei} µ⁄\nobreakspace {}1\nobreakspace {} ’¬ 1.
+[1
+
+
+] [2] [3] [4] [5] [6] [7] [8]
+Package epstopdf Info: Source file: <jishu.eps>
+(epstopdf)                    date: 2019-04-03 11:48:06
+(epstopdf)                    size: 389686 bytes
+(epstopdf)             Output file: <jishu-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-04-03 11:48:38
+(epstopdf)                    size: 41022 bytes
+(epstopdf)             Command: <epstopdf --outfile=jishu-eps-converted-to.pdf 
+jishu.eps>
+(epstopdf)             \includegraphics on input line 433.
+Package epstopdf Info: Output file is already uptodate.
+
+<jishu-eps-converted-to.pdf, id=125, 1346.02875pt x 1242.6425pt>
+File: jishu-eps-converted-to.pdf Graphic file (type pdf)
+
+<use jishu-eps-converted-to.pdf>
+Package pdftex.def Info: jishu-eps-converted-to.pdf used on input line 433.
+(pdftex.def)             Requested size: 404.02913pt x 372.98524pt.
+ [9] [10 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zh
+angliu master paper/jishu-eps-converted-to.pdf>]
+\CJKfamily {hei} µ⁄\nobreakspace {}2\nobreakspace {} ’¬ 2.
+[11
+
+]
+Package epstopdf Info: Source file: <O.eps>
+(epstopdf)                    date: 2019-01-29 14:00:06
+(epstopdf)                    size: 1281915 bytes
+(epstopdf)             Output file: <O-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 14:00:48
+(epstopdf)                    size: 30976 bytes
+(epstopdf)             Command: <epstopdf --outfile=O-eps-converted-to.pdf O.ep
+s>
+(epstopdf)             \includegraphics on input line 471.
+Package epstopdf Info: Output file is already uptodate.
+ <O-eps-converted-to.pdf, id=156, 263.98625pt x 284.06125pt>
+File: O-eps-converted-to.pdf Graphic file (type pdf)
+
+<use O-eps-converted-to.pdf>
+Package pdftex.def Info: O-eps-converted-to.pdf used on input line 471.
+(pdftex.def)             Requested size: 144.54pt x 155.53198pt.
+Package epstopdf Info: Source file: <O.eps>
+(epstopdf)                    date: 2019-01-29 14:00:06
+(epstopdf)                    size: 1281915 bytes
+(epstopdf)             Output file: <O-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 14:00:48
+(epstopdf)                    size: 30976 bytes
+(epstopdf)             Command: <epstopdf --outfile=O-eps-converted-to.pdf O.ep
+s>
+(epstopdf)             \includegraphics on input line 486.
+Package epstopdf Info: Output file is already uptodate.
+File: O-eps-converted-to.pdf Graphic file (type pdf)
+ <use O-eps-converted-to.pdf>
+Package pdftex.def Info: O-eps-converted-to.pdf used on input line 486.
+(pdftex.def)             Requested size: 144.54pt x 155.53198pt.
+ [12 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangl
+iu master paper/O-eps-converted-to.pdf>]
+\CJKfamily {hei} µ⁄\nobreakspace {}3\nobreakspace {} ’¬ 3.
+
+Underfull \vbox (badness 1735) has occurred while \output is active []
+
+ [13
+
+]
+[14] [15] [16]
+Package epstopdf Info: Source file: <OEMO.eps>
+(epstopdf)                    date: 2019-01-29 13:19:34
+(epstopdf)                    size: 1492144 bytes
+(epstopdf)             Output file: <OEMO-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 14:11:40
+(epstopdf)                    size: 33573 bytes
+(epstopdf)             Command: <epstopdf --outfile=OEMO-eps-converted-to.pdf O
+EMO.eps>
+(epstopdf)             \includegraphics on input line 634.
+Package epstopdf Info: Output file is already uptodate.
+ <OEMO-eps-converted-to.pdf, id=216, 406.51875pt x 284.06125pt>
+File: OEMO-eps-converted-to.pdf Graphic file (type pdf)
+
+<use OEMO-eps-converted-to.pdf>
+Package pdftex.def Info: OEMO-eps-converted-to.pdf used on input line 634.
+(pdftex.def)             Requested size: 216.81pt x 151.49663pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Overfull \hbox (8.36087pt too wide) in paragraph at lines 677--679
+[]\C19/song/m/n/12/40 È\OT1/cmr/m/n/12 (3-12[])\C19/song/m/n/12/53 ¶ $\OML/cmm/
+m/it/12 Q[] []$\C19/song/m/n/12/40  \C19/song/m/n/12/41  \C19/song/m/n/12/46 
+ \C19/song/m/n/12/40  \C19/song/m/n/12/55 Í \C19/song/m/n/12/58 è\OT1/cmr/m/n
+/12 : $ [][] = \OMS/cmsy/m/n/12  \OML/cmm/m/it/12  < \OT1/cmr/m/n/12 0\OML/cmm
+/m/it/12 :$ \C19/song/m/n/12/56 § \C19/song/m/n/12/61 ±\OT1/cmr/m/n/12 3PR\C19/
+song/m/n/12/40  \C19/song/m/n/12/48 | \C19/song/m/n/12/54 d$ []\OML/cmm/m/it/1
+2 []$ \C19/song/m/n/12/58 è $\OML/cmm/m/it/12 Q[] []$\C19/song/m/n/12/40 
+ []
+
+[18 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangli
+u master paper/OEMO-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <3PRO.eps>
+(epstopdf)                    date: 2019-01-29 13:31:44
+(epstopdf)                    size: 1491674 bytes
+(epstopdf)             Output file: <3PRO-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 14:18:00
+(epstopdf)                    size: 33442 bytes
+(epstopdf)             Command: <epstopdf --outfile=3PRO-eps-converted-to.pdf 3
+PRO.eps>
+(epstopdf)             \includegraphics on input line 731.
+Package epstopdf Info: Output file is already uptodate.
+
+<3PRO-eps-converted-to.pdf, id=254, 401.5pt x 284.06125pt>
+File: 3PRO-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 3PRO-eps-converted-to.pdf>
+Package pdftex.def Info: 3PRO-eps-converted-to.pdf used on input line 731.
+(pdftex.def)             Requested size: 216.81pt x 153.39511pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19]
+Overfull \hbox (7.21364pt too wide) in paragraph at lines 777--779
+[]\C19/song/m/n/12/40 È\OT1/cmr/m/n/12 (3-16[])\C19/song/m/n/12/53 ¶ $\OML/cmm/
+m/it/12 Q[] []$\C19/song/m/n/12/40  \C19/song/m/n/12/41  \C19/song/m/n/12/46 
+ \C19/song/m/n/12/40  \C19/song/m/n/12/55 Í \C19/song/m/n/12/58 è\OT1/cmr/m/n
+/12 : $ [][] = \OMS/cmsy/m/n/12  \OML/cmm/m/it/12  < \OT1/cmr/m/n/12 0\OML/cmm
+/m/it/12 :$ \C19/song/m/n/12/56 § \C19/song/m/n/12/61 ±\OT1/cmr/m/n/12 3PR\C19/
+song/m/n/12/40  \C19/song/m/n/12/48 | \C19/song/m/n/12/54 d$ []\OML/cmm/m/it/1
+2 []$ \C19/song/m/n/12/58 è$ []\OML/cmm/m/it/12 Q[] []$\C19/song/m/n/12/40 
+ []
+
+[20 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangli
+u master paper/3PRO-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <CO.eps>
+(epstopdf)                    date: 2019-01-29 13:34:22
+(epstopdf)                    size: 1491666 bytes
+(epstopdf)             Output file: <CO-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 13:53:58
+(epstopdf)                    size: 33423 bytes
+(epstopdf)             Command: <epstopdf --outfile=CO-eps-converted-to.pdf CO.
+eps>
+(epstopdf)             \includegraphics on input line 830.
+Package epstopdf Info: Output file is already uptodate.
+
+<CO-eps-converted-to.pdf, id=284, 401.5pt x 284.06125pt>
+File: CO-eps-converted-to.pdf Graphic file (type pdf)
+
+<use CO-eps-converted-to.pdf>
+Package pdftex.def Info: CO-eps-converted-to.pdf used on input line 830.
+(pdftex.def)             Requested size: 216.81pt x 153.39511pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21]
+Overfull \hbox (12.9404pt too wide) in paragraph at lines 874--876
+[]\C19/song/m/n/12/40 È\OT1/cmr/m/n/12 (3-20[])\C19/song/m/n/12/53 ¶ $\OML/cmm/
+m/it/12 Q[] []$\C19/song/m/n/12/40  \C19/song/m/n/12/41  \C19/song/m/n/12/46 
+ \C19/song/m/n/12/40  \C19/song/m/n/12/55 Í \C19/song/m/n/12/58 è\OT1/cmr/m/n
+/12 : $ [][] = \OMS/cmsy/m/n/12  \OML/cmm/m/it/12  < \OT1/cmr/m/n/12 0\OML/cmm
+/m/it/12 :$ \C19/song/m/n/12/56 § \C19/song/m/n/12/61 ±\OT1/cmr/m/n/12 3PR\C19/
+song/m/n/12/40  \C19/song/m/n/12/48 | \C19/song/m/n/12/54 d$ []\OML/cmm/m/it/1
+2 []$ \C19/song/m/n/12/58 è$ []\OML/cmm/m/it/12 Q[] []$\C19/song/m/n/12/40 
+ []
+
+[22 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangli
+u master paper/CO-eps-converted-to.pdf>]
+Underfull \vbox (badness 1648) has occurred while \output is active []
+
+ [23]
+[24] [25]
+Overfull \hbox (2.96951pt too wide) in paragraph at lines 1013--1014
+[]\OT1/cmr/m/n/12 (2) \C19/song/m/n/12/55 « \C19/song/m/n/12/54  \C19/song/m/n
+/12/63 2 \C19/song/bx/n/12/64 õ \C19/song/m/n/12/63 E \C19/song/m/n/12/51  \C1
+9/song/m/n/12/55 ™ \C19/song/m/n/12/59 e\OT1/cmr/m/n/12 , \C19/song/bx/n/12/64 
+ \C19/song/m/n/12/42 ? \C19/song/m/n/12/40 È\OT1/cmr/m/n/12 OEM\C19/song/m/n/1
+2/46 ? \C19/song/m/n/12/60 1 \C19/song/m/n/12/37 ÷ \C19/song/m/n/12/57 b\OT1/cm
+r/m/n/12 , \C19/song/m/n/12/54 X \C19/song/m/n/12/57 „\OT1/cmr/m/n/12 3-4[], \C
+19/song/m/n/12/47  \C19/song/m/n/12/49 ƒ \C19/song/m/n/12/40  \C19/song/m/n/1
+2/57 J \C19/song/m/n/12/42 p\OT1/cmr/m/n/12 OEM\C19/song/m/n/12/40 È
+ []
+
+Package epstopdf Info: Source file: <OEMA.eps>
+(epstopdf)                    date: 2019-01-29 13:17:34
+(epstopdf)                    size: 1697599 bytes
+(epstopdf)             Output file: <OEMA-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 14:20:08
+(epstopdf)                    size: 33552 bytes
+(epstopdf)             Command: <epstopdf --outfile=OEMA-eps-converted-to.pdf O
+EMA.eps>
+(epstopdf)             \includegraphics on input line 1017.
+Package epstopdf Info: Output file is already uptodate.
+<OEMA-eps-converted-to.pdf, id=324, 404.51125pt x 284.06125pt>
+File: OEMA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use OEMA-eps-converted-to.pdf>
+Package pdftex.def Info: OEMA-eps-converted-to.pdf used on input line 1017.
+(pdftex.def)             Requested size: 216.81pt x 152.25082pt.
+
+Underfull \vbox (badness 1360) has occurred while \output is active []
+
+ [26 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangl
+iu master paper/OEMA-eps-converted-to.pdf>] [27]
+Package epstopdf Info: Source file: <3PRA.eps>
+(epstopdf)                    date: 2019-01-29 13:30:54
+(epstopdf)                    size: 1698103 bytes
+(epstopdf)             Output file: <3PRA-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 14:22:16
+(epstopdf)                    size: 33625 bytes
+(epstopdf)             Command: <epstopdf --outfile=3PRA-eps-converted-to.pdf 3
+PRA.eps>
+(epstopdf)             \includegraphics on input line 1116.
+Package epstopdf Info: Output file is already uptodate.
+
+<3PRA-eps-converted-to.pdf, id=355, 406.51875pt x 284.06125pt>
+File: 3PRA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 3PRA-eps-converted-to.pdf>
+Package pdftex.def Info: 3PRA-eps-converted-to.pdf used on input line 1116.
+(pdftex.def)             Requested size: 216.81pt x 151.49663pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28] [29 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zh
+angliu master paper/3PRA-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <CA.eps>
+(epstopdf)                    date: 2019-01-29 13:33:36
+(epstopdf)                    size: 1697066 bytes
+(epstopdf)             Output file: <CA-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-01-29 13:54:02
+(epstopdf)                    size: 33460 bytes
+(epstopdf)             Command: <epstopdf --outfile=CA-eps-converted-to.pdf CA.
+eps>
+(epstopdf)             \includegraphics on input line 1216.
+Package epstopdf Info: Output file is already uptodate.
+
+<CA-eps-converted-to.pdf, id=385, 406.51875pt x 284.06125pt>
+File: CA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use CA-eps-converted-to.pdf>
+Package pdftex.def Info: CA-eps-converted-to.pdf used on input line 1216.
+(pdftex.def)             Requested size: 216.81pt x 151.49663pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30] [31 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zh
+angliu master paper/CA-eps-converted-to.pdf>] [32]
+Overfull \hbox (3.55008pt too wide) in paragraph at lines 1333--1335
+\C19/song/bx/n/12/64 y[][] \C19/song/bx/n/12/50 ≤[][]\OT1/cmr/m/n/12 :  \C19/so
+ng/m/n/12/42 ä \C19/song/bx/n/12/46 ‚ \C19/song/m/n/12/57 Ì \C19/song/bx/n/12/4
+9 ÿ\OT1/cmr/m/n/12 (3.3.1)\C19/song/m/n/12/25 ! \C19/song/m/n/12/57 Ì \C19/song
+/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.2)\C19/song/m/n/12/25 ! \C19/song/m/n/12/57 Ì
+ \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.3)\C19/song/m/n/12/25 ! \C19/song/m
+/n/12/57 Ì \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.4)\C19/song/m/n/12/25 ! \
+C19/song/m/n/12/57 Ì \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.5)\C19/song/m/n
+/12/25 !
+ []
+
+[33]
+Overfull \hbox (3.55008pt too wide) in paragraph at lines 1368--1370
+\C19/song/bx/n/12/64 y[][] \C19/song/bx/n/12/50 ≤[][]\OT1/cmr/m/n/12 :  \C19/so
+ng/m/n/12/42 ä \C19/song/bx/n/12/46 ‚ \C19/song/bx/n/12/50 ∑ \C19/song/m/n/12/5
+7 K\OT1/cmr/m/n/12 (3.3.1)\C19/song/m/n/12/25 ! \C19/song/bx/n/12/50 ∑ \C19/son
+g/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.2)\C19/song/m/n/12/25 ! \C19/song/bx/n/12/50 
+∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.3)\C19/song/m/n/12/25 ! \C19/song/b
+x/n/12/50 ∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.4)\C19/song/m/n/12/25 ! \
+C19/song/bx/n/12/50 ∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.5)\C19/song/m/n
+/12/25 !
+ []
+
+[34]
+Overfull \hbox (3.55008pt too wide) in paragraph at lines 1390--1392
+\C19/song/bx/n/12/64 y[][] \C19/song/bx/n/12/50 ≤[][]\OT1/cmr/m/n/12 :  \C19/so
+ng/m/n/12/42 ä \C19/song/bx/n/12/46 ‚ \C19/song/bx/n/12/50 ∑ \C19/song/m/n/12/5
+7 K\OT1/cmr/m/n/12 (3.3.1)\C19/song/m/n/12/25 ! \C19/song/bx/n/12/50 ∑ \C19/son
+g/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.2)\C19/song/m/n/12/25 ! \C19/song/bx/n/12/50 
+∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.3)\C19/song/m/n/12/25 ! \C19/song/b
+x/n/12/50 ∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.4)\C19/song/m/n/12/25 ! \
+C19/song/bx/n/12/50 ∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.5)\C19/song/m/n
+/12/25 !
+ []
+
+[35]
+Overfull \hbox (3.55008pt too wide) in paragraph at lines 1413--1415
+\C19/song/bx/n/12/64 y[][] \C19/song/bx/n/12/50 ≤[][]\OT1/cmr/m/n/12 :  \C19/so
+ng/m/n/12/42 ä \C19/song/bx/n/12/46 ‚ \C19/song/bx/n/12/50 ∑ \C19/song/m/n/12/5
+7 K\OT1/cmr/m/n/12 (3.3.1)\C19/song/m/n/12/25 ! \C19/song/bx/n/12/50 ∑ \C19/son
+g/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.2)\C19/song/m/n/12/25 ! \C19/song/bx/n/12/50 
+∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.3)\C19/song/m/n/12/25 ! \C19/song/b
+x/n/12/50 ∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.4)\C19/song/m/n/12/25 ! \
+C19/song/bx/n/12/50 ∑ \C19/song/m/n/12/57 K\OT1/cmr/m/n/12 (3.3.5)\C19/song/m/n
+/12/25 !
+ []
+
+[36] [37]
+Overfull \hbox (9.70164pt too wide) in paragraph at lines 1472--1473
+[] \C19/song/bx/n/12/46 ([][] \C19/song/bx/n/12/49 ÿ[][]  \OT1/cmr/bx/n/12 3.8.
+ []\C19/song/m/it/12/48 ¸ \C19/song/m/it/12/64 ´ \C19/song/m/it/12/63 2 \C19/so
+ng/m/it/12/64 õ \C19/song/m/it/12/63 E \C19/song/m/it/12/51  \C19/song/m/it/12
+/55 ™\OT1/cmr/m/it/12 OEM\C19/song/m/it/12/40  \C19/song/m/it/12/48 | \C19/son
+g/m/it/12/54 d \C19/song/m/it/12/49 ˜ \C19/song/m/it/12/65 v $[] \OML/cmm/m/it/
+12 > []; j \OMS/cmsy/m/n/12 2 f\OML/cmm/m/it/12 N; R; C\OMS/cmsy/m/n/12 g\OT1/c
+mr/m/n/12 ; \OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 =$
+ []
+
+
+Overfull \hbox (3.55008pt too wide) in paragraph at lines 1475--1477
+\C19/song/bx/n/12/64 y[][] \C19/song/bx/n/12/50 ≤[][]\OT1/cmr/m/n/12 :  \C19/so
+ng/m/n/12/42 ä \C19/song/bx/n/12/46 ‚ \C19/song/m/n/12/57 Ì \C19/song/bx/n/12/4
+9 ÿ\OT1/cmr/m/n/12 (3.3.1)\C19/song/m/n/12/25 ! \C19/song/m/n/12/57 Ì \C19/song
+/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.2)\C19/song/m/n/12/25 ! \C19/song/m/n/12/57 Ì
+ \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.3)\C19/song/m/n/12/25 ! \C19/song/m
+/n/12/57 Ì \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.4)\C19/song/m/n/12/25 ! \
+C19/song/m/n/12/57 Ì \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.5)\C19/song/m/n
+/12/25 !
+ []
+
+
+Overfull \hbox (8.15872pt too wide) in paragraph at lines 1500--1501
+[]\C19/song/bx/n/12/46 ( \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 3.8[]\C19/song/m
+/n/12/56 ` \C19/song/bx/n/12/50 ≤\OT1/cmr/m/n/12 OEM\C19/song/m/n/12/63 3 \C19/
+song/m/n/12/58 	 \C19/song/m/n/12/36 ù \C19/song/m/n/12/63 2 \C19/song/bx/n/12/
+64 õ \C19/song/m/n/12/63 E \C19/song/m/n/12/51  \C19/song/m/n/12/55 ™ \C19/son
+g/m/n/12/59 e \C19/song/m/n/12/40  \C19/song/m/n/12/48 | \C19/song/m/n/12/54 d
+ \C19/song/m/n/12/39 å \C19/song/m/n/12/62 u \C19/song/m/n/12/55 « \C19/song/m/
+n/12/54  \C19/song/m/n/12/63 2 \C19/song/bx/n/12/64 õ \C19/song/m/n/12/63 E\OT
+1/cmr/m/n/12 , \C19/song/m/n/12/37 L \C19/song/bx/n/12/50 ≤\OT1/cmr/m/n/12 OEM\
+C19/song/m/n/12/62 k
+ []
+
+
+Overfull \hbox (3.55008pt too wide) in paragraph at lines 1506--1508
+\C19/song/bx/n/12/64 y[][] \C19/song/bx/n/12/50 ≤[][]\OT1/cmr/m/n/12 :  \C19/so
+ng/m/n/12/42 ä \C19/song/bx/n/12/46 ‚ \C19/song/m/n/12/57 Ì \C19/song/bx/n/12/4
+9 ÿ\OT1/cmr/m/n/12 (3.3.1)\C19/song/m/n/12/25 ! \C19/song/m/n/12/57 Ì \C19/song
+/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.2)\C19/song/m/n/12/25 ! \C19/song/m/n/12/57 Ì
+ \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.3)\C19/song/m/n/12/25 ! \C19/song/m
+/n/12/57 Ì \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.4)\C19/song/m/n/12/25 ! \
+C19/song/m/n/12/57 Ì \C19/song/bx/n/12/49 ÿ\OT1/cmr/m/n/12 (3.3.5)\C19/song/m/n
+/12/25 !
+ []
+
+[38]
+Overfull \hbox (3.03656pt too wide) in paragraph at lines 1528--1529
+[]\C19/song/bx/n/12/46 ≤ \C19/song/m/n/12/43 L\OT1/cmr/m/n/12 3.4[]\C19/song/bx
+/n/12/46 ! \C19/song/m/n/12/40  \C19/song/m/n/12/41 © \C19/song/m/n/12/58 € \C
+19/song/m/n/12/41 u \C19/song/m/n/12/59 y \C19/song/bx/n/12/64  \C19/song/m/n/
+12/42 ? \C19/song/m/n/12/37 ÷ \C19/song/m/n/12/57 b \C19/song/m/n/12/65 ] \C19/
+song/bx/n/12/46 7 \C19/song/m/n/12/58 è \C19/song/m/n/12/38 ~ \C19/song/m/n/12/
+55 Í \C19/song/m/n/12/40  \C19/song/m/n/12/53 ú \C19/song/m/n/12/47 π \C19/son
+g/m/n/12/59 e\OT1/cmr/m/n/12 , \C19/song/bx/n/12/64  \C19/song/m/n/12/42 ? \C1
+9/song/m/n/12/40 È\OT1/cmr/m/n/12 OEM\C19/song/m/n/12/25 !\OT1/cmr/m/n/12 3PR\C
+19/song/m/n/12/43 ⁄
+ []
+
+Package epstopdf Info: Source file: <pn3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:18
+(epstopdf)                    size: 20279 bytes
+(epstopdf)             Output file: <pn3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:22
+(epstopdf)                    size: 8920 bytes
+(epstopdf)             Command: <epstopdf --outfile=pn3-eps-converted-to.pdf pn
+3.eps>
+(epstopdf)             \includegraphics on input line 1533.
+Package epstopdf Info: Output file is already uptodate.
+<pn3-eps-converted-to.pdf, id=439, 433.62pt x 289.08pt>
+File: pn3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pn3-eps-converted-to.pdf>
+Package pdftex.def Info: pn3-eps-converted-to.pdf used on input line 1533.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <pr3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:18
+(epstopdf)                    size: 23555 bytes
+(epstopdf)             Output file: <pr3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:24
+(epstopdf)                    size: 10061 bytes
+(epstopdf)             Command: <epstopdf --outfile=pr3-eps-converted-to.pdf pr
+3.eps>
+(epstopdf)             \includegraphics on input line 1548.
+Package epstopdf Info: Output file is already uptodate.
+<pr3-eps-converted-to.pdf, id=440, 433.62pt x 289.08pt>
+File: pr3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pr3-eps-converted-to.pdf>
+Package pdftex.def Info: pr3-eps-converted-to.pdf used on input line 1548.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <qn3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:16
+(epstopdf)                    size: 22305 bytes
+(epstopdf)             Output file: <qn3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:24
+(epstopdf)                    size: 9638 bytes
+(epstopdf)             Command: <epstopdf --outfile=qn3-eps-converted-to.pdf qn
+3.eps>
+(epstopdf)             \includegraphics on input line 1564.
+Package epstopdf Info: Output file is already uptodate.
+<qn3-eps-converted-to.pdf, id=441, 433.62pt x 289.08pt>
+File: qn3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use qn3-eps-converted-to.pdf>
+Package pdftex.def Info: qn3-eps-converted-to.pdf used on input line 1564.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <qr3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:18
+(epstopdf)                    size: 22962 bytes
+(epstopdf)             Output file: <qr3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:26
+(epstopdf)                    size: 9625 bytes
+(epstopdf)             Command: <epstopdf --outfile=qr3-eps-converted-to.pdf qr
+3.eps>
+(epstopdf)             \includegraphics on input line 1579.
+Package epstopdf Info: Output file is already uptodate.
+<qr3-eps-converted-to.pdf, id=442, 433.62pt x 289.08pt>
+File: qr3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use qr3-eps-converted-to.pdf>
+Package pdftex.def Info: qr3-eps-converted-to.pdf used on input line 1579.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <y3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:18
+(epstopdf)                    size: 20229 bytes
+(epstopdf)             Output file: <y3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:26
+(epstopdf)                    size: 8959 bytes
+(epstopdf)             Command: <epstopdf --outfile=y3-eps-converted-to.pdf y3.
+eps>
+(epstopdf)             \includegraphics on input line 1594.
+Package epstopdf Info: Output file is already uptodate.
+<y3-eps-converted-to.pdf, id=443, 433.62pt x 289.08pt>
+File: y3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use y3-eps-converted-to.pdf>
+Package pdftex.def Info: y3-eps-converted-to.pdf used on input line 1594.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <n3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:18
+(epstopdf)                    size: 19450 bytes
+(epstopdf)             Output file: <n3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:28
+(epstopdf)                    size: 8540 bytes
+(epstopdf)             Command: <epstopdf --outfile=n3-eps-converted-to.pdf n3.
+eps>
+(epstopdf)             \includegraphics on input line 1609.
+Package epstopdf Info: Output file is already uptodate.
+<n3-eps-converted-to.pdf, id=444, 433.62pt x 289.08pt>
+File: n3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use n3-eps-converted-to.pdf>
+Package pdftex.def Info: n3-eps-converted-to.pdf used on input line 1609.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <r3.eps>
+(epstopdf)                    date: 2019-03-26 20:03:18
+(epstopdf)                    size: 21748 bytes
+(epstopdf)             Output file: <r3-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:28
+(epstopdf)                    size: 9399 bytes
+(epstopdf)             Command: <epstopdf --outfile=r3-eps-converted-to.pdf r3.
+eps>
+(epstopdf)             \includegraphics on input line 1624.
+Package epstopdf Info: Output file is already uptodate.
+<r3-eps-converted-to.pdf, id=445, 433.62pt x 289.08pt>
+File: r3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use r3-eps-converted-to.pdf>
+Package pdftex.def Info: r3-eps-converted-to.pdf used on input line 1624.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangl
+iu master paper/pn3-eps-converted-to.pdf> <D:/Person Program/github/Academic-Re
+port-Documentation/MasterPaper/zhangliu master paper/pr3-eps-converted-to.pdf>]
+
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+ [41 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangl
+iu master paper/qn3-eps-converted-to.pdf> <D:/Person Program/github/Academic-Re
+port-Documentation/MasterPaper/zhangliu master paper/qr3-eps-converted-to.pdf>]
+ [42 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangl
+iu master paper/y3-eps-converted-to.pdf> <D:/Person Program/github/Academic-Rep
+ort-Documentation/MasterPaper/zhangliu master paper/n3-eps-converted-to.pdf>] [
+43 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangliu
+ master paper/r3-eps-converted-to.pdf>] [44
+
+]
+\CJKfamily {hei} µ⁄\nobreakspace {}4\nobreakspace {} ’¬ 4.
+[45] [46] [47] [48] [49] [50] [51]
+Missing character: There is no û in font cmr12!
+ [52]
+Overfull \hbox (32.72331pt too wide) detected at line 1950
+[]\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 [] \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 [
+]\OT1/cmr/m/n/12 )[]] = \OMS/cmsy/m/n/12  [] \OML/cmm/m/it/12 < \OT1/cmr/m/n/12
+ 0
+ []
+
+[53]
+Package epstopdf Info: Source file: <qn.eps>
+(epstopdf)                    date: 2019-03-26 20:03:38
+(epstopdf)                    size: 22929 bytes
+(epstopdf)             Output file: <qn-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:30
+(epstopdf)                    size: 9812 bytes
+(epstopdf)             Command: <epstopdf --outfile=qn-eps-converted-to.pdf qn.
+eps>
+(epstopdf)             \includegraphics on input line 1992.
+Package epstopdf Info: Output file is already uptodate.
+ <qn-eps-converted-to.pdf, id=658, 433.62pt x 289.08pt>
+File: qn-eps-converted-to.pdf Graphic file (type pdf)
+
+<use qn-eps-converted-to.pdf>
+Package pdftex.def Info: qn-eps-converted-to.pdf used on input line 1992.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+Package epstopdf Info: Source file: <qr.eps>
+(epstopdf)                    date: 2019-03-26 20:03:38
+(epstopdf)                    size: 21046 bytes
+(epstopdf)             Output file: <qr-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:30
+(epstopdf)                    size: 8821 bytes
+(epstopdf)             Command: <epstopdf --outfile=qr-eps-converted-to.pdf qr.
+eps>
+(epstopdf)             \includegraphics on input line 2007.
+Package epstopdf Info: Output file is already uptodate.
+
+<qr-eps-converted-to.pdf, id=659, 433.62pt x 289.08pt>
+File: qr-eps-converted-to.pdf Graphic file (type pdf)
+
+<use qr-eps-converted-to.pdf>
+Package pdftex.def Info: qr-eps-converted-to.pdf used on input line 2007.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+Package epstopdf Info: Source file: <n.eps>
+(epstopdf)                    date: 2019-03-26 20:03:38
+(epstopdf)                    size: 20941 bytes
+(epstopdf)             Output file: <n-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:32
+(epstopdf)                    size: 9060 bytes
+(epstopdf)             Command: <epstopdf --outfile=n-eps-converted-to.pdf n.ep
+s>
+(epstopdf)             \includegraphics on input line 2022.
+Package epstopdf Info: Output file is already uptodate.
+
+<n-eps-converted-to.pdf, id=660, 433.62pt x 289.08pt>
+File: n-eps-converted-to.pdf Graphic file (type pdf)
+
+<use n-eps-converted-to.pdf>
+Package pdftex.def Info: n-eps-converted-to.pdf used on input line 2022.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <r.eps>
+(epstopdf)                    date: 2019-03-26 20:03:38
+(epstopdf)                    size: 22378 bytes
+(epstopdf)             Output file: <r-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-03-26 20:04:32
+(epstopdf)                    size: 9215 bytes
+(epstopdf)             Command: <epstopdf --outfile=r-eps-converted-to.pdf r.ep
+s>
+(epstopdf)             \includegraphics on input line 2037.
+Package epstopdf Info: Output file is already uptodate.
+<r-eps-converted-to.pdf, id=661, 433.62pt x 289.08pt>
+File: r-eps-converted-to.pdf Graphic file (type pdf)
+
+<use r-eps-converted-to.pdf>
+Package pdftex.def Info: r-eps-converted-to.pdf used on input line 2037.
+(pdftex.def)             Requested size: 216.81pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[54 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangli
+u master paper/qn-eps-converted-to.pdf> <D:/Person Program/github/Academic-Repo
+rt-Documentation/MasterPaper/zhangliu master paper/qr-eps-converted-to.pdf>]
+[55 <D:/Person Program/github/Academic-Report-Documentation/MasterPaper/zhangli
+u master paper/n-eps-converted-to.pdf> <D:/Person Program/github/Academic-Repor
+t-Documentation/MasterPaper/zhangliu master paper/r-eps-converted-to.pdf>]
+[56]
+\CJKfamily {hei} µ⁄\nobreakspace {}5\nobreakspace {} ’¬ 5.
+[57
+
+] [58] [59] [60
+
+]
+Overfull \hbox (2.05727pt too wide) in paragraph at lines 2112--2113
+[]\C19/song/m/n/12/47 k \C19/song/m/n/12/57 A \C19/song/m/n/12/37 * \C19/song/m
+/n/12/48 V \C19/song/m/n/12/63 2 \C19/song/bx/n/12/64 õ \C19/song/m/n/12/63 E\O
+T1/cmr/m/n/12 [EB/OL].https://www.cat.com/zh[]CN/parts/reman.html,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
+[]\C19/song/m/n/12/58 ê \C19/song/m/n/12/38  \C19/song/m/n/12/40 ƒ \C19/song/m
+/n/12/48 Â \C19/song/m/n/12/63 2 \C19/song/bx/n/12/64 õ \C19/song/m/n/12/63 E \
+C19/song/m/n/12/62 k \C19/song/m/n/12/59 Å \C19/song/m/n/12/42 ˙ \C19/song/m/n/
+12/56 i\OT1/cmr/m/n/12 [EB/OL].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
+\OT1/cmr/m/n/12 http://www.weichai.com/cpyfw[]350/wmdyw/hfwsc/zzz/, 2018-08-
+ []
+
+
+Underfull \hbox (badness 8113) in paragraph at lines 2116--2117
+[]\C19/song/m/n/12/54 m a\OT1/cmr/m/n/12 [EB/OL]. http-s://www.sohu.com/a/22764
+2108[]257861, 2018-08-
+ []
+
+[61
+
+] [62] [63]
+Underfull \hbox (badness 1803) in paragraph at lines 2149--2150
+[]\OT1/cmr/m/n/12 Atasu A, Souza GC. How Does Prod-uc-t Re-cov-ery Af-fec-t Qua
+l-i-ty
+ []
+
+[64] [65] [66] [67
+
+] [68]
+("D:\Person Program\github\Academic-Report-Documentation\MasterPaper\zhangliu m
+aster paper\Master Paper of ZhangLiu.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 7620 strings out of 495354
+ 114699 string characters out of 3183018
+ 161332 words of memory out of 3000000
+ 10544 multiletter control sequences out of 15000+200000
+ 74869 words of font info for 255 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 42i,18n,45p,1092b,867s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Pro
+gram/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/f
+onts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/ch
+inese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
+><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Prog
+ram/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fo
+nts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chi
+nese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf>
+<D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Progr
+am/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fon
+ts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chin
+ese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><
+D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Progra
+m/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/font
+s/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chine
+se/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D
+:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program
+/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts
+/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chines
+e/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:
+/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/
+CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/
+truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese
+/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/
+Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/C
+TEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/t
+ruetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/
+simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/P
+erson Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CT
+EX/CTeX/fonts/truetype/chinese/simsun.ttf><C:/Windows/Fonts/simhei.ttf><D:/Pers
+on Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/
+CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truet
+ype/chinese/simsun.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.tt
+f><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/s
+imhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><D:/Person 
+Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><C:/Windows/Fonts/simhei.tt
+f><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/s
+imhei.ttf><C:/Windows/Fonts/simhei.ttf><D:/Person Program/CTEX/CTeX/fonts/truet
+ype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/sims
+un.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Perso
+n Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><C:/Windows/Fonts/simhei.
+ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><D:/Person Progra
+m/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/font
+s/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chine
+se/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D
+:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program
+/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts
+/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chines
+e/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:
+/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/
+CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/
+truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese
+/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/
+Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/C
+TEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/t
+ruetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/
+simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/P
+erson Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CT
+EX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/tr
+uetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/s
+imsun.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows
+/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:
+/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei
+.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Fonts/simhei.ttf><C:/Windows/Font
+s/simhei.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:
+/Person Program/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/
+CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/
+truetype/chinese/simsun.ttf><D:/Person Program/CTEX/CTeX/fonts/truetype/chinese
+/simsun.ttf><D:/Person Program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb><D:/Person Program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<D:/Person Program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Pe
+rson Program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Person Pr
+ogram/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Person Program/C
+TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Person Program/CTEX/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Person Program/CTEX/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr8.pfb><D:/Person Program/CTEX/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><D:/Person Program/CTEX/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb><D:/Person Program/CTEX/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb><D:/Person Program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mti12.pfb>
+Output written on "Master Paper of ZhangLiu.pdf" (78 pages, 1418695 bytes).
+PDF statistics:
+ 1147 PDF objects out of 1200 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+
